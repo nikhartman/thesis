@@ -1,3 +1,6 @@
+## Specific files to ignore
+root.pdf 
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
