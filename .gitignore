@@ -10,7 +10,8 @@
 ## Intermediate documents:
 *.dvi
 *-converted-to.*
-# these rules might exclude image files for figures etc.
+
+## these rules might exclude image files for figures etc.
 # *.ps
 # *.eps
 # *.pdf
