@@ -8,7 +8,7 @@ This archive is intended to simplify the process of creating a thesis
 in LaTeX that complies with the JHU formatting requirements.  
 
 ==============================================
-*** Quick Start ***
+Quick Start
 ==============================================
 
 1) Install LaTeX and a decent editor (ideally emacs+AUCTeX+RefTeX) on
@@ -24,7 +24,7 @@ pdflatex root
 (extra compiles may be needed for accurate TOC, List of Figures, etc)
 
 ==============================================
-*** What's Included? ***
+What's Included?
 ==============================================
 
 thesis.cls -- The TeX class file that contains many of the formatting commands.  
@@ -61,7 +61,7 @@ formatting requirements, but is better than nothing if you want to use
 a smaller font.
 
 ==============================================
-*** Figures ***
+Figures
 ==============================================
 Figures should be generated as such:
 
