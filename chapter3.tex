@@ -223,12 +223,19 @@ Matched filter banks are a well known technique that have been used very success
 
 \subsubsection{Nanotube Profile Model}
 
-To begin building the matched filter bank, the profile shape of a single nanotube from the SEM image must be determined. To find this shape, a random set of 25 SEM images was selected. From each of these images, two nanotubes were chosen. Those nanobues can be seen in Figure (...)a. Each of these images was then rotate such that the longest, straight portion that could be identified by eye was oriented vertically. The profile of the nanotube was averaged over that long straight section. These results are plotted in ...
+To begin building the matched filter bank, the profile shape of a single nanotube from the SEM image must be determined. To find this shape, a random set of 25 SEM images was selected. From each of these images, two nanotubes were chosen. Those nanobues can be seen in Figure \ref{fig:all_nanotube_sections}a. Each of these images was then rotate such that the longest, straight portion that could be identified by eye was oriented vertically. The profile of the nanotube was averaged over that long straight section. These results are plotted in Figure \ref{fig:all_nanotube_sections}b.
+
+\begin{figure}
+	\centering
+	\includegraphics[width = 1.0\textwidth]{chapter3/all_nanotube_sections.eps}
+	\caption{a) The original data set of SEM nanotube images used to create and optimize the matched filter bank. b) The same data set rotated and overlaid with extracted nanotube profiles.}
+	\label{fig:all_nanotube_sections}
+\end{figure}
 
 % figures I want for this section...
-% 1. original data set
-% 2. extracted profiles with fits, histograms of k, L data
-% 3. filter bank, each filter applied, original image, result
+% 1. original data set -- done
+% 2. extracted profiles with fits, histograms of k, L data -- done
+% 3. filter bank, each filter applied, original image, result -- done
 
 Based on the shape of these profiles a truncated sinc function was chose to fit the nanotube profile. 
 
