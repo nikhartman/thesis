@@ -48,7 +48,7 @@
 
 \begin{document}
 
-\title{Some Carbon Nanotube Bullshit}
+\title{TITLE}
 \author{Nikolaus Hartman}
 \degreemonth{Month}
 \degreeyear{2015} 
@@ -58,12 +58,16 @@
 
 
 % add your chapters, best way is to have separate TeX files for each chapter
-\include{front_matter}
-\include{intro}
-\include{electronic_properties_cnt}
-\include{cnt_growth_placement}
+\include{chapter_front_matter}  % title, abstract, acknowledgement, dedication, TOC, figure list
+\include{chapter_intro}  % an introduction to the field and some bullshit to tie the whole thing together
+\include{chapter_electronic_properties_cnt} % derivation of CNT band structure, explanation of QD + measurements
+\include{chapter_cnt_growth_placement} % growth of CNT, placement on substrate, imaging
+\include{chapter_cnt_fm} % describe results of FMCNTQD made in the ebeam evaporator that showed possibly interesting behavior. Basically, the group meeting talk from 2014
+\include{chapter_al_tunneling}  % use CNT QD as a tunnel probe into the density of states of a narrow aluminum wire
+\include{chapter_fm_cnt_sc} % explore spin transport through a FM-CNT-SC junction
 \appendix
-\include{fabrication_app}
+\include{appendix_fabrication} % details about fabrication 
+\include{appendix_measurement} % details about measurement
 
 %% REFERENCES
 
@@ -77,6 +81,6 @@
 %\includegraphics[width=2in,height=2.5in,clip,keepaspectratio]{nik_headshot}
 %\end{wrapfigure}
 
-Nik did some physics. It could have gone much better.
+Nik did some physics. It could have gone better.
 \end{vita}
 \end{document}
