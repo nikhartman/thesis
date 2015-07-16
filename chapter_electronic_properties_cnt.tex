@@ -30,11 +30,11 @@ In Figure \ref{fig:graphene_unit_cell} the unit cell is defined by the two latti
 Using the coordinates defined in Figure \ref{fig:graphene_unit_cell}, the lattice vectors are defined, from the center of a honeycomb.
 
 \begin{align}
-    \vec{a}_1 &= \frac{3a_0}{2}\hat{i} + \frac{\sqrt{3}a_0}{2}\hat{j} \\
-    \vec{a}_2 &= \frac{3a_0}{2}\hat{i} - \frac{\sqrt{3}a_0}{2}\hat{j}
+    \vec{a}_1 &= \frac{3a}{2}\hat{i} + \frac{\sqrt{3}a}{2}\hat{j} \\
+    \vec{a}_2 &= \frac{3a}{2}\hat{i} - \frac{\sqrt{3}a}{2}\hat{j}
 \end{align}
 
-Here $a_0$ is the carbon-carbon bond distance, \SI{1.42}{\angstrom} (CITE).
+Here $a$ is the carbon-carbon bond distance, \SI{1.42}{\angstrom} (CITE).
 
 The reciprocal lattice vectors, $\vec{b}_1$ and $\vec{b}_2$ can now be found in the usual way.
 
@@ -45,8 +45,8 @@ The reciprocal lattice vectors, $\vec{b}_1$ and $\vec{b}_2$ can now be found in 
 Here $\delta_{ij}$ is the Kronecker delta. The reciprocal lattice defined by $\vec{b}_1$ and $\vec{b}_2$ can be seen in Figure \ref{fig:graphene_k_space}.
 
 \begin{align}
-    \vec{b}_1 &= \frac{2\pi}{3a_0}\hat{i} + \frac{2\sqrt{3}\pi}{3a_0}\hat{j} \\
-    \vec{b}_2 &= \frac{2\pi}{3a_0}\hat{i} - \frac{2\sqrt{3}\pi}{3a_0}\hat{j}
+    \vec{b}_1 &= \frac{2\pi}{3a}\hat{i} + \frac{2\sqrt{3}\pi}{3a}\hat{j} \\
+    \vec{b}_2 &= \frac{2\pi}{3a}\hat{i} - \frac{2\sqrt{3}\pi}{3a}\hat{j}
 \end{align}
 
 \begin{figure}
@@ -138,16 +138,17 @@ Where $\varepsilon_{p_z}$ is the energy of a single electron on a $p_z$ orbital.
 In order to simplify Equation \ref{eq:overlap_AB} it is useful to define the vectors pointing from an atom on the B sublattice to its three nearest neighbors on the A sublattice.
 
 \begin{align}
-    \vec{\delta}_1 &= \frac{1}{3}(2\vec{a}_1 - \vec{a}_2) = \frac{a_0}{2}\hat{i} + \frac{\sqrt{3}}{2}a_0\hat{j} \nonumber \\
-    \vec{\delta}_2 &= \frac{1}{3}(2\vec{a}_2 - \vec{a}_1) = \frac{a_0}{2}\hat{i} - \frac{\sqrt{3}}{2}a_0\hat{j} \label{eq:deltas} \\
-    \vec{\delta}_3 &= -\frac{1}{3}(\vec{a}_1 + \vec{a}_2) = -a_0\hat{i} \nonumber
+    \vec{\delta}_1 &= -a\hat{i} \nonumber \\
+    \vec{\delta}_2 &= \frac{a}{2}\hat{i} - \frac{\sqrt{3}}{2}a\hat{j} \label{eq:deltas} \\
+    \vec{\delta}_3 &= \frac{a}{2}\hat{i} + \frac{\sqrt{3}}{2}a\hat{j} \nonumber 
+\label{eq:deltas}
 \end{align}
 
 With these definitions Equation \ref{eq:overlap_AB} can be rewritten as:
 
 \begin{equation}
 \label{eq:AB_simple}
-    \hat{H}_{AB} = \sum_{i=1}^{3} e^{i\vec{k}\cdot\vec{\delta}_i} \int \phi^*_{2p_z}(\vec{r}) \hat{H} \phi_{2p_z}(\vec{r}-\vec{\delta}_i) \, d^3\vec{r}
+    \hat{H}_{AB} = \sum_{i=1}^{3} e^{i\vec{k}\cdot\vec{\delta}_i} \int \phi^*_{2p_z}(\vec{r}) \hat{H} \phi_{2p_z}(\vec{r}- \vec{\delta}_i) \, d^3\vec{r}
 \end{equation}
 
 Since the exact form of the Hamiltonian is not known, the integral in Equation \ref{ep:AB_simple} cannot be evaluated. However, the integral clearly represents the overlap between the wavefunction of an electron in a $p_z$ orbital on the A lattice and its nearest neighbor on the B lattice. With that in mind, the hopping amplitude $t$ is defined:
@@ -174,25 +175,200 @@ Equation \ref{eq:AB_final} can be combined with the assumption that the onsite e
 Using these same results in Equation \ref{eq:simple_bands} gives the two lowest energy bands in terms of the hopping amplitude, $t$. 
 
 \begin{equation}
-    \varepsilon(\vec{k}) = \pm t \left| \sum_{i}^{} e^{i \vec{k}\cdot\vec{\delta}_i} \right| \nonumber \\
+    \varepsilon(\vec{k}) = \pm t \left| \sum_{i}^{} e^{i \vec{k}\cdot\vec{\delta}_i} \right|
+    \label{eq:f_k}
 \end{equation}
+
 \begin{equation}
-    \varepsilon(\vec{k}) = \pm t \sqrt{ 1 + 4\cos\left(\frac{3a_0}{2}k_x\right)\cos\left(\frac{\sqrt{3}a_0}{2}k_y\right) + 4\cos^{2}\left(\frac{\sqrt{3}a_0}{2}k_y\right)} \label{eq:bands}
+    \varepsilon(\vec{k}) = \pm t \sqrt{ 1 + 4\cos\left(\frac{3a}{2}k_x\right)\cos\left(\frac{\sqrt{3}a}{2}k_y\right) + 4\cos^{2}\left(\frac{\sqrt{3}a}{2}k_y\right)} \label{eq:bands}
 \end{equation}    
 
-These two bands can be seen in Figure \ref{fig:graphene_bands}. 
+These two bands can be seen in Figure \ref{fig:graphene_bands}. Note that the plot does not assume  $S_{ij} = \braket{u_i | u_j} = \delta_{ij}$, which introduces some asymmetry in the valence and conduction bands.
 
 \begin{figure}
     \centering
     \includegraphics[width = 1.0\textwidth]{chapter2/graphene_band_fig.png}
-    \caption{(a) The $\pi$-bands of graphene calculated using a nearest neighbor tight binding model. (b) A contour plot of the lower band with the first Brillouin zone drawn. The bands meet at the three $K$ and three $K'$ points at the vertices of the Brillouin zone.}
+    \caption{(a) The $\pi$-bands of graphene calculated using a nearest neighbor tight binding model. (b) A contour plot of the upper band with the first Brillouin zone drawn. The bands meet at the three $K$ and three $K'$ points at the vertices of the Brillouin zone.}
     \label{fig:graphene_bands}
 \end{figure}
 
 \subsection{Low Energy Bandstructure of Graphene}
 
+For low energy electronic excitations, conduction will be dominated by the bandstructure near the $K$ and $K'$ points. There are only two inequivalent points, since the other 4 are equivalent by the symmetry of the honeycomb lattice. Consider the two points located at:
 
+\begin{align}
+    \vec{K} &= 0\hat{i} - \frac{4\pi}{3\sqrt{3}a}\hat{j} \\
+    \pvec{K}' &= -\vec{K} = 0\hat{i} + \frac{4\pi}{3\sqrt{3}a}\hat{j}
+\end{align}
+
+To get the low-energy dispersion relation, expand the Hamiltonian in Equation \ref{eq:effective_H} around the $K$ point.
+
+\begin{equation}
+    \vec{k} = \vec{K} + \vec{q}
+\end{equation}
+
+\begin{equation}
+\label{eq:approx_HK}
+    \hat{H} \approx -i\frac{3at}{2} \begin{pmatrix} 0 & q_x+iq_y\\ -(q_x-iq_y)& 0 \end{pmatrix}
+\end{equation}
+
+Similarly, expanding around the $K'$ point yields:
+
+\begin{equation}
+\label{eq:approx_HKp}
+    \hat{H} \approx -i\frac{3at}{2} \begin{pmatrix} 0 & q_x-iq_y\\ -(q_x+iq_y)& 0 \end{pmatrix}
+\end{equation}
+
+By defining $v_f \equiv {3at}/{2\hbar}$, using the standard Pauli matrices, and rotating the phase, Equations \ref{eq:approx_HK} and \ref{eq:approx_HKp} can be written in a more suggestive form. 
+
+\begin{align}
+    \hat{H}_K &= \hbar v_f \vec{\sigma}\cdot\vec{q} \label{eq:chiral_HK} \\
+    \hat{H}_{K'} &= \hbar v_f \pvec{\sigma}^*\cdot\vec{q} \nonumber
+\end{align}
+
+These Hamiltonians describe massless Dirac fermions in 2D. This is clear in the low-energy dispersion relation.
+
+\begin{equation}
+\label{eq:massless_disp}
+    \varepsilon(\vec{q}) = \pm\hbar v_f q
+\end{equation}
+
+It is also important to note, in Equation \ref{eq:chiral_HK}, that the sublattice structure has lead to a spin-1/2 degree of freedom. This degree of freedom is known as the valley degeneracy or pseudospin. 
+
+A useful consequence of the pseudospin is the reduction in scattering in graphene and carbon nanotubes. The reduced backscattering is a result of the introduction of an additional symmetry to the system. This reduction in scattering leads to unusually high mobilities and long spin coherence lengths in both materials. The increased spin coherence length is exactly what lead to the choice of carbon nanotubes for this work.
+
+\section{Electronic Bandstructure of Carbon Nanotubes} 
+
+Now that the bandstructure a graphene sheet has been calculated, finding the electronic bandstructure of various carbon nanotubes is as simple as applying a few boundary conditions.
+
+The structure of a carbon nanotube can be completely described by its chiral vector.
+
+\begin{align}
+    \vec{C}_h &= m\vec{a}_1 + n\vec{a}_2 \label{eq:chiral_vec} \\
+    \vec{C}_h &= \frac{3}{2}(n+m)a\hat{i} + \frac{\sqrt{3}}{2}(n-m)a\hat{j} \nonumber
+\end{align}
+
+This vector describes how to roll a graphene sheet to form the nanotube. The tube is formed by rolling the graphene sheet such that the tip and tail of $\vec{C}_h$ meet. The indices $(n,m)$ describe the type of nanotube that is formed. A tube where $0<m<n$ is known as chiral, $m=n$ is an armchair nanotube, and $m=0$ is a zig-zag nanotube. Armchair and zig-zag tubes get their names from the shape of the carbon bonds on the edge of the unit cell.
+
+\begin{figure}
+    \centering
+    \includegraphics[width = 0.5\textwidth]{chapter2/nanotube_unit_cell.png}
+    \caption{The real-space structure of a carbon nanotube. The nanotube unit cell is defined by the vectors $\vec{C}_h$ and $\vec{T}$}
+    \label{fig:cnt_unit_cell}
+\end{figure}
+
+An example of a chiral (2,1) nanotube unit cell can be seen in Figure \ref{fig:cnt_unit_cell}. The unit cell is defined by the chiral vector $\vec{C_h}$ and the translation vector $T$. Which is defined as:
+
+\begin{equation}
+    \vec{T} = t_1\vec{a}_1 + t_2\vec{a}_2 \label{eq:translation}
+\end{equation}
+    
+where $t_1 = (2m+n)/d_R, t_2 = (2n-m)/d_R$ and $d_R = gcd(2n+m, 2m+n)$ These two vectors can be used to calculate a few basic properties of the nanotube. The diameter of the nanotube is found from the chiral vector.
+
+\begin{equation}
+    d = \left| \vec{C}_h \right|/\pi = \frac{\sqrt{3}a}{\pi}\sqrt{n^2+nm+m^2}
+    \label{eq:cnt_diameter}
+\end{equation}
+
+The number of graphene unit cells contained in the nanotube unit cell is also easily calculated.
+
+\begin{equation}
+    N = \frac{\left| \vec{C}_h \times \vec{T} \right|}{\left| \vec{a}_1 \times \vec{a}_2 \right|} = \frac{2}{d_R}\sqrt{n^2+nm+m^2}
+    \label{eq:cnt_N}
+\end{equation}
+
+Knowing the number of graphene unit cells contained in the nanotube unit cell yields a lot of useful information about the band structure. There are 2N carbon atoms in the nanotube unit cell and N conduction electrons. There will be 2N bands (one for each carbon atom) that will be half-filled, just like the graphene bandstructure.
+
+The reciprocal lattice vectors for the carbon nanotube defined by $(n,m)$ can be found in the usual way.
+
+\begin{align}
+    \vec{C}_h\cdot\vec{K}_1 &= \vec{T}\cdot\vec{K}_2 = 2\pi \nonumber \\
+    \vec{C}_h\cdot\vec{K}_2 &= \vec{T}\cdot\vec{K}_1 = 0 \label{eq:cnt_recip}
+\end{align}
+    
+\begin{align}
+    \vec{K}_1 &= -\frac{(t_2 \vec{b}_1 - t_1 \vec{b}_2)}{N} \nonumber \\
+    \vec{K}_2 &= \frac{(m \vec{b}_1 - n \vec{b}_2)}{N} \label{eq:K1_K2}
+\end{align}
+
+The reciprocal space of the unrolled nanotube is quantized along $\vec{K}_1$ and continuous along $\vec{K}_2$. This means the electron momentum $k$ in the nanotube is quantized along the direction of $C_h$. These quantized 'cutting lines' define the electronic bands in the carbon nanotube.
+
+\begin{equation}
+    \vec{k}\cdot\vec{C}_h = 2\pi\mu
+\end{equation}
+
+Where $\mu$ is an integer from $1-N/2$ to $N/2$ and $\mu=0$ cuts through the $\Gamma$ point at the center of the graphene Brillouin zone. The structure of the nanotube reciprocal lattice, definied by $K_1$ and $K_2$ can be seen in Figure \ref{fig:cnt_k_space}. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width = 0.5\textwidth]{chapter2/nanotube_k_space.png}
+    \caption{The reciprocal lattice of a carbon nanotube, defined by the vectors $K_1$ and $K_2$}
+    \label{fig:cnt_k_space}
+\end{figure}
+
+With all of these definitions, the electron momentum in the carbon nanotube can be rewritten.
+
+\begin{equation}
+    \vec{k} = \mu\vec{K}_1 + k_{\parallel}\frac{\vec{K}_2}{|\vec{K}_2|}
+    \label{eq:k_quant}
+\end{equation}
+
+The bands for a generic nanotube can be found by simply inserting this definition for the momentum into the graphene bands derived in Equation \ref{eq:bands}. 
+
+\subsection{Types of Carbon Nanotubes}
+
+The electronic properties of a carbon nanotube are determined by its chirality, $(n,m)$. If one of the cutting lines, as seen in Figure \ref{fig:cnt_k_space}, passes through a $K$ or $K'$ point, the nanotube will have a metallic band structure. Like in graphene, two of the valence and conduction bands will meet at discrete points at the Fermi energy. If this is not the case, and none of the cutting lines pass through a $K$ or $K'$ point, the nanotube will be semiconducting with a bandgap determined by the chirality.
+
+To determine if a nanotube is semiconducting or metallic, one can look at the projection of $\vec{K}$, the vector pointing to a $K$ point in the graphene Brillouin zone, and $\vec{K}_1$, the nanotube reciprocal lattice vector.
+
+\begin{equation}
+    \frac{\vec{K}\cdot\vec{K}_1}{\vec{K}_1\vec{K}_1} = \frac{(2n+m)}{3} 
+    \label{eq:metallic_condition}
+\end{equation}
+
+From Equation \ref{eq:metallic_condition}, it is clear that a nanotube is metallic if $(n-m)\bmod3 = 0$. There are two other cases, where $(n-m)\bmod3 = 1$ or $(n-m)\bmod3 = 2$. Each of these results in a semiconducting nanotube. Based on these results, in a collection of nanotubes with random chirality, $(n,m)$, there will be roughly $1/3$ metallic and $2/3$ semiconducting nanotubes.
+
+Figure \ref{fig:cnt_types} shows the full bandstructure of a metallic $(5,5)$ armchair nanotube and a semiconducting $(4,2)$ chiral nanotube. These have 20 and 56 bands, respectively.
+
+\begin{figure}
+    \centering
+    \includegraphics[width = 1.0\textwidth]{chapter2/cnt_types.png}
+    \caption{Two types of carbon nanotube bandstructure. The left plot shows a metallic $(5,5)$ armchair nanotube. The right plot shows a semiconducting $(4,2)$ chiral nanotube.}
+    \label{fig:cnt_types}
+\end{figure}
+
+
+\subsection{Low Energy Bandstructure of Carbon Nanotubes}
+
+To calculate the full set of bands for a generic nanotube $(n,m)$ is cumbersome. The basic proprties for a generic nanotube can be more easily calculated by first expanding the graphene bands about the $K$ and $K'$ points as in Equation \ref{eq:massless_disp}, then using the quantized momentum derived in Equation \ref{eq:k_quant}. Doing this yields the low energy dispersion relation for a generic carbon nanotube.
+
+\begin{equation}
+    \varepsilon_{\mu}(k) = \pm\frac{2\hbar v_f}{d}\sqrt{\left(\frac{m-n}{3} - \mu\right)^2 + \left(\frac{kd}{2}\right)^2}
+    \label{eq:low_e_cnt}
+\end{equation}
+
+Where $\mu$ is the band index, $d$ is the nanotube diameter, and k is the electron momentum along the nanotube axis. Looking at the first term in parentheses, it is clear that the nanotube will be metallic if $(m-n)/3$ is an integer. In that case, there will be some integer $\mu$ for which the valence and conduction bands meet at the Fermi energy. This is consistent with the condition derived previously for metallic and semiconducting chiral vectors. Using that information the low energy bandstructure can be written a little more suggestively.
+
+\begin{align}
+    \varepsilon(k) &= \pm\left(\frac{1}{2}E_g(n,m) + \frac{\hbar^2}{2m^*}k^2\right) \\
+    \varepsilon(k) &= \pm\hbar v_f k
+\end{align}
+
+These are the approximate bandstructures at low energy. Semiconducting nanotubes have a bandgap, $E_g(n,m)$ dependent on the chirality, and an effective mass $m^*$ dependent on the lowest band curvature. Metallic nanotubes maintain the massless Dirac fermion properties found in graphene at low energies.
+
+\section{Carbon Nanotube Field Effect Transistors}
+
+Now that the electronic bandstructure of a carbon nanotube is known, we can move on to discussing electric measurements on simple carbon nanotube devices. At room temperature, the simplest device that one can make with a carbon nanotube is a field effect transistor. A nanotube is placed, or grown, on a silicon substrate capped with an insulating silicon dioxide layer. Source and drain contacts are then made to the nanotube. The three terminal device is then made up of the source, drain, and silicon substrate acting as the gate, with the silicon dioxide layer serving as the gate dielectric. A schematic of such a device is seen in Figure \ref{fig:nanotube_fet}
+
+\begin{figure}
+    \centering
+    \includegraphics[width = 0.5\textwidth]{chapter2/nanotube_FET_device.png}
+    \caption{Schematic of a carbon nanotube field effect transistor.}
+    \label{fig:nanotube_fet}
+\end{figure}
+
+Measurements on carbon nanotube field effect transistors (CNTFETs) depend on the type of carbon nanotube that has been contacted. 
 
 \section{Carbon Nanotube Quantum Dots}
 
-How to interpret/understand quantum dot measurements.
+d
