@@ -151,7 +151,7 @@ With these definitions Equation \ref{eq:overlap_AB} can be rewritten as:
     \hat{H}_{AB} = \sum_{i=1}^{3} e^{i\vec{k}\cdot\vec{\delta}_i} \int \phi^*_{2p_z}(\vec{r}) \hat{H} \phi_{2p_z}(\vec{r}- \vec{\delta}_i) \, d^3\vec{r}
 \end{equation}
 
-Since the exact form of the Hamiltonian is not known, the integral in Equation \ref{ep:AB_simple} cannot be evaluated. However, the integral clearly represents the overlap between the wavefunction of an electron in a $p_z$ orbital on the A lattice and its nearest neighbor on the B lattice. With that in mind, the hopping amplitude $t$ is defined:
+Since the exact form of the Hamiltonian is not known, the integral in Equation \ref{eq:AB_simple} cannot be evaluated. However, the integral clearly represents the overlap between the wavefunction of an electron in a $p_z$ orbital on the A lattice and its nearest neighbor on the B lattice. With that in mind, the hopping amplitude $t$ is defined:
 
 \begin{equation}
 \label{eq:hopping_amp}
@@ -358,7 +358,7 @@ These are the approximate bandstructures at low energy. Semiconducting nanotubes
 
 \section{Carbon Nanotube Field Effect Transistors}
 
-Now that the electronic bandstructure of a carbon nanotube is known, we can move on to discussing electric measurements on simple carbon nanotube devices. At room temperature, the simplest device that one can make with a carbon nanotube is a field effect transistor. A nanotube is placed, or grown, on a silicon substrate capped with an insulating silicon dioxide layer. Source and drain contacts are then made to the nanotube. The three terminal device is then made up of the source, drain, and silicon substrate acting as the gate, with the silicon dioxide layer serving as the gate dielectric. A schematic of such a device is seen in Figure \ref{fig:nanotube_fet}
+Now that the electronic bandstructure of a carbon nanotube is known, we can move on to discussing electric measurements on simple carbon nanotube devices. At room temperature, the simplest device that one can make with a carbon nanotube is a field effect transistor. A nanotube is placed, or grown, on a silicon substrate capped with an insulating silicon dioxide layer. Source and drain contacts are then made to the nanotube. The completed three terminal device is made up of the source, drain, and silicon substrate acting as the gate, with the silicon dioxide layer serving as the gate dielectric. A schematic of such a device is seen in Figure \ref{fig:nanotube_fet}
 
 \begin{figure}
     \centering
@@ -367,8 +367,108 @@ Now that the electronic bandstructure of a carbon nanotube is known, we can move
     \label{fig:nanotube_fet}
 \end{figure}
 
-Measurements on carbon nanotube field effect transistors (CNTFETs) depend on the type of carbon nanotube that has been contacted. 
+Measurements on carbon nanotube field effect transistors (CNTFETs) depend on the type of carbon nanotube that has been contacted.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1.0\textwidth]{chapter2/fet_measurements.png}
+    \caption{Current versus gate voltage characteristics for three typs of CNTFET.}
+    \label{fig:fet_measurements}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{chapter2/transistor_curves.png}
+    \caption{IV characteristics of a typical small band gap semiconducting CNTFET. The current saturates at higher bias voltage, but is not typically measured due to avalanche breakdown of the devices. Inset: Current versus gate at a fixed bias for the same device.}
+    \label{transistor_curves.png}
+\end{figure}
+
+Metallic source/drain contacts typically form Schottky barriers with carbon nanotubes. The polarity of the resulting CNTFET is thus determined by the relation between the work function of the contact material and nanotube. For metals with a relatively high work function, such as Pd, Ti, Cr, and Co, the devices are expected to be p-type. Metals with a lower work function, such as Al, Mg, and Sc, can produce n-type transistors. However, many of these low work function metals also happen to have a very poor wetability on the nanotube surface, which leads to large contact resistances, making the devices very difficult to fabricate and measure.
 
 \section{Carbon Nanotube Quantum Dots}
 
-d
+When cooled to low temperatures ($\lesssim \SI{10}{\kelvin}$), the device drawn in Figure \ref{fig:nanotube_fet} exhibits quantum mechanical behavior. For a sufficiently short channel length ($L \lesssim \SI{500}{\nano\meter}$), electrons become confined within the carbon nanotube and behave like quantum mechanical particles in a box. This device is called a quantum dot. The resistance versus temperature plot in Figure \ref{fig:CNT_RT} shows the sharp increase in resistance as the tunneling through the device is suppressed at low temperatures. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{chapter2/cntfet_cooldown.png}
+    \caption{R-T curve of a CNTFET cooled to \SI{4}{\kelvin}}
+    \label{fig:CNT_RT}
+\end{figure}
+
+Once the device is cold, the filling of electrons can be controlled by varying the bias and gate voltages. A schematic of the relevant energies is seen in Figure \ref{fig:QD_model}. The bias voltage can be used to change the relative chemical potential of the source and drain metals. The gate voltage is then used to change the chemical potential on the quantum dot relative to the source/drain.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{chapter2/quantum_dot_model.png}
+    \caption{Quantum dot energy diagram.}
+    \label{fig:QD_model}
+\end{figure}
+
+The model we will use to discuss this device is called the constant interaction model. Tunnel barriers naturally form at the interface between the metal contacts and the nanotube. At low temperatures this leads to weak tunneling on/off the nanotube (quantum dot). Because of this, the number of electrons confined on the dot at any given time is an integer, N. Adding an additional electron to the dot requires overcoming the Coulomb repulsion between the additional electron and those already confined on the dot. The constant interaction model treats this charging energy as a constant, regardless of the number of electrons confined on the dot. The model also assumes that the states on the quantum dot are not affected by the electron-electron interactions.
+
+With these assumptions, it is simple to find the energy required to add an electron to the dot. To begin, the total energy on the dot can be approximated.
+
+\begin{equation}
+    U(N) = \frac{[e(N-N_0) - C_gV_g]^2}{2C} + \sum_{N}^{} E_n
+\end{equation}
+
+Here $N_0$ is the charge on the dot a zero gate voltage, $C_g$ is the gate capacitance, and $C = C_source + C_drain + C_gate$. The summation represents the sum over all of the filled quantum dot leves, denoted by $E_n$. The chemical potential is defined as $\mu(N) = U(N) - U(N+1)$. 
+
+\begin{equation}
+    \mu(N) = (N - N_0 - \frac{1}{2})\frac{e^2}{2C} - \frac{eC_gV_g}{C} + E_N
+\end{equation}
+
+Finally, the addition energy is given by the change in chemical potential from the $N$ to $N+1$ levels.
+
+\begin{align}
+    \Delta \mu(N) &= \frac{e^2}{2C} + (E_N+1 - E_N) \nonumber \\
+    \Delta \mu(N) &= \frac{e^2}{2C} + \Delta E  \label{eq:addition_energy}
+\end{align}
+
+Equation \ref{eq:addition_energy} gives the amount of energy required to add the Nth electron to the quantum dot. Note that the first term in this energy is the constant interaction term representing the Coulomb repulsion, $E_{charging} = \frac{e^2}{2C}$. 
+
+The simplest measurement to make on a quantum dot like the one described here, is to measure the conductance as a function of the gate voltage. Figure \ref{fig:gate_blockade} shows diagrammatically how the process works. At very small bias ($\mu_{left} \sim \mu_{right}$), the gate voltage is varied. When the chemical potential on the source/drain are resonant with a level on the quantum dot, a peak is observed in the conductance. Otherwise, conductance  across the dot is suppressed. Spacing between conductance peaks should follow Equation \ref{eq:addition_energy}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{chapter2/gate_blockade.png}
+    \caption{Left: A quantum dot level resonant with the source/drain chemical potential. Right: The same device in the blockaded region.}
+    \label{fig:gate_blockade}
+\end{figure}
+
+Figure \ref{fig:real_gate} shows conductance as a function of gate voltage through an actual carbon nanotube quantum dot device. A close look at the spacing of the conductance peaks reveals some hints of four-fold symmetry that is an important part of the structure of the nanotube quantum dot. Addinzag the first electron to the dot costs an energy $ \Delta \mu(N) = \frac{e^2}{2C} + \Delta E$. However, the electron spin and valley degeneracy combine to give each level in the quantum potential well a degeneracy of four. The next three electrons added move into the same level, which only requires an energy of $\Delta \mu(N) = \frac{e^2}{2C}$ for each electron. This pattern continues for each level on the dot, such that the energy required to add the $N$ electron is always larger than the energy required to add the $N+1$, $N+2$, and $N+3$ electrons.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{chapter2/gate_sweep.png}
+    \caption{Conductance as a function of applied gate voltage in a cobalt contacted nanotube quantum dot.}
+    \label{fig:real_gate}
+\end{figure}
+
+Varying the bias voltage leads to similar behavior, as illustrated in Figure \ref{fig:bias_blockade}. If a level on the quantum dot lies between the source and drain chemical potentials, conductance is possible. Otherwise, if no level lies in that window, the device is again in the blockaded regime. With further increases of the bias voltage, higher order conductance processes are possible. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{chapter2/bias_blockade.png}
+    \caption{Left: A quantum dot level resonant with the drain chemical potential. Right: The same device in the blockaded region.}
+    \label{fig:bias_blockade}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{chapter2/bias_sweep.png}
+    \caption{Left: An IV curve at fixed gate voltage Right: Differential conductance measured at fixed gate voltage.}
+    \label{fig:real_bias}
+\end{figure}
+
+Figure \ref{fig:real_bias} shows current and conductance as a function of applied bias voltage. It is clear from the differential conductance plot, for low bias voltages the conductance is suppressed across the dot. At higher bias, a quantum dot level moves into the bias window and conductance increases. Increasing the bias further from there allows for transport through excited states and higher order processes, which will be discussed further in later chapters.
+
+Finally, measuring conductance as a function of both the bias and gate produces a stability diagram of the quantum dot. An example of this can be seen in Figure \ref{fig:coulomb_diamonds}. Looking at a cut of this plot at constant bias reproduces Figure \ref{fig:real_gate}. Similarly, a cut at constant gate voltage reproduces Figure \ref{fig:real_bias}. Putting both together produces diamond-shaped regions in which the charge on the quantum dot in constant, denoted by $N-1$, $N$, and $N+1$ in the figure. The white dashed lines serve as a guide to the eye. The two black arrows mark the level spacing, $\Delta E$, and addition energy $E_Add$ (or $\Delta \mu$). By measuring both of these quantities it is possible to know the level spacing on the quantum dot and the capacitance of the device. By observing changes in the conductance peaks at different fillings and applied fields much can be learned about the levels on, interactions in, and transport across the quantum dot.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{chapter2/diamond_diagram.png}
+    \caption{Conductance of a cobalt contacted nanotube quantum dot at 4K as a function of bias and gate voltages.}
+    \label{fig:coulomb_diamonds}
+\end{figure}

@@ -162,7 +162,7 @@ With nanotubes that have been drop cast onto the surface, the standard method is
 
 \begin{figure}
 	\centering
-	\includegraphics[width = 0.8\textwidth]{chapter3/cnt_au_markers.eps}
+	\includegraphics[width = 0.8\textwidth]{chapter3/cnt_au_markers.png}
 	\caption{A composite image made from several AFM height measurements of a sample with nanotubes dispersed over a  substrate with \SI{1.5}{\micro\meter} gold markers. The scale bar is \SI{10}{\micro\meter}.}
 	\label{fig:cnt_au_markers}
 \end{figure}
@@ -224,13 +224,13 @@ This method was based on two corrections. First, a plane fit to correct for the 
 	\label{fig:hist_eq}
 \end{figure}
 
-Figure \ref{fig:his_eq_example} shows the process of filtering an SEM image using histogram equalization. At the top of figure is the original image after a plane fit (to correct changes in brightness across the substrate). To the right of the image, the histogram of brightness values and the cummulative distribution function are plotted. The center image is after the histogram equalization. Contrast is now dramatically increased in the image, the histogram is nearly flat, and the cumulative distribution function is linear. Finally, the image is gaussian filtered using a $3 \times 3$ kernel to reduce the high frequency noise, which has been exaggerated by the histogram equalization. The final histogram is not flat quite flat and the cumulative distribution function is not quite linear. However, the contrast in the image has been enhanced significantly
+Figure \ref{fig:hist_eq_data} shows the process of filtering an SEM image using histogram equalization. At the top of figure is the original image after a plane fit (to correct changes in brightness across the substrate). To the right of the image, the histogram of brightness values and the cummulative distribution function are plotted. The center image is after the histogram equalization. Contrast is now dramatically increased in the image, the histogram is nearly flat, and the cumulative distribution function is linear. Finally, the image is gaussian filtered using a $3 \times 3$ kernel to reduce the high frequency noise, which has been exaggerated by the histogram equalization. The final histogram is not flat quite flat and the cumulative distribution function is not quite linear. However, the contrast in the image has been enhanced significantly
 
 \begin{figure}
 	\centering
 	\includegraphics[width = 0.8\textwidth]{chapter3/histogram_eq_example.pdf}
 	\caption{Top image is the original SEM image after a plane fit. Middle image shows the SEM image after histogram equalization. Bottom image shows the final result after gaussian smoothing. Plots on the right show the histogram of brightness values and cumulative distribution function at each step.}
-	\label{fig:hist_eq}
+	\label{fig:hist_eq_data}
 \end{figure}
 
 While this filter does success in increasing contrast in the image, which was the main problem associated with our SEM, it also increases the background noise to often unacceptable levels. Histogram equalization does not use any specific information about the carbon nanotubes and substrates being imaged. A better filter should be possible by taking advantage of the fact that the features of interest can be well characterized in a sample set of images. 
@@ -255,9 +255,9 @@ Based on the shape of these profiles a truncated $sinc$ function, Equation \ref{
 
 \begin{equation} 
 \label{eq:sinc}
-f(x) = \begin{cases} \frac{A\sin{kx}}{kx} & |x| < \frac{2\pi}{k} \\ 
-                     0                    & |x| > \frac{2\pi}{k} 
-       \end{cases}
+    f(x) = \begin{cases} \frac{A\sin{kx}}{kx} & |x| < \frac{2\pi}{k} \\ 
+                         0                    & |x| > \frac{2\pi}{k} 
+           \end{cases}
 \end{equation}
 
 This fuction was chosen because it captures the bright nanotube peak and dark regions beside the nanotube while still only requiring one fit parameter. To determine the fit parameters the linear background was subtracted from each profile in Figure \ref{fig:all_nanotube_sections}b and the profiles were  fit using \ref{eq:sinc}. The results of this fitting can be seen in Figures \ref{fig:profile_fits}a and b. 
