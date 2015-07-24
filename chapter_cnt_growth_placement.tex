@@ -4,11 +4,12 @@
 \label{sec:growth}
 \chaptermark{Growth and Placement}
 
-There are several methods that can be used to deposit nanotubes onto a substrate. Two of these methods, random dispersion and catalyst island growth, are discussed here. Additional methods, such as stamping \cite{Wu2010, Pei2012}, were not utilized for this work and will not be discussed.
+In the years since their discovery, many methods of producing electronic devices from carbon nanotubes have been developed. These include random dispersion (Section \ref{sec:random_dispersion}), on-substrate catalyst island growth (Section \label{sec:catalyst_island}) and stamping \cite{Wu2010, Pei2012}. For this work, the first two methods were successfully used to produce carbon nanotube quantum dots. It was found that the catalyst island growth was much easier to implement and required much less processing time per device.
 
 \section{Random Dispersion}
+\label{sec:random_dispersion}
 
-The oldest, and least reliable, method of nanotube device fabrication, is what will be referred to as random dispersion. First, nanotubes are grown in bulk through chemical vapor deposition (or other preferred method). Then, the nanotubes are suspended in a solution. Finally, the nanotubes are cast onto a substrate. Nanotubes can then be located relative to some predefined markers on the substrate.
+The first successful method of nanotube device fabrication was what will be referred to here as random dispersion. First, nanotubes are grown in bulk through chemical vapor deposition (or other preferred method). Then, the nanotubes are suspended in a solution. Finally, the nanotubes are cast onto a substrate. Nanotubes can then be located relative to some predefined markers on the substrate.
 
 \subsection{Catalyst}
 \label{subsec:disperse_catalyst}
@@ -30,7 +31,7 @@ All of the devices discussed in this thesis have utilized the same, iron-based c
 \subsection{Growth}
 \label{subsubsec:powder_cvd}
 
-Of the many possible techniques for nanotube growth, we choose chemical vapor deposition for its simple implementation. The process is carried out in a Lindberg Blue tube furnace using a 1 inch diameter quartz tube. The furnace, quartz tube, and exhaust filtering are seen in Figure~\ref{fig:furnace_setup}. Despite its poor looks, this setup has been repeatedly, and successfully, leak checked. Oxygen leaks can be detrimental to the nanotube growth process by forming \ce{CO} and \ce{CO2} with any free carbon.
+Of the many possible techniques for nanotube growth, we choose chemical vapor deposition for its simple implementation. The process is carried out in a Lindberg Blue tube furnace using a 1 inch diameter quartz tube. The furnace, quartz tube, and exhaust filtering are seen in Figure~\ref{fig:furnace_setup}. This setup has been repeatedly, and successfully, leak checked. Oxygen leaks can be detrimental to the nanotube growth process by forming \ce{CO} and \ce{CO2} with any free carbon, and potentially causing a fiery reaction with free hydrogen from the methane decomposition.
 
 \begin{figure}
     \centering
@@ -39,7 +40,7 @@ Of the many possible techniques for nanotube growth, we choose chemical vapor de
     \label{fig:furnace_setup}
 \end{figure}
 
-The gases used in the CVD process, argon, hydrogen, and methane, are fed into the furnace using a custom-made gas handling panel. This was originally constructed by Matt Oresky, a JHU undergraduate working in our lab with post-doc Atikur Rahman. The panel has three gas channels, each with its own analog flowmeter, needle valve, and on/off valve. A digital flowmeter placed at the right side of the panel reads the total flow of combined gas exiting the panel to the furnace. The gas handling panel can be see in Figure~\ref{fig:gas_panel}
+The gases used in the CVD process, argon, hydrogen, and methane, are fed into the furnace using a custom-made gas handling panel. The panel has three gas channels, each with its own analog flowmeter, needle valve, and on/off valve. A digital flowmeter placed at the right side of the panel reads the total flow of combined gas exiting the panel to the furnace. The gas handling panel can be see in Figure~\ref{fig:gas_panel}
 
 \begin{figure}
     \centering
@@ -62,7 +63,7 @@ The growth procedure begins with filling a ceramic crucible with the iron cataly
 
 \subsection{Nanotube Placement}
 
-After the CVD process, the nanotubes remain attached to the iron\slash alumina\slash molybdenum catalyst particles, which must be removed before depositing onto a silicon substrate. The nanotube\slash catalyst powder is first scraped from the ceramic crucible used in the tube furnace. The powder is then mixed with either dichloroethane or dichlorobenzne in a \SI{1}{\milli\gram} to \SI{10}{\milli\liter} ratio. Dichlorobenze has been found to leave less residue after deposition, but may promote more damage to nanotubes during sonication. Some attempts were made to use water along with the surfactant SDS. However, SDS turned out to be difficult to remove and no devices were made in this way.
+After the CVD process, the nanotubes remain attached to the iron\slash alumina\slash molybdenum catalyst particles, which must be removed before depositing onto a silicon substrate. The nanotube\slash catalyst powder is first scraped from the ceramic crucible used in the tube furnace. The powder is then mixed with either dichloroethane or dichlorobenzene in a \SI{1}{\milli\gram} to \SI{10}{\milli\liter} ratio. Dichlorobenzene has been found to leave less residue after deposition, but may promote more damage to nanotubes during sonication. This was noted by Justin Silverman, an undergraduate working with our lab on functionalizing short carbon nanotubes. Some attempts were made to use water along with the surfactant SDS. However, SDS turned out to be difficult to remove and no devices were made in this way.
 
 To remove the catalyst particles from the nanotubes, the solution described above must be placed in an ultrasonic bath for 1-60 minutes. The amount of time needed varied a great deal depending on the equipment and solvent used. The goal of this step is to break up large pieces of catalyst, separate nanotube bundles, and break individual nanotubes away from their catalyst particles. Sonication can be stopped when no large pieces of catalyst\slash nanotube material are visible and the solution has a uniform black color. Leaving the solution in the sonicator for too much time will begin to break long nanotubes. 
 
@@ -77,14 +78,14 @@ Now the solution is ready for deposition on a silicon substrate. The substrates 
     \label{fig:markers}
 \end{figure}
 
-\subsection{Conclusion}
+\subsection{Advantages and Disadvantages}
 
-Despite having some success fabricating devices using randomly dispersed nanotubes and EFM scans, the process was found to be too unreliable for frequent use. The main failure point was the preparation of nanotube solutions after growth. The concentrations varied significantly, often producing samples with dense nanotube coverage or no nanotubes found in the regions imaged. Additionally, the process of making a suspended nanotube solution is time consuming. Even those solutions with a useful concentration of nanotubes only remain fully suspended for less than 1 hour.
+Despite having some success fabricating devices using randomly dispersed nanotubes and Electric Force Microscopy scans (Section \ref{subsec:EFM}), the process was found to be too time consuming for frequent use. The main failure point was the preparation of nanotube solutions after growth. The concentrations varied significantly, often producing samples with dense nanotube coverage or no nanotubes found in the regions imaged. Additionally, the process of making a suspended nanotube solution is time consuming. Even those solutions with a useful concentration of nanotubes only remain fully suspended for less than 1 hour. Meaning the process must be repeated frequently.
 
 \section{Catalyst Island Growth}
-\label{subsec:catalyst_island}
+\label{sec:catalyst_island}
 
-In 1998 \cite{Kong1998a}, it was discovered that the same type of catalyst used to grow nanotubes in powder form (Section \ref{subsec:disperse_catalyst}), could be suspended in solution, patterned, and used to grow nanotubes directly on silicon substrates. When paired with high melting point metals and optical lithography, nanotubes can be grown directly on patterned substrates in known locations. Devices prepared this way take just a fraction of the time to produce. 
+In 1998 \cite{Kong1998a}, it was discovered that the same type of catalyst used to grow nanotubes in powder form (Section \ref{subsec:disperse_catalyst}), could be suspended in solution, patterned, and used to grow nanotubes directly on silicon substrates. When paired with high melting point metals and optical lithography, nanotubes can be grown directly on patterned substrates in known locations. Devices prepared this way take just a fraction of the time to produce. However, these devices were found to be much more prone to other modes of failure, such as leaks in the gate oxide and amorphous carbon contamination on the substrate from the CVD growth process.
 
 \subsection{Catalyst} 
 
@@ -103,7 +104,7 @@ Many different types of catalyst particles can be used in the growth of carbon n
     \begin{tabular}{| r | c || p{70mm} |}
     	\hline
     	\textbf{Catalyst} & \textbf{Suspended In} & \textbf{Results} \\ \hline
-        Fe/Mo/alumina \cite{Kong1998} & Methanol & Easy to pattern. Liftoff difficult. Slowly attacks PMMA mask. Appeared to promote to gate leaks through the \ce{SiO2} layer. \\ \hline
+        Fe/Mo/alumina \cite{Kong1998} & Methanol & Easy to pattern. Liftoff difficult. Slowly attacks PMMA mask. Appeared to promote gate leaks through the \ce{SiO2} layer. \\ \hline
         Fe/Mo/alumina \cite{Aurich2012} & IPA & Poor adhesion to substrate. \\ \hline
         Fe/Mo/alumina \cite{Ouellette2008} & DI water & Easy to pattern. Excellent adhesion. No gate leak problems. \\ \hline
         \ce{FeCl3} \cite{Hong2005} & DI water & Excellent adhesion to substrate. Not compatible with PMMA mask. Left substrate entirely covered in catalyst. May work well with PDMS stamp. \\ \hline
@@ -122,7 +123,7 @@ All of the devices discussed in this thesis were produced using the Fe\slash Mo\
 	\item Liftoff by sonicating in acetone for 5 minutes, soaking in a clean acetone for 5 minutes, followed by an isopropanol rinse for 1 minute and a DI water rinse for 1 minute
 \end{enumerate}
 
-Depositing the catalyst islands in a reproducible way proved to be the most difficult step in the fabrication of nanotube samples. It is suspected that baking the catalyst on a hot plate to dry the solution leads directly to gate leaks in the \ce{SiO2} layers and later device failure. Thus, there is no baking step in the deposition of our catalyst islands.
+Obtaining reproducible results in the catalyst deposition was the source of much difficulty. The recipe provided here can be repeated before liftoff shows insufficient catalyst coverage on the substrate. Additionally, it is suspected that baking the catalyst on a hot plate to dry the solution leads directly to gate leaks in the \ce{SiO2} layers and later device failure. Thus, there is no baking step in the deposition of our catalyst islands.
 
 \subsection{Growth}
 \label{subsubsec:substrate_cvd}
@@ -147,9 +148,9 @@ In almost every case this recipe has grown nanotubes successfully. Steps 2 and 3
 
 The most common point of failure has been related to the patterned molybdenum leads on the substrate. Molybdenum oxidizes rapidly at high temperatures. Therefore, any oxygen contamination in the tube during the growth process will form a \ce{MoO} layer that is then quickly removed by reacting with the high temperature \ce{H2} flow. This process repeats and can lead to the Mo leads being entirely etched away. Additionally, it has been found that opening the furnace too soon during cooling can lead to the Mo leads peeling off of the substrate. This appears to be caused by some super-heating due to IR radiation reflecting off of the surfaces of the sample and quartz tube. It is a strange phenomenon that is avoided by allowing the furnace to cool to less than \SI{300}{\degreeCelsius} before opening the lid. These problems could also be solved by using a different high temperature metal such as a W/Pt bilayer, common in many other nanotube projects. Molybdenum was chosen for this work because it is easy to sputter and much more affordable.
 
-\subsection{Conclusion}
+\subsection{Advantages and Disadvantages}
 
-Growing nanotubes from catalyst islands near predefined leads and markers offers a huge improvement over the method of random dispersion. Nanotubes produced with this method are longer, cleaner, and easier to locate. These improvements, along with the ability to produce many more samples in much less time, made this method the obvious choice for device fabrication.
+Growing nanotubes from catalyst islands near predefined leads and markers offers a large improvement in processing time over the method of random dispersion. Nanotubes produced with this method are longer, cleaner, and easier to locate. These improvements made this method the obvious choice for device fabrication. The disadvantages stemming from substrate contamination during growth or imaging can be overcome by simply increasing number of samples produced.
 
 \section{Imaging Nanotubes}
 \label{subsubsec:imaging_disperse}
@@ -170,6 +171,7 @@ With nanotubes that have been drop cast onto the surface, the standard method is
 This method is very reliable, but extremely time consuming. In order to resolve nanotubes, as well as the predefined markers in the image, AFM scan sizes must be limited to \SI{25}{\square\micro\meter}. Each of these scans takes 30 minutes and many scans are needed to fully image one patterned substrate. Looking closely at Figure \ref{fig:cnt_au_markers}, there are 12 scans covering less than half the substrate. Due to vibrational noise and piezo limits, some images are slightly warped. Stitching the images together is time consuming and inaccurate.
 
 \subsection{Electric Force Microscopy}
+\label{subsec:EFM}
 
 The Digital Instruments Nanoscope 3 used in our lab is also capable of making electric force microscope (EFM) measurements. An EFM image is made by first measuring the height across the sample in standard tapping mode, then using that height data to run a second 'interleave' scan at a fixed height with a bias voltage applied between the tip and sample. By holding the tip at a fixed height, van der Waals interactions between the tip and sample are constant and the only force measured is the electrostatic force from the applied bias voltage. Contrast in the resulting images is related to the different conductivities of the objects on the sample \cite{Bockrath2002}. Thus, conducting (and semiconducting) nanotubes have a high contrast against the insulating \ce{SiO2} substrate. An example of this type of image is shown in Figure \ref{fig:cnt_efm}
 
@@ -233,7 +235,7 @@ Figure \ref{fig:hist_eq_data} shows the process of filtering an SEM image using 
 	\label{fig:hist_eq_data}
 \end{figure}
 
-While this filter does success in increasing contrast in the image, which was the main problem associated with our SEM, it also increases the background noise to often unacceptable levels. Histogram equalization does not use any specific information about the carbon nanotubes and substrates being imaged. A better filter should be possible by taking advantage of the fact that the features of interest can be well characterized in a sample set of images. 
+While this filter does succeed in increasing contrast in the image, which was the main problem associated with our SEM, it also increases the background noise to often unacceptable levels. Histogram equalization does not use any specific information about the carbon nanotubes and substrates being imaged. A better filter should be possible by taking advantage of the fact that the features of interest can be well characterized in a sample set of images. 
 
 \subsection{Matched Filter Bank}
 
@@ -295,7 +297,7 @@ To build the full filter bank, the kernel, built using Equation \ref{eq:kernel},
 
 After each kernel has been separately convolved with the original image, and the threshold applied, those binary images are added together to produce the final filtered image. Figures \ref{fig:filter_bank_results}a and b show the original and filtered nanotube images. 
 
-In building this filter many parameters had to be optimized simultaneously and compared by eye. Due to the large parameter space, the matched filters were optimized by iteratively varying a single parameter and choosing the best result. This process is illustrated in Figure \ref{fig:filter_parameter_test}.
+In building this filter, many parameters had to be optimized simultaneously and compared by eye. Due to the large parameter space, the matched filters were optimized by iteratively varying a single parameter and choosing the best result. This process is illustrated in Figure \ref{fig:filter_parameter_test}.
 
 \begin{figure}
 	\centering
@@ -325,7 +327,7 @@ It is also important to note that the length scale for these parameters is in pi
     \label{table:filter_parameters}
 \end{table}
 
-Finally, the filter was tested with the original set of full device SEM images. A selection of the results can be seen in Figure \ref{fig:full_image_filter}. It is clear from this set of images that the filter has the desired result. Nanotubes are much more clearly visible and the background is almost completely removed. Because the filter is very similar in it's construction to common edge detection algorithms, it also leaves features at the edges of the optical lithography leads and markers defined on the substrate before nanotube growth. This actually works well since those features are used to align the SEM images for additional electron beam lithography steps. 
+Finally, the filter was tested with the original set of full device SEM images. A selection of the results can be seen in Figure \ref{fig:full_image_filter}. It is clear from this set of images that the filter has the desired result. Nanotubes are much more clearly visible and the background is almost completely removed. Because the filter is very similar in its construction to common edge detection algorithms, it also leaves features at the edges of the optical lithography leads and markers defined on the substrate before nanotube growth. This actually works well, since those features are used to align the SEM images for additional electron beam lithography steps. 
 
 \begin{figure}
 	\centering

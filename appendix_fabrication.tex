@@ -2,13 +2,13 @@
 \label{chap:fabrication}
 \chaptermark{Fabrication Details}
 
-This appendix describes, in detail, each of the steps taken to create the carbon nanotube (nanotube) devices measured for this thesis. Some of the information is specific to the Markovic lab and Johns Hopkins University, but an effort has been made to make the discussion useful to anyone producing nanotube devices.
+This appendix describes, in detail, each of the steps taken to create the carbon nanotube devices measured for this thesis. Some of the information is specific to the Markovic lab and Johns Hopkins University, but an effort has been made to make the discussion useful to anyone producing nanotube devices.
 
 The devices measured in this thesis were all produced with the following recipe:
 
 \begin{enumerate}
-\item Use the mask aligner (\ref{subsubsec:mask_aligner}) to pattern large sputtered molybdenum (\ref{subsec:sputtering}) leads on a silicon substrate
-\item Pattern small catalyst islands (\ref{subsec:catalyst_island}) using electron beam lithography (\ref{sec:ebeam_lith})
+\item Use the mask aligner (\ref{subsubsec:mask_aligner}) to pattern large sputtered molybdenum (\ref{subsec:sputtering}) leads or alignment markers on a silicon substrate
+\item Pattern small catalyst islands (\ref{sec:catalyst_island}) using electron beam lithography (\ref{sec:ebeam_lith})
 \item Grow nanotubes directly on substrate using chemical vapor deposition (\ref{subsubsec:substrate_cvd})
 \item Locate nanotubes using a scanning electron microscope (\ref{subsec:imaging_sem})
 \item Design devices using vector graphics software (\ref{sec:device_design})
@@ -45,7 +45,7 @@ Many of the devices produced in the Markovic lab have been patterned using the c
 
 \begin{figure}
     \centering
-    \includegraphics[width = 1.0\textwidth]{appa/project_lith.eps}
+    \includegraphics[width = 1.0\textwidth]{appa/project_lith.pdf}
     \caption{Custom projection lithography setup in the JHU physics department cleanroom. (a) The arrows from left to right show the UV lamp, sliding UV filter, and mask holder. (b) A projection lithography mask and holder. The arrow shows the mask itself.}
     \label{fig:project_lith}
 \end{figure}
@@ -71,7 +71,7 @@ First, a chromium on glass mask is made with the desired pattern in the actual s
 \section{Device Design}
 \label{sec:device_design}
 
-Once the substrates are prepared, devices are designed one at a time using Adobe Illustrator. Any computer aided drafting (CAD) or vector graphics program would work just as well. The procedure is outlined in Figure \ref{fig:device_design}. Designing the devices is a simple process of connecting the nanotubes with the mask aligner leads, although some thought must be given to the size of the leads drawn. If the leads are too large, the write time for the electron beam lithography steps will be too long. Additionally, one must be careful not to let any stray nanotubes short the device leads.
+Once the substrates are prepared, devices are designed one at a time using Adobe Illustrator. Any computer aided drafting (CAD) or vector graphics program would work just as well. The procedure is outlined in Figure \ref{fig:device_design}. Designing the devices is a simple process of aligning the image with the markers/leads patterned in the first lithography step, then designing the desired pattern of nanotube contacts and bonding pads. Some thought must be given to the size of the leads drawn. If the leads are too large, the write time for the electron beam lithography steps will be too long. Long write times are at risk for poor alignment due to stage drift in the SEM. It was found that keeping write times under 20 minutes yielded the best results. Additionally, one must be careful not to let any stray nanotubes short the device leads.
 
 \begin{figure}
 	\centering
@@ -191,7 +191,7 @@ The benefit of sputtering, as mentioned above, is that almost any metal can be s
 	\label{fig:ald}
 \end{figure}
 
-Atomic layer deposition (ALD) is a process in which thin, usually insulating, films are grown by reacting a series of gases. As a part of this work, we have constructed a homemade ALD reactor in the Markovic lab with the help of Streit Cunningham. It uses the same Lindberg 1 inch tube furnace as the chemical vapor deposition setup.
+Atomic layer deposition (ALD) is a process in which thin, usually insulating, films are grown by reacting a series of gases. As a part of this work, we have constructed a homemade ALD reactor in the Markovic lab with the help of undergraduate student Streit Cunningham. It uses the same Lindberg 1 inch tube furnace as the chemical vapor deposition setup.
 
 Samples are loaded into a 1 inch quartz tube and placed in the furnace. The tube is evacuated to about \SI{100}{\milli\torr} using a mechanical rough pump. A high purity \ce{N2} flow is turned on and adjusted so the pressure in the chamber, with the pump still running, is \SI{1000}{\milli\torr}. The \ce{N2} flow will act as a carrier gas throughout the process. We have only tested the reactor for growth of \ce{Al2O3} layers. Two precursor gases are used in the growth of \ce{Al2O3}, water vapor and trimethylaluminum (TMA). Once the quartz tube is evacuated and \ce{N2} flow is set, the water vapor and TMA are alternately pulsed using computer controlled solenoid valves. Films grow one monolayer (\SI{1.1}{\angstrom}) per pulse cycle. A typical recipe is as follows:
 
@@ -216,7 +216,7 @@ When patterning a thin film using a polymer mask, such as PMMA or S1813, the fin
 
 Typically, liftoff is very simple. The sample is soaked in acetone for 1-12 hours (depending on what else is going on in the lab), then rinsed in IPA for 30 seconds followed by a 30 second rinse in water. 
 
-To help remove any stubborn material the sample can be sprayed with a bottle of acetone for a few seconds before rinsing in IPA. Some samples can also be placed in a beaker of acetone in a sonicator for a few seconds before rinsing in IPA. Sonication is not ideal for nanotube samples, as the process tends to break nanotubes off of the substrate and introduce defects in long tubes. An example of this can be seen in Figure \ref{fig:broken_tube}.
+To help remove any stubborn material, the sample can be sprayed with a bottle of acetone for a few seconds before rinsing in IPA. Some samples can also be placed in a beaker of acetone in a sonicator for a few seconds before rinsing in IPA. Sonication is not ideal for nanotube samples, as the process tends to break nanotubes off of the substrate and introduce defects in long tubes. An example of this can be seen in Figure \ref{fig:broken_tube}.
 
 \begin{figure}
 	\centering
