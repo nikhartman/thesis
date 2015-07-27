@@ -8,9 +8,9 @@ Carbon nanotubes exhibit a variety of interesting material and electrical proper
 
 \section{Electronic Bandstructure of Graphene}
 
-The electronic bandstructure of graphene was first calculated in 1947 by P.R. Wallace (CITE). This was done as part of an effort to understand the electronic structure of bulk graphite. In this paper, there is mention of the two lowest energy bands and the half filling of a single layer of carbon atoms. It was not until 1984 that Semenoff discussed the existence of a linear dispersion relation for low energy electronic excitations in single layers of carbon atoms (CITE). This was done by looking at a generic honeycomb lattice as an analoge of 2+1 dimensional electrodynamics. Semenoff found the low energy electronic band structure of the monoatomic honeycomb lattice matched that of Dirac fermions.
+The electronic bandstructure of graphene was first calculated in 1947 by P.R. Wallace \cite{Wallace1947}. This was done as part of an effort to understand the electronic structure of bulk graphite. In this paper, there is mention of the two lowest energy bands and the half filling of a single layer of carbon atoms. It was not until 1984 that Semenoff discussed the existence of a linear dispersion relation for low energy electronic excitations in single layers of carbon atoms \cite{Semenoff1984}. This was done by looking at a generic honeycomb lattice as an analoge of 2+1 dimensional electrodynamics. Semenoff found the low energy electronic band structure of the monoatomic honeycomb lattice matched that of Dirac fermions.
 
-Graphene was first isolated on silicon wafers through mechanical exfoliation in 2004. The semimetallic characteristics were confirmed through measuring transistor curves and the charge carrier sign change through the Hall effect (CITE). Shortly after, the same research group confirmed the existance of low energy Dirac fermions in graphene (CITE).
+Graphene was first isolated on silicon wafers through mechanical exfoliation in 2004. The semimetallic characteristics were confirmed through measuring transistor curves and the charge carrier sign change through the Hall effect \cite{Novoselov2004}. Shortly after, the same research group confirmed the existance of low energy Dirac fermions in graphene \cite{Novoselov2005}.
 
 Beginning with the structure of the monoatomic honeycomb lattice, and following the original work of Wallace, the electronic band structure of graphene will be derived below.
 
@@ -34,7 +34,7 @@ Using the coordinates defined in Figure \ref{fig:graphene_unit_cell}, the lattic
     \vec{a}_2 &= \frac{3a}{2}\hat{i} - \frac{\sqrt{3}a}{2}\hat{j}
 \end{align}
 
-Here $a$ is the carbon-carbon bond distance, \SI{1.42}{\angstrom} (CITE).
+Here $a$ is the carbon-carbon bond distance, \SI{1.42}{\angstrom} \cite{Javey2009}.
 
 The reciprocal lattice vectors, $\vec{b}_1$ and $\vec{b}_2$ can now be found in the usual way.
 
@@ -60,7 +60,7 @@ The reciprocal lattice is also a honeycomb lattice, rotated 90 degrees from the 
 
 \subsection{Tight Binding Model}
 
-The simplest way to calculate the low energy electronic band structure for graphene is using a nearest neighbor tight binding model, also known as a linear combination of atomic orbitals (CITE). In this model, each conduction electron is tightly bound to a lattice site with a small probability of hopping only to a nearest neighbor site. With this simple picture for electron conduction, one can find the lowest energy bands in graphene.
+The simplest way to calculate the low energy electronic band structure for graphene is using a nearest neighbor tight binding model, also known as a linear combination of atomic orbitals \cite{Charlier2007, Ibach2010}. In this model, each conduction electron is tightly bound to a lattice site with a small probability of hopping only to a nearest neighbor site. With this simple picture for electron conduction, one can find the lowest energy bands in graphene.
 
 Given that the model deals with the motion of individual electrons and their wavefunctions at each atomic site, the goal will be to solve the time independent Schr\"{o}dinger equation.
 
@@ -239,7 +239,7 @@ A useful consequence of the pseudospin is the reduction in scattering in graphen
 
 \section{Electronic Bandstructure of Carbon Nanotubes} 
 
-Now that the bandstructure a graphene sheet has been calculated, finding the electronic bandstructure of various carbon nanotubes is as simple as applying a few boundary conditions.
+Now that the bandstructure a graphene sheet has been calculated, finding the electronic bandstructure of various carbon nanotubes is as simple as applying a few boundary conditions \cite{Saito1998, Samsonidze2003, Charlier2007, Javey2009}.
 
 The structure of a carbon nanotube can be completely described by its chiral vector.
 
@@ -405,7 +405,7 @@ Once the device is cold, the filling of electrons can be controlled by varying t
     \label{fig:QD_model}
 \end{figure}
 
-The model we will use to discuss this device is called the constant interaction model. Tunnel barriers naturally form at the interface between the metal contacts and the nanotube. At low temperatures, this leads to weak tunneling on/off the nanotube (quantum dot). Because of this, the number of electrons confined on the dot at any given time is an integer, N. Adding an additional electron to the dot requires overcoming the Coulomb repulsion between the additional electron and those already confined on the dot. The constant interaction model treats this charging energy as a constant, regardless of the number of electrons confined on the dot. The model also assumes that the states on the quantum dot are not affected by the electron-electron interactions.
+The model we will use to discuss this device is called the constant interaction model. Tunnel barriers naturally form at the interface between the metal contacts and the nanotube. At low temperatures, this leads to weak tunneling on/off the nanotube (quantum dot). Because of this, the number of electrons confined on the dot at any given time is an integer, N. Adding an additional electron to the dot requires overcoming the Coulomb repulsion between the additional electron and those already confined on the dot. The constant interaction model treats this charging energy as a constant, regardless of the number of electrons confined on the dot. The model also assumes that the states on the quantum dot are not affected by the electron-electron interactions \cite{Kouwenhoven2001}.
 
 With these assumptions, it is simple to find the energy required to add an electron to the dot. To begin, the total energy on the dot can be approximated.
 
@@ -437,7 +437,7 @@ The simplest measurement to make on a quantum dot like the one described here, i
     \label{fig:gate_blockade}
 \end{figure}
 
-Figure \ref{fig:real_gate} shows conductance as a function of gate voltage through an actual carbon nanotube quantum dot device. A close look at the spacing of the conductance peaks reveals some hints of four-fold symmetry that is an important part of the structure of the nanotube quantum dot. Adding the first electron to the dot costs an energy $ \Delta \mu(N) = \frac{e^2}{2C} + \Delta E$. However, the electron spin and valley degeneracy combine to give each level in the quantum potential well a degeneracy of four. The next three electrons added move into the same level, which only requires an energy of $\Delta \mu(N) = \frac{e^2}{2C}$ for each electron. This pattern continues for each level on the dot, such that the energy required to add the $N$ electron is always larger than the energy required to add the $N+1$, $N+2$, and $N+3$ electrons.
+Figure \ref{fig:real_gate} shows conductance as a function of gate voltage through an actual carbon nanotube quantum dot device. A close look at the spacing of the conductance peaks reveals some hints of four-fold symmetry that is an important part of the structure of the nanotube quantum dot \cite{Cobden2002}. Adding the first electron to the dot costs an energy $ \Delta \mu(N) = \frac{e^2}{2C} + \Delta E$. However, the electron spin and valley degeneracy combine to give each level in the quantum potential well a degeneracy of four. The next three electrons added move into the same level, which only requires an energy of $\Delta \mu(N) = \frac{e^2}{2C}$ for each electron. This pattern continues for each level on the dot, such that the energy required to add the $N$ electron is always larger than the energy required to add the $N+1$, $N+2$, and $N+3$ electrons.
 
 \begin{figure}
     \centering
