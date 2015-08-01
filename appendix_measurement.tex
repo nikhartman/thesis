@@ -4,4 +4,176 @@
 \label{sec:measurement}
 \chaptermark{Measurement Details}
 
-A description of the cryogenics, measurement setup, and homemade electronics used in this tesis.
+In this thesis work a variety of standard low temperature and low noise measurement techniques have been used. This chapter will summarize these techniques with a focus on my own work and making the measurements repeatable for future lab members. 
+
+\section{Transport Measurements}
+
+All of the devices measurements carried out for this work have been two-probe, voltage biased measurements. The majority of measurements were DC, this was motivated by the fact that problems like gate leakage current is much easier to identify in a DC measurement. A few AC measurements were made, especially in the beginning of this work. Each measurement setup will be reviewed here.
+
+\subsection{DC Current Measurements}
+
+% add diagram
+
+\subsection{AC Conductance Measurements}
+
+% add diagram
+
+\subsection{Current Amplification}
+
+% add image of amplifier
+% add circuit for amplifier
+% add circuit for voltage subtractor
+
+\subsection{AC-DC Adder}
+
+% add circuit diagram
+
+\section{Cryogenics}
+
+A number of different cryostats and superconducting magnets were used for this work. This section will briefly review the various components used, including some new operating instructions that had to be developed during my work.
+
+\subsection{Oxford Magnet}
+
+% 
+
+\subsection{BTI Magnet}
+
+% 
+
+\subsection{Dunker}
+
+A simple 4He dunker was built for our lab several years ago by Chris Merchant. The dunker, seen in Figure (dunker) consists mainly of a vacuum can, sample holder, and ribbon cable connected to a 24-pin Fischer connector at room temperature. The dunker is very useful for quick measurements, and is extremely reliable for reaching 4K. It is small enough to fit in just about any cryostat or transfer dewar and can be loaded and cooled down in about an hour. This dunker was used for many of the measurements in this thesis.
+
+% dunker figure
+
+\subsection{Oxford Heliox 3He Cryostat}
+
+The Oxford 3He cryostat was used in this work for some very early measurements. After that it developed a leak in the 1K pot pumping line that made it very inconvenient for this work. The typical hold times were about 24 hours, 12 hours on a bad day.
+
+The primary cooling in 3He cryostat is from evaporative cooling of 3He liquid by cryopumping with a charcoal sorb. Before this is possible the 3He must be liquified. This is done by first pumping on a small volume of 4He known as the 1K pot. This pot will typically reach temperatures between 1.2 and 1.8K. The 3He gas, stored in a charcoal sorb in a separate volume, is released from the charcoal by heating the sorb to about 30K. The 3He gas then passes through the 1K pot, which is cold enough to condense the 3He gas into a liquid. The 3He liquid collects in a 3He pot, to which the sample has been thermally anchored. Once all the gas is released from the sorb, the sorb is cooled to 4K. The cold sorb the acts as a cryopump on the liquid 3He. This cryopumping cools the 3He pot to its base temperature of 250mK \cite{Balshaw2001}.
+
+The operation of these Oxford cyrostats is well-documented elsewhere. Temperature control is mainly done with an ITC503 temperature controller which monitors the temperature sensors and adjusts needle valve on the 1K pot line to keep the pot at the proper temperature during operation.
+
+\subsection{Oxford Kelvinox Dilution Refrigerator}
+
+% add image of fridge with sample holder
+% check notes for changes
+
+Dilution refrigerators rely on a mixture of 3He and 4He to achieve temperatures as low as 5mK. Our Kelvinox system is said to be capable of 7mK base temperatures, although, due to various problems with the IVC vacuum I have been unable to cool it below 70mK.
+
+The process by which the dilution fridge achieves its based temperature is easiest to understand by following the path of the gas mixture through the system. From room temperature the mixture is cooled to 4K by passing through the LHe bath in the magnet dewar. The mixture then passes through the 1K pot where 3He is condensed. The condensed mixture then passes through the primary impedance, designed to control the flow rate to the mixing chamber. After the primary impedance are a series of heat exchangers which use outgoing cold gas to cool the incoming mixture to 50mK. From there the mixture moves into the mixing chamber. The mixing chamber contains two phases of the 3He/4He mixture, a dilute phase and a concentrated phase. The most important cooling stage of the dilution fridge is the evaporating of 3He from the concentrated phase into the dilute phase in the mixing chamber. 3He the moves from the dilute phase in the mixing chamber into the still, which is held at about 600mK. Osmotic pressure from the lower 3He concentration in the still drives this movement. Finally the mixture is pumped through the heat exchangers and out of the fridge through the still pumping line. It then passes through cold traps to remove any impurities before entering the condenser line \cite{Balshaw2001}.
+
+Because each dilution fridge has a little of its own character, instructions are provided here for the Markovic lab Kelvinox system. This system was not used for about 8 years before I cooled it down again in 2014. It required several repairs to the temperature control wiring and pump power supplies, but the gas handling systems were found to be in very good condition. After several cool downs, it became apparent that the system had a leak into the IVC from the top plate.
+
+The instructions below assume all of the gas handling lines have been leak checked and pumped out. The manual valves on the still/condenser lines should be open. It is also useful to the monitor the still temperature with a resistance bridge while doing this.
+
+\subsubsection*{Before opening dump}
+
+\begin{itemize}
+\item Fill LN trap with liquid nitrogen. Stop when level is about 5 inches from top
+\item Slowly insert LHe trap into port on top of fridge. 
+\item He recovery line should be connected at the large dewar exhaust port (this cools the magnet leads).
+\item Check dump levels and cool LN trap
+\item Close all IGH valves. 
+\item Cold trap 1 must be used for the initial cool down because only 12A is a needle valve
+\item Open green manual valves on the dump
+\item Switch on 3He rotary pump. Let the pump warm up for ~20 minutes
+\item Open valve 9
+\item Wait a few moments, then record the reading on G2. This will be used later to be sure all of the mash has been pumped back out of the fridge. (765±2)
+\item Close valve 9
+\item Open valve 1
+\item Open valve 13A. This will send some of the mash from behind the He3 pump into the LN trap. Wait for about 1 minute for LN boil off to slow.
+\item Open valve 12A to allow gas into the condenser line. Make sure P1 starts to rise. This proves there is no blockage in the fridge lines.
+\end{itemize}
+
+\subsubsection*{Starting the 1K pot pump}
+
+\begin{itemize}
+\item Make sure valves 1A, 2A, 4A, 5A are closed
+\item Start the 4He rotary pump
+\item Open valve 4A
+\item Open manual valve on the 1K pot line at the fridge
+\item Open needle valve to 100\%. Wait for G3 to fill >300mbar. 
+\item Close needle valve slowly until pressure in P2 drops to about 7.5 (from test values) Needle valve should be ~10\%
+\item Adjust needle valve until the 1K pot temperature stabilizes. It should be somewhere around 1.7K, maybe as low as 1.5K.
+\item Condense mixture from storage dump
+\item Close valve 12A. Wait for needle valve
+\item Open valve 3 to connect still and condenser lines
+\item Open valve 9 – G2 shows remaining pressure in dump (692)
+\item Check that 13A is still open
+\item Slowly open 12A. Keep condenser pressure (G1) below 200mbar. This prevents excessive load on the 1K pot. P2 rises very quickly as 12A is opened. Keep an eye on the 1K pot temperature. Needle valve likely needs to be adjusted.
+\item Still temperature should drop to 1.2K
+\item When 12A is 100\% open – wait for G1<100mbar
+\item Close valve 3. P1 still at 1000.
+\end{itemize}
+
+\subsubsection*{Starting circulation}
+
+\begin{itemize}
+\item Close valve 9
+\item Open valve 14 to connect the dump to the still pumping line
+\item Begin pumping still by opening 6 slowly. Keep G2 between 100-200mbar. Once the mixing chamber is below 2K things speed up. Once 6 is open more than 18\% it can be opened much faster.
+\item When 6 is fully open G1 and G2 should drop.
+\item After G1 and G2 stabilize most of the mixture should be condensed. (G1/G2 ~ 150 or lower)
+\item Close valve 14. Note: green manual valves on the dump should remain open during fridge operation
+\end{itemize}
+
+\subsubsection*{Going to base temperature}
+
+\begin{itemize}
+\item Switch on roots pump. Watch 1K pot temp. All other temps should drop fast.
+\item Still should be < 1.2K now. Mixing chamber and heat exchanger temperatures should follow still temperature
+\item When still line pressure (P1) is <0.3mbar increase circulation rate by turning on still heater. See the test results for details.
+\end{itemize}
+
+\subsection{He3}
+
+% figure out who makes this thing
+% add image of cryostat 
+
+After both of our Oxford cryostats were found to have leaks, we obtained this cryostat on loan from the Reich lab next door to ours. This cryostat had not been used in about a decade before our lab adopted it. In order to make it compatible with our sample holders and breakout boxes, we rewired the cryostat with a 24-pin Fischer connector at room temperature and a 25-pin miniature D-sub connector anchored to the 3He pot. The original temperature control wiring was left in place, connected to a separate 19-pin connector connected to a custom breakout box. Heater power was supplied with $\pm$12V power supplies on the breakout box. The RuOx and Pt 3He pot temperature sensors were read with a Neocera LTC21 temperature controller.
+
+\subsubsection*{Setup}
+
+To complete these instructions a turbo pump with backing pump, rough pump for the 1K pot line, a 4He gas tank, vacuum grease, and (optionally) a leak checker will be needed.
+
+\begin{itemize}
+\item Mount samples and check wiring
+\item Clean cone seal, grease and seat vacuum can then evacuate
+\item Leak check cone seal
+\item Add "thumbfull of He4 exchange gas to IVC
+\item Purge the 1K pot pump line with 4He gas for at least 30 minutes at 1-5psi, then pressurize with 4He gas to 5 psi and close line
+\end{itemize}
+
+\subsubsection*{Cool Down}
+
+\begin{itemize}
+\item Insert the cryostat into the cold dewar by clamping down the sliding seal and lowering very slowly into the LHe bath
+\item Once the temperature reaches 10K on the 3He pot, pump out the exchange gas with a turbo pump
+\end{itemize}
+
+\subsubsection*{Cooling to Base Temperature}
+
+\begin{itemize}
+\item Connect the rotary pump to the 1K pot pumping line
+\item Turn on the pump, wait for pressure in line to drop, slowly open the valve to pump on the 1K pot.
+\item Wait for the pressure to stabilize
+\item Turn on the sorb heater to 500mW
+\item Wait for the 3He pot temperature to stabilize at 1.2-1.5K. 
+**NOTE** If this takes longer than 10-20 minutes, lower the sorb heater power to 50mW
+\item Once the 3He pot temperature reaches about 1.2K, wait 30-40 minutes for the 3He to condense. At this point the sorb heater should be set to 50mW.
+\item Turn off the sorb heater power.
+\item Turn on the switch heater for 1 minute at 10mW. This is to cool the sorb more quickly by releasing some exchange gas from the charcoal sorb.
+\item Turn the switch heater down to 1mW (may need to be adjusted from 0-1mW depending on base temperature behavior)
+\item Wait for the 3He sorb temperature to reach its based temperature (250-300mK)
+\end{itemize}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\textwidth]{measurements/he3_cooldown.pdf}
+    \caption{3He pot temperature versus time for the ?? 3He cryostat.}
+    \label{fig:he3_cooldown}
+\end{figure}
+
+A diagram of this process can be seen in Figure \ref{fig:he3_cooldown}.
+

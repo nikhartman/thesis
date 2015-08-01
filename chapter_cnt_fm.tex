@@ -4,16 +4,69 @@
 
 \section{Characteristics of Measured Samples}
 
-Summarize the characteristics of the quantum dots measured. Fabrication, room temperature resistances, quantum dot specs.
+Of the many samples discussed in Chapter \ref{chap:contacts}, seven FM-CNT-FM devices were measured at low temperatures. Details, including room temperature resistance, about these samples can be seen in Table \ref{table:fm_devices}.
+
+\begin{table}
+    \centering
+    \caption{Details of measured FM-CNT-FM devices}
+    \begin{tabular}{ r | c | c c c}
+        Sample & Leads & Material & Deposition Method & R($T=300K$) \\ \hline
+        SCF72 & 17-19 & Co & sputter & \SI{65}{\kilo\ohm} \\
+        SCF72 & 21-23 & Co & sputter & \SI{76}{\kilo\ohm}\\
+        SCF75 & 21-23 & Co & sputter & \SI{280}{\kilo\ohm}\\
+        SCF75 & 15-16 & Co & sputter & \SI{30}{\kilo\ohm}\\
+        SCF96 & 9-12  & Co & electron beam evaporation & \SI{200}{\kilo\ohm}\\
+        SCF96 & 16-17 & Co & electron beam evaporation & \SI{400}{\kilo\ohm}\\
+        SCF98 & 11-12 & Co & electron beam evaporation & \SI{120}{\kilo\ohm}\\
+    \end{tabular}
+    \label{table:fm_devices}  
+\end{table}
+
+Each of these samples was measured at 4K, with the exception of SCF98 (11-12) which was measured at 150mK. Figure \ref{fig:all_FM_CD} shows Coulomb diamond plots for each of the samples. These were used to calculate the quantum dot properties seen in Table \ref{table:qd_characters}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{fmdots/all_fm_dots.pdf}
+    \caption{Conductance as a function of $V_{bias}$ and $V_{gate}$ for all measured ferromagnetic quantum dots.}
+    \label{fig:all_FM_CD}
+\end{figure}
+
+%\begin{table}
+%    \centering
+%    \caption{Low temperature characteristics of FM-CNT-FM quantum dots. FIX THIS TABLE.}
+%    \begin{tabular}{ r | c | c c c}
+%        Sample & Leads & $\Delta \mu (meV)$ & $\Delta E (meV)$ & $\frac{e^2}{2C} (meV)$ & $L_{measured} (nm)$ & $L_{design}$ (nm) & $C_{\Sigma} (aF)$ & $\alpha_{G}$ \\ \hline
+%        SCF72 & 23-21     & 8  & x & 175 & 300 & x  & 0.080 \\ 
+%        SCF72 & 17-19     & 8  & 3 & 166 & 300 & 20 & 0.072 \\
+%        SCF75 & 21-23     & 15 & 5 & 100 & 300 & 8  & 0.075 \\
+%        SCF75 & 15-16     & 12 & 5 & 100 & 300 & 10 & 0.110 \\
+%        SCF75 & 15-16 (2) & 6  & 5 & 100 & 300 & 80 & 0.075 \\
+%        SCF96 & 9-12      & 30 & 5 & 100 & 300 & 3  & 0.011 \\
+%        SCF96 & 16-17     & 22 & 5 & 100 & 300 & 5  & 0.006 \\
+%        SCF98 & 11-12     & 7  & 3 & 166 & 300 & 20 & 0.005 \\
+%    \end{tabular}
+%    \label{table:cold_fm_devices}  
+%\end{table}
+
+$\alpha_{G}$ is the lever arm. It is defined as $\alpha_{G} = C_G/C_{\Sigma}$ and is used to convert gate voltages to energies, $U_{gate} = \alpha_{G}eV_{gate}$ (CITE Electron Transport in Mesoscopic...). The lever arm can be calculated based on the geometry of the Coulomb diamonds. Figure \ref{fig:alpha_calc} illustrates how to calculate $\alpha_{G}$. The lever arm characterizes the coupling regime for each devices. Looking at the lever arm values, the electron beam evaporated samples are in a much weaker coupling regime than the sputtered samples. All other aspects of the fabrication were the same over all four samples. It is unclear why the deposition method for the source and drain contacts would affect the gate coupling. 
 
 \section{Tunneling Magnetoresistance}
 
-Discuss the magnetoresistance data. Include data showing quadratic behavior over large field sweep. Also, discuss bias/field sweep showing some interesting behavior right around zero field.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{fmdots/TMR.pdf}
+    \caption{Tunneling magnetoresistance measurement taken on devices SCFM72 (17-19) at $V_{gate} = 0V$ and $V_{bias} = 5mV$.}
+    \label{fig:TMR_real}
+\end{figure}
 
-\section{Cotunneling at Positive Bias}
+Show data in 45$^\circ$ device? Only if I can explain it.
 
-Discuss that sample that showed some cotunneling states at positive bias/zero field. Do your best to come up with an explanation that fits those two criteria.
+\section{Resonant Tunneling at Positive Bias}
 
-\section{Negative Differential Conductance in Magnetic Field}
+This is pretty clear, but needs an explanation. Even if it is a boring one.
 
-Show data with negative differential conductance at finite field. Maybe the explanation for that fits with what was seen in the previous section.
+\section{Negative Differential Conductance in Coulomb Blockade Regime}
+
+SCF75 is probably explained with the double quantum dot paper.
+
+SCF96 has yet to be explained. That paper with the pinned magnetic lead might offer some insight.
