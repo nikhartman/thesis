@@ -1,0 +1,176 @@
+\chapter{Details of Cryostat Operation}
+\label{sec:cryostat}
+\chaptermark{Cryostat Operation}
+
+\subsection{Oxford Kelvinox Dilution Refrigerator}
+\label{sec:kelvinox}
+
+The instructions below assume all of the gas handling lines have been leak checked and pumped out. The manual valves on the still/condenser lines should be open. It is also useful to the monitor the still temperature with a resistance bridge while following these instructions.
+
+\subsubsection*{Before opening dump}
+
+\begin{itemize}
+\item Fill LN trap with liquid nitrogen. Stop when level is about 5 inches from top
+\item Slowly insert LHe trap into port on top of fridge. 
+\item He recovery line should be connected at the large dewar exhaust port (this cools the magnet leads).
+\item Check dump levels and cool LN trap
+\item Close all IGH valves. 
+\item Cold trap 1 must be used for the initial cool down because only 12A is a needle valve
+\item Open green manual valves on the dump
+\item Switch on 3He rotary pump. Let the pump warm up for ~20 minutes
+\item Open valve 9
+\item Wait a few moments, then record the reading on G2. This will be used later to be sure all of the mash has been pumped back out of the fridge. (762±5)
+\item Close valve 9
+\item Open valve 1
+\item Open valve 13A. This will send some of the mash from behind the He3 pump into the LN trap. Wait for about 1 minute for LN boil off to slow. 
+\item Open valve 12A to allow gas into the condenser line. Make sure P1 starts to rise. This proves there is no blockage in the fridge lines. G1 and G2 should drop to 30 while P1 remains at 1000.
+\end{itemize}
+
+\subsubsection*{Starting the 1K pot pump}
+
+\begin{itemize}
+\item Make sure valves 1A, 2A, 4A, 5A are closed
+\item Start the 4He rotary pump
+\item Open valve 4A
+\item Open manual valve on the 1K pot line at the fridge
+\item Open needle valve to 100\%. Wait for G3 to fill >300mbar. 
+\item Close needle valve slowly until pressure in P2 drops to about 7.5 (from test values) Needle valve should be ~10\%
+\item Adjust needle valve until the 1K pot temperature stabilizes. It should be somewhere around 1.7K, maybe as low as 1.5K.
+\end{itemize}
+
+\subsubsection*{Condense mixture from storage dump}
+\begin{itemize}
+\item Close valve 12A. Wait for needle valve
+\item Open valve 3 to connect still and condenser lines
+\item Open valve 9 – G2 shows remaining pressure in dump (692)
+\item Check that 13A is still open
+\item Slowly open 12A. Keep condenser pressure (G1) below 200mbar. This prevents excessive load on the 1K pot. P2 rises very quickly as 12A is opened. Keep an eye on the 1K pot temperature. Needle valve likely needs to be adjusted.
+\item Still temperature should drop to 1.2K
+\item When 12A is 100\% open – wait for G1<100mbar
+\item Close valve 3. P1 still at 1000.
+\end{itemize}
+
+\subsubsection*{Starting circulation}
+
+\begin{itemize}
+\item Close valve 9
+\item Open valve 14 to connect the dump to the still pumping line
+\item Begin pumping still by opening 6 slowly. Keep G2 between 100-200mbar. Once the mixing chamber is below 2K things speed up. Once 6 is open more than 18\% it can be opened much faster.
+\item When 6 is fully open G1 and G2 should drop.
+\item After G1 and G2 stabilize most of the mixture should be condensed. (G1/G2 ~ 150 or lower)
+\item Close valve 14. Note: green manual valves on the dump should remain open during fridge operation
+\end{itemize}
+
+\subsubsection*{Going to base temperature}
+
+\begin{itemize}
+\item Switch on roots pump. Watch 1K pot temp. All other temps should drop fast.
+\item Still should be < 1.2K now. Mixing chamber and heat exchanger temperatures should follow still temperature
+\item When still line pressure (P1) is <0.3mbar increase circulation rate by turning on still heater. See the test results for details.
+\item The lowest base temperature obtained in our lab was using a still heater power of 10mW.
+\end{itemize}
+
+With everything setup correctly, the fridge should remain at base temperature for a few weeks. LN traps should be switched and regenerated every few days, and all cryogen levels should be checked daily.
+
+\subsubsection*{Removing Mixture}
+
+\begin{itemize}
+\item Note: Do not remove LN or LHe traps before this process is complete
+\item Open valve 3 to equalize pressure in still and condenser lines
+\item Close valve 6
+\item Open valve 4
+\item Close 1K pot needle valve
+\item Close 4A
+\item Stop He4 pump
+\item Vent 1K pot with He gas from main bath (or gas tank connected to main bath port) by opening 1A (make sure main bath line is actually connected first)
+\item Increase still and mixing chamber heaters to maximum (20mW/200mW). This is very important. Otherwise the process takes more than a day.
+\item Close valves 4, 13A
+\item Open valve 9
+\item Slowly open valve 6 to pump mixture into dump
+\item Make sure 12A is open while moving mixture to dump
+\item When G1 is a few mbar, close valve 6, quick open valve 14 to let warm gas into the fridge, let G1 and G2 equalize, close valve 14, slowly open valve 6. (12A may need to be close for the pumping and flushing process to prevent warm gas from reaching the LN and causing excessive boil off.) This seemed to work best with the roots pump off.
+\item Repeat this pumping and flushing until G2 reaches it’s original value, P1 < 0.1mbar, and resistors show their 4.2K values
+\item When G2 = (pressure measured when the dump was first opened) and P1<0.1mbar, close valves 4, 6, 9, 12A
+\item Open valve 6 all the way and wait for some time to be sure all of the mash has been pumped out of the fridge lines.
+\item In the end G1, P1 = 0 and G2 = (765±2)
+\item Shut manual valves on fridge
+\item Close all valves on IGH
+\item Wait for valve 6 to fully close
+\item Shut green manual valves on dump
+\item Turn He3 pump off. G2 may drop (to ~600), but the mash is safely contained in the IGH and He3 pump.
+\end{itemize}
+
+\subsubsection*{LHe trap}
+
+\begin{itemize}
+\item Before the LHe trap is warmed, close the manual speedivalve on the condenser line
+\item Open valve 1
+\item Monitor pressure at G1
+\item Start 1K pot pump
+\item Pull out cold trap from dewar
+\item Open valves 5A, 2A, 7, 2
+\item Heat trap gently
+\item Wait for G1 to drop back to 0
+\item Close 1, 2, 7, 2A, 5A
+\end{itemize}
+
+\subsubsection*{LN trap}
+
+\begin{itemize}
+\item Open valve 12A
+\item Monitor G1 pressure
+\item Start 1K pot pump
+\item Pull out trap
+\item Pump trap by opening valves 5A, 2A, 7, 2
+\item Open 11A for faster pumping
+\item When G1 drops to zero close 11A, 12A, 2, 7, 2A, 5A.
+\end{itemize}
+
+Make sure all manual valves on the fridge are closed. Remove pumping lines. Connect He gas source to vent port on sliding seal. Hoist fridge out of dewar. Cover dewar opening with blank plate.
+
+\subsection{RMC 3He Cryostat}
+\label{sec:rmc}
+
+Below are detailed instructions for cooling down the RMC 3He cryostat. To complete these instructions a turbo pump with backing pump, rough pump for the 1K pot line, a 4He gas tank, vacuum grease, and (optionally) a leak checker will be needed.
+
+\subsubsection*{Setup}
+
+\begin{itemize}
+\item Mount samples and check wiring
+\item Clean cone seal, grease and seat vacuum can then evacuate
+\item Leak check cone seal
+\item Add "thumbfull of He4 exchange gas to IVC
+\item Purge the 1K pot pump line with 4He gas for at least 30 minutes at 1-5psi, then pressurize with 4He gas to 5 psi and close line
+\end{itemize}
+
+\subsubsection*{Cool Down}
+
+\begin{itemize}
+\item Insert the cryostat into the cold dewar by clamping down the sliding seal and lowering very slowly into the LHe bath
+\item Once the temperature reaches 10K on the 3He pot, pump out the exchange gas with a turbo pump
+\end{itemize}
+
+\subsubsection*{Cooling to Base Temperature}
+
+\begin{itemize}
+\item Connect the rotary pump to the 1K pot pumping line
+\item Turn on the pump, wait for pressure in line to drop, slowly open the valve to pump on the 1K pot.
+\item Wait for the pressure to stabilize 
+\item Turn on the sorb heater to 500mW
+\item Wait for the 3He pot temperature to stabilize at 1.2-1.5K. 
+**NOTE** If this takes longer than 10-20 minutes, lower the sorb heater power to 50mW
+\item Once the 3He pot temperature reaches about 1.2K, wait 30-40 minutes for the 3He to condense. At this point the sorb heater should be set to 50mW.
+\item Turn off the sorb heater power.
+\item Turn on the switch heater for 1 minute at 10mW. This is to cool the sorb more quickly by releasing some exchange gas from the charcoal sorb.
+\item Turn the switch heater down to 1mW (may need to be adjusted from 0-1mW depending on base temperature behavior)
+\item Wait for the 3He sorb temperature to reach its based temperature (250-300mK)
+\end{itemize}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\textwidth]{measurements/he3_cooldown.pdf}
+    \caption{3He pot temperature versus time for the RMC 3He cryostat.}
+    \label{fig:he3_cooldown}
+\end{figure}
+
+A diagram of this process can be seen in Figure \ref{fig:he3_cooldown}.

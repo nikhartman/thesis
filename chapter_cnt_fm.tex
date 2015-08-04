@@ -2,13 +2,10 @@
 \label{sec:FMCNTQD}
 \chaptermark{Ferromagnetic CNTQD}
 
-\section{Characteristics of Measured Samples}
-
-Of the many samples discussed in Chapter \ref{chap:contacts}, seven FM-CNT-FM devices were measured at low temperatures. Details, including room temperature resistance, about these samples can be seen in Table \ref{table:fm_devices}.
+Of the many samples discussed in Chapter \ref{chap:contacts}, seven FM-CNT-FM devices were measured at low temperatures. Details, including room temperature resistance, can be seen in Table \ref{table:rt_fm_devices}.
 
 \begin{table}
     \centering
-    \caption{Details of measured FM-CNT-FM devices}
     \begin{tabular}{ r | c | c c c}
         Sample & Leads & Material & Deposition Method & R($T=300K$) \\ \hline
         SCF72 & 17-19 & Co & sputter & \SI{65}{\kilo\ohm} \\
@@ -18,39 +15,49 @@ Of the many samples discussed in Chapter \ref{chap:contacts}, seven FM-CNT-FM de
         SCF96 & 9-12  & Co & electron beam evaporation & \SI{200}{\kilo\ohm}\\
         SCF96 & 16-17 & Co & electron beam evaporation & \SI{400}{\kilo\ohm}\\
         SCF98 & 11-12 & Co & electron beam evaporation & \SI{120}{\kilo\ohm}\\
+        \label{table:rt_fm_devices}  
     \end{tabular}
-    \label{table:fm_devices}  
+    \caption{Details of measured FM-CNT-FM devices}
 \end{table}
 
-Each of these samples was measured at 4K, with the exception of SCF98 (11-12) which was measured at 150mK. Figure \ref{fig:all_FM_CD} shows Coulomb diamond plots for each of the samples. These were used to calculate the quantum dot properties seen in Table \ref{table:qd_characters}
+Each of these samples was measured at 4K, with the exception of SCF98 (11-12) which was measured at 150mK. Figure \ref{fig:all_FM_QD} shows Coulomb diamond plots for each of the samples. These were used to calculate the quantum dot properties seen in Table \ref{table:cold_fm_devices}
+
+\begin{table}
+    \centering
+    \footnotesize
+    \begin{tabular}{ r | r | c c c c c c c}
+        Sample & Leads & $\Delta \mu (meV)$ & $\Delta E (meV)$ & $\frac{e^2}{2C} (meV)$ & $L_{measured} (nm)$ & $L_{design}$ (nm) & $C_{\Sigma} (aF)$ & $\alpha_{G}$ \\ \hline
+        SCF72 & 23-21 & 8  & x   & x    & 175 & 300 & x  & 0.080 \\ 
+        SCF72 & 17-19 & 8  & 1.8 & 6.2  & 280 & 300 & 13 & 0.072 \\
+        SCF75 & 21-23 & 15 & 4.5 & 11.5 & 110 & 300 & 7  & 0.075 \\
+        SCF75 & 15-16 & 12 & 3.5 & 8.5  & 140 & 300 & 9  & 0.110 \\
+        SCF96 & 9-12  & 30 & 4.0 & 26.0 & 125 & 300 & 3  & 0.011 \\
+        SCF96 & 16-17 & 22 & 2.0 & 20.0 & 250 & 300 & 4  & 0.006 \\
+        SCF98 & 11-12 & 7  & 1.8 & 5.2  & 280 & 300 & 15 & 0.005 \\
+        \label{table:cold_fm_devices}  
+    \end{tabular}
+    \caption{Low temperature characteristics of FM-CNT-FM quantum dots}
+\end{table}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.6\textwidth]{fmdots/all_fm_dots.pdf}
+    \includegraphics[width=1.0\textwidth]{fmdots/all_fm_dots.png}
     \caption{Conductance as a function of $V_{bias}$ and $V_{gate}$ for all measured ferromagnetic quantum dots.}
-    \label{fig:all_FM_CD}
+    \label{fig:all_FM_QD}
 \end{figure}
 
-%\begin{table}
-%    \centering
-%    \caption{Low temperature characteristics of FM-CNT-FM quantum dots. FIX THIS TABLE.}
-%    \begin{tabular}{ r | c | c c c}
-%        Sample & Leads & $\Delta \mu (meV)$ & $\Delta E (meV)$ & $\frac{e^2}{2C} (meV)$ & $L_{measured} (nm)$ & $L_{design}$ (nm) & $C_{\Sigma} (aF)$ & $\alpha_{G}$ \\ \hline
-%        SCF72 & 23-21     & 8  & x & 175 & 300 & x  & 0.080 \\ 
-%        SCF72 & 17-19     & 8  & 3 & 166 & 300 & 20 & 0.072 \\
-%        SCF75 & 21-23     & 15 & 5 & 100 & 300 & 8  & 0.075 \\
-%        SCF75 & 15-16     & 12 & 5 & 100 & 300 & 10 & 0.110 \\
-%        SCF75 & 15-16 (2) & 6  & 5 & 100 & 300 & 80 & 0.075 \\
-%        SCF96 & 9-12      & 30 & 5 & 100 & 300 & 3  & 0.011 \\
-%        SCF96 & 16-17     & 22 & 5 & 100 & 300 & 5  & 0.006 \\
-%        SCF98 & 11-12     & 7  & 3 & 166 & 300 & 20 & 0.005 \\
-%    \end{tabular}
-%    \label{table:cold_fm_devices}  
-%\end{table}
+The lever arm, $\alpha_{G}$, defined as $\alpha_{G} = C_G/C_{\Sigma}$ and is used to convert gate voltages to energies, $U_{gate} = \alpha_{G}eV_{gate}$ \cite{Ihn2004}. The lever arm can be calculated based on the geometry of the Coulomb diamonds. Figure \ref{fig:alpha_calc} illustrates how to calculate $\alpha_{G}$. The lever arm characterizes the coupling regime for each devices. Looking at the lever arm values, the electron beam evaporated samples are in a much weaker coupling regime than the sputtered samples. All other aspects of the fabrication were the same over all four samples. 
 
-$\alpha_{G}$ is the lever arm. It is defined as $\alpha_{G} = C_G/C_{\Sigma}$ and is used to convert gate voltages to energies, $U_{gate} = \alpha_{G}eV_{gate}$ (CITE Electron Transport in Mesoscopic...). The lever arm can be calculated based on the geometry of the Coulomb diamonds. Figure \ref{fig:alpha_calc} illustrates how to calculate $\alpha_{G}$. The lever arm characterizes the coupling regime for each devices. Looking at the lever arm values, the electron beam evaporated samples are in a much weaker coupling regime than the sputtered samples. All other aspects of the fabrication were the same over all four samples. It is unclear why the deposition method for the source and drain contacts would affect the gate coupling. 
+\begin{figure}
+    \centering
+    \includegraphics[width=1.0\textwidth]{fmdots/alpha_calc.png}
+    \caption{Calculating the lever arm using Coulomb diamond geometry.}
+    \label{fig:alpha_calc}
+\end{figure}
 
 \section{Tunneling Magnetoresistance}
+
+Tunneling magnetoresistance is an change in resistance measured across a ferromagnet/insulator/ferromagnet structure. The spin transport through such an interface can be made tunable by replacing the insulator with a carbon nanotube quantum dot. Exchange coupling with the ferromagnetic leads will split the spin degeneracy of the quantum dot, making it possible to tune the magnitude and even the sign of the magnetoresistance \cite{...}
 
 \begin{figure}
     \centering
