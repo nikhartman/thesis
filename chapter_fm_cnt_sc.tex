@@ -1,7 +1,251 @@
-%% This is going to be my carbon nanotube chapter. It should be based almost completely on GBO notes
-
 \chapter{Spin Transport in Tunable Ferromagnet/Superconductor Junction}
 \label{sec:SCFM}
 \chaptermark{FM-CNT-SC}
 
-Two samples to discuss. MT7 and scfmh8 (possibly scfmh2,5 as well). Low resolution Bias/Field sweeps of MT7. Interesting switching behavior in scfmh8 at low field.
+%Motivation... show MT results to measure spin polarization using zeeman splitting of the tunneling current into a superconductor. in the same way that a nanotube quantum dot can be used to modulate the TMR signal in a ferromagnetic junction, it should be possible to electrically tune the spin transport through a ferromagnet/superconductor junction. 
+%
+%many samples made... two work... properties
+%
+%show CD data (below and above critical field) and bias/field data for MT7, discuss linear features in bias/field data in terms of Zeeman splitting
+%
+%difficult to determine any ferromagnetic effects in that data. move on to scfm8 data. show Nb measurement to establish critical field. show Nb-CNT-Nb data to show effect of critical field on the types of data we're looking at. show Py-CNT-Nb data. point out hysteresis and low field switching (mention coercive field of similar measurements in Py spin valves). draw a figure describing the tunneling situation. try to plot a coulomb diamond to get an idea of what energy scales are present.
+%
+%Two samples to discuss. MT7 and scfmh8 (possibly scfmh2,5 as well). Low resolution Bias/Field sweeps of MT7. Interesting switching behavior in scfmh8 at low field.
+
+%%%%%%%%  Chapter starts below %%%%%%%%%%%
+
+In 1971, Tedrow and Meservey made their famous measurement of the spin polarization in a ferromagnetic nickel thin film \cite{Tedrow1971}. This was done by creating a tunnel junction between the thin nickel film and a thin aluminum film. The density of states of the aluminum film was used as a probe into the spin polarization of the nickel film by measuring the conductance through the junction. Tedrow and Meservey later used this same technique to characterize a number of ferromagnetic materials \cite{Tedrow1973}
+
+The motivation for the work present in this chapter was to make the same measurement using a carbon nanotube quantum dot as a spin tunable tunnel barrier between a ferromagnetic and superconducting lead. In doing so the spin resolved density of states of each material could be inferred from the differential conductance through the quantum dot as a function of magnetic field.
+
+\section{Background}
+
+The results of the Tedrow and Meservey experiment can be described with a simple theory based on the density of states of the materials \cite{Meservey1994}. Figure \ref{fig:MT_explanation}(a) shows schematically the density of states on each side of the tunnel barrier in a non-zero magnetic field applied parallel to the thin films separated by an insulator. The ferromagnet has a larger number of spins aligned with its magnetization (and the applied field). In the superconducting film, the density of states is split due to Zeeman splitting in the applied magnetic field. The energy to add a spin up (aligned with the field) particle is lower than adding a spin down particle. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{scfmdots/MT_explanation.pdf}
+    \caption{(a) Energy diagram showing the density of states of each material in the F-I-SC junction. Figure adapted from \cite{Moodera2010}. (b) Superconducting density of states with Zeeman splitting. (c) Spin-dependent kernel used to calculate the tunneling current. (d) Differential conductance as measured through the junction. Different spin-resolved peaks are labeled $\sigma_{1-4}$. Figures (b)-(d) are adapted from \cite{Meservey1994}.}
+    \label{fig:MT_explanation}
+\end{figure}
+
+To begin, the tunneling current through a normal-insulator-superconductor junction can be written as follows:
+
+\begin{equation}
+    \label{eq:nis_junction}
+    I \sim N_n \int N_s(E)[f(E+eV) - f(E)]dE
+\end{equation}
+
+Where $N_n$ is the normal metal density of states which is indenpendent of energy in 2D and $f(E)$ is the Fermi function. The superconducting density of states $N_s$ can be written in the BCS form \cite{Tinkham1996}:
+
+\begin{equation}
+    \label{eq:bcs_dos}
+    N_s(E) = \begin{cases}
+    N_n(E)E\frac{E}{sqrt{E^2 \Delta^2}}, & |E| \geq \Delta.\\
+    0, & |E| < \Delta.
+  \end{cases}
+\end{equation}
+
+Taking the derivative of Equation \ref{eq:nis_junction} gives the differential conductance for the NIS junction:
+
+\begin{equation}
+    \label{eq:nis_diffcond}
+    \frac{dI}{dV} \sim N_n \int N_s(E)[\frac{df(E+eV)}{dV}]dE
+\end{equation}
+
+In an applied magnetic field the spin up (parallel to applied field) and spin down (anti-parallel) contributions can be written separately.
+
+\begin{equation}
+    \label{eq:nis_diffcond_field}
+    \frac{dI}{dV} \sim N_n \int N_s(E+\mu H)[\frac{df(E+eV)}{dV}]dE + N_n \int N_s(E-\mu H)[\frac{df(E+eV)}{dV}]dE
+\end{equation}
+
+Now that the expression for the differential conductance of an N-I-S junction is known, it is simple to infer the F-I-S results. Since the ferromagnet has a density of states that can be considered independent of the energy, like a normal metal in 2D, the only change is a factor to account for relative populations of spin up and spin down electrons.
+
+\begin{equation}
+    \label{eq:fis_diffcond_field}
+    \frac{dI}{dV} \sim N_n \int N_s(E+\mu H)[a\frac{df(E+eV)}{dV}]dE + N_n \int N_s(E-\mu H)[(1-a)\frac{df(E+eV)}{dV}]dE
+\end{equation}
+
+Where $a$ is the fraction of spin up electrons in the ferromagnet. Figure \ref{fig:MT_explanation}(b) shows the superconducting density of states in non-zero field and (b) shows the spin dependent kernel in the integrals in Equation \ref{eq:fis_diffcond_field}. Finally, Figure \ref{fig:MT_explanation}(d) shows the resulting differential conductance through the F-I-S junction. 
+
+The peak heights seen in Figure \ref{eq:fis_diffcond_field}(d), $\sigma_{1-4}$ can be used to calculate the polarization.
+
+\begin{equation}
+    \label{eq:polarization}
+    P = 2a-1 = \frac{(\sigma_4 - \sigma_2) - (\sigma_1 - \sigma_3)}{(\sigma_4 - \sigma_2) + (\sigma_1 - \sigma_3)}
+\end{equation}
+
+Equation \ref{eq:polarization} is what Tedrow and Meservey derived to measure the spin polarization of a given ferromagnetic thin film using tunneling current through an F-I-S junction.
+
+Now, it is important to consider what might be observed when replacing the tunnel junction with a carbon nanotube quantum dot. An energy diagram of the device can be seen in Figure \ref{fig:MT_proposed}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{scfmdots/MT_proposed.pdf}
+    \caption{Energy diagram showing the density of states and energy levels in a F-QD-SC junction. Figure adapted from \cite{Moodera2010}.}
+    \label{fig:MT_proposed}
+\end{figure}
+
+The levels on the dot should be non-degenerate due to exchange coupling with the ferromagnetic lead. The exact effect of this exchange coupling is not known in carbon nanotubes and could be determined using the proposed devices. The magnitude of the conductance peaks sketched in Figure \ref{fig:MT_explanation}(d) will be modulated by the gate voltage by bringing quantum dot levels with different spin textures in and out of resonance with the levels on the magnetic and superconducting leads. Looking at how these conductance peaks evolve in the magnetic field at different gave voltages will give information about the exchange coupling between the nanotube and ferromagnet. A similar measurement has been performed in \ce{InAs} quantum dots \cite{Hofstetter2010}. 
+
+Measurements of the differential conductance as a function of $V_{bias}$ and applied field should show the conductance peaks sketched in Figure \ref{fig:MT_explanation}(d) move as a function of the applied field in the same was as observed by Tedrow and Meservey. If the spin texture of the resonant quantum dot level is known, this measurement will probe the density of states of the ferromagnet and superconductor materials.
+
+%%%% what happens with a quantum dot in between %%%%
+
+\section{Characteristics of Samples}
+
+Two SC-CNT-FM devices were measured at 4K for this thesis, MT7 and SCFMH8. Basic properties of each device will be summarized here.
+
+\subsection*{MT7}
+
+Sample MT7 was one of the earliest samples made for this project and motivated a lot of my later work on fabrication and experimental setup. It was made using dropcast nanotubes on a silicon substrate with sputtered cobalt (50nm) and niobium (60nm) leads. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{scfmdots/mt7_sem.pdf}
+    \caption{Scanning electron microscope image of sample MT7. The leads are alternating Co and Nb, starting with Co at the top. Each section of nanotube between to adjacent leads forms a 300nm long quantum dot. The nanotube is not visible because of the 30kV accelerating potential used to make the image.}
+    \label{fig:mt7}
+\end{figure}
+
+The device is show in Figure \ref{fig:mt7}. Figure \ref{fig:mt7_gate} shows the conductance as a function of $V_{gate}$ measured at 4K. The inset of that figure shows some two-fold symmetry in the peaks. Both the spin and orbital degeneracies should be broken by the presence of the cobalt leads. The two-fold symmetry likely comes from a difference in magnitude of the spin and orbital splittings.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{scfmdots/mt7_9-11_gateswp_4K.pdf}
+    \caption{Conductance as a function of $V_{gate}$ in MT7. The inset shows a region with clear two-fold symmetry in the addition energy.}
+    \label{fig:mt7_gate}
+\end{figure}
+
+Coulomb blockade features were measured in this device both above and below the critical field of the niobium contacts, which is just under 1T. Figure \ref{fig:mt7_coulomb} shows this data. Some important information about the nature of this quantum dot can be extracted from the data in Figure \ref{fig:mt7_coulomb}. In the normal state (B=1T), the energy level splitting is measured to be $\Delta E  = 2.0$meV. This corresponds to a calculated quantum dot size of 250nm, in good agreement with the image in Figure \ref{fig:mt7}. The measured addition energy is about 2.5meV, giving a charging energy of 0.7meV and a total capacitance of 100aF and lever arm of $\alpha_G = 3.8$. This puts MT7 in a wildly different coupling regime than the substrate grown nanotubes used in the rest of this thesis.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{scfmdots/mt7_9-11_vigate_4K.pdf}
+    \caption{Conductance as a function of $V_{bias}$ and $V_{gate}$ in 0T (top) and 1T (bottom) magnetic field parallel to the leads.}
+    \label{fig:mt7_coulomb}
+\end{figure}
+
+In the top plot of Figure \ref{fig:mt7_coulomb} the niobium lead is in the superconducting state. Due to the presence of the superconducting gap, the overall measured conductance is decreased and the coulomb diamonds no longer close at low bias. The splitting between diamond peaks gives a measure of the superconducting gap, $2\Delta = 3.5$meV. The expected gap can be calculated from BCS theory:
+
+\begin{equation}
+    \label{eq:bcs_gap}
+    \Delta (T \rightarrow T_C) \approx 3.07 k_B T_C \sqrt(1 - T/T_C)
+\end{equation}
+
+Using this equation and the measured value of $T_C = 7$K, gives an expected gap of 1.2meV, which is in reasonably good agreement with the measured value of 1.75meV.
+
+\subsection*{SCFMH8}
+
+Sample SCFMH8 was one of the last samples made for this work. Nanotubes were grown directly on the substrate with predefined Mo markers and contacted with thermally evaporated permalloy (40nm) and sputtered Ti/Nb (5nm/60nm). An image of the device can be seen in Figure \ref{fig:scfmh8}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{scfmdots/scfmg1_sem.pdf}
+    \caption{Scanning electron microscope image of sample scfmh8. The three wide leads are Nb, while the three narrow leads are Py. These leads are connected to bonding pads made with electron beam lithography and thermally evaporated Cr/Au layers.}
+    \label{fig:scfmh8}
+\end{figure}
+
+As fabricated the thermally evaporated permalloy leads had contact resistances in the 100M$\Omega$ range. To improve the contact the samples were annealed at 325$^\circ$C for 3 hours in an Ar/\ce{H2} atmosphere. After annealing Py-CNT-Py junctions were approximately 50k$\Omega$ while Nb-CNT-Nb junctions were around 500k$\Omega$. After growth and annealing the gate on this device no longer worked. It is possible that the high temperature growth damaged the gate oxide.
+
+Figure \ref{fig:scfmh8_vi} shows the current and conductance as a function of the bias voltage. Without the back gate to tune the energy on the quantum dot, it is difficult to learn much about the level spacing form this plot. It is enough to say that the sample is in the Coulomb Blockade regime. As an additional test a two probe resistance measurement was made across a niobium wire fabricated on the same chip as SCFMH8 to confirm the critical field, which was found to be 2T.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{scfmdots/scfmh8_vi_4K.pdf}
+    \caption{Current (left) and conductance (right) as a function of $V_{bias}$ in sample SCFMH8.}
+    \label{fig:scfmh8_vi}
+\end{figure}
+
+\section{Zeeman Splitting of Differential Conductance Peaks}
+
+Figure \ref{fig:mt7_bisweep_edit} shows the evolution of the differential conductance peaks in sample MT7 as a function of the magnetic field. The black dashed lines in the bottom plot serve as a guide to the eye for each of the differential conductance peaks.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\textwidth]{scfmdots/mt7_9-11_bisweep-edited.pdf}
+    \caption{Top left: Coulomb diamonds in 0T. The white dashed line marks the gate voltage where the field sweep was taken. Top right: Coulomb diamonds in 2T parallel field. Bottom: Conductance as a function of $V_{bias}$ and parallel magnetic field. Here $V_{bias}$ was the fast sweep axis. Dashed lines represent approximate peak positions.}
+    \label{fig:mt7_bisweep_edit}
+\end{figure}
+
+Due to the noise levels and low resolution of the data it is difficult to make any fits to the dashed black lines tracing the conductance peaks in Figure \ref{fig:mt7_bisweep_edit}. Similar data was taken for SCFMH8 and can be seen in Figure \ref{fig:scfmh8_bisweep_edit}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\textwidth]{scfmdots/scfmh8_15-16_bisweep-edited.pdf}
+    \caption{Conductance as a function of $V_{bias}$ and parallel magnetic field in SCFMH8. $V_{bias}$ was the fast sweep axis. Dashed lines represent approximate peak positions. Magnetic field sweep direction is from left to right.}
+    \label{fig:scfmh8_bisweep_edit}
+\end{figure}
+
+To more easily discuss the differential conductance as a function of field, vertical cuts across the data in Figures \ref{fig:mt7_bisweep_edit} and \ref{fig:scfmh8_bisweep_edit} are shown in Figure \ref{fig:bisweep_cuts_all}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1.0\textwidth]{scfmdots/bisweep_cuts_both.pdf}
+    \caption{Conductance as a function of $V_{bias}$ and parallel magnetic field in both samples. Conductance curves have been offset for clarity.}
+    \label{fig:bisweep_cuts_all}
+\end{figure}
+
+Figure \ref{fig:bisweep_cuts_all} shows how the tunneling differential conductance evolves as a function of the magnetic field at fixed bias in each sample. The peaks observed in these differential conductance peaks are a convolution of the structure derived in Equation \ref{eq:fis_diffcond_field} with the Coulomb blockade effect. In calculating Equation \ref{eq:fis_diffcond_field} it was assumed that the tunnel barrier was a fixed height regardless of the electron energy. By replacing the insulating layer used in that model with a quantum dot, that is no longer the case. In order to capture the energy dependence of the quantum dot an energy dependent hopping amplitude must be added to the integral over the superconducting density of states.
+
+In the absence of such a detailed calculation, some insight can still be gained from looking at the movement of the peaks in the magnetic field. Sample SCFMH8 very little movement of the peaks with the magnetic field. There are a number of reasons this might be the case. Most importantly, the splitting could be obscured by thermal noise in the system, which is on the order of 500$\mu$eV. Zeeman splitting of spin split levels on a nanotube quantum dot has been observed in the past to be of this same order of magnitude \cite{Tans1997}. Given the variety of spin dependent phenomena that should exist in sample SCFMH8, this seem to be the most reasonable explanation. It is difficult to speculate any more on what splittings are expected from the Coulomb blockade features without the device being gate tunable. Looking closely at Figure \ref{fig:scfmh8_bisweep_edit} it is possible that there is some evidence of the superconducting gap closing in the outermost conductance peaks near $B=2T$.
+
+In Figures \ref{fig:bisweep_cuts_all} and \ref{fig:mt7_bisweep_edit} it is clear that there is some field dependent movement of the conductance peaks in sample MT7. Again, it is important to remember that the drop in conductance at low bias is not solely due to the superconducting gap, but rather a combination of the gap and Coulomb blockade. From $B=0$T to 0.5T conductance peak 1 (labelled in Figure \ref{fig:mt7_bisweep_edit} shifts from $V_{bias}=-4.2meV$ to $V_{bias}=3meV$. This agrees well with the closing of the calculated superconducting gap of 1.18meV. Similar features are observed in the other three conductance peaks. At fields above 0.5T, peaks 1-3 have a slight field dependance. Peaks 1 and 2 show positive slopes of 1.5 and 0.3 meV/T, respectively. Peak 3 has a slope of -0.1meV/T. Qualitatively this makes senes in terms of the Coulomb blockade. The magnitudes of the slopes are consistent with Zeeman splitting energies in carbon nanotubes with a g-factor of 2. Additionally, the opposite sign of the splitting on each side of the Coulomb diamond makes sense for a quantum dot with no spin degeneracy. Each successive diamond should have opposite spin polarization, therefore excited states on opposite sides of the diamond will have opposite spin as well. 
+
+With the level of resolution present in this data it is difficult to comment further on the influence of the superconductor-ferromagnet tunneling properties of the quantum dot measured on sample MT7.
+
+\section{Hysteretic Switching of Quantum Dot Conductance at Low Field}
+\label{sec:scfm_switching}
+
+After not observing any clear field-dependent behavior in sample SCFMH8 additional data was taken with the fast and slow scan axes switched. Sweeping the magnetic field, at a fixed bias, while measuring current through the quantum dot revealed some interesting behavior, seen in Figure \ref{fig:scfmh8_positive_field_switching}.
+
+\begin{figure}
+    \centering
+    \includegraphics[height=0.8\textheight]{scfmdots/scfmh8_15-16_fieldswp_p_4K.pdf}
+    \caption{Current as a function of field measured at $V_{bias}$ between -2.5 and 2.5mV. }
+    \label{fig:scfmh8_positive_field_switching}
+\end{figure}
+
+There are three features to note in Figure \ref{fig:scfmh8_positive_field_switching}. First are the two changes in conductance at 0.5T and 2.0T. Based on the measured niobium critical field, it seems obvious to associate this change in conductance with the niobium leads transitioning to the normal state. The switch at 0.5T is 10-50 times larger than the expected coercive field for permalloy leads of this approximate size and shape \cite{Aurich2010, Preusche2009}. Additionally, both of these switching events show a hysteresis with the magnetic field sweep direction. 
+
+As a simple check to verify this behavior, the curves in Figure \ref{fig:scfmh8_positive_field_switching} can be compared to horizontal cuts across the data in Figure \ref{fig:scfmh8_bisweep_edit}. A comparison of the two data sets is seen in Figure \ref{fig:scfmh8_fast_slow_compare}. There does seem to be some evidence of the hysteretic switching behavior around 0.5T in both data sets.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1.0\textwidth]{scfmdots/scfmh8_fast_slow_compare.pdf}
+    \caption{A comparison of the current versus field data with fast and slow sweep axes reversed.}
+    \label{fig:scfmh8_fast_slow_compare}
+\end{figure}
+
+As a control, the same measurement, with a fast field sweep at fixed bias, was made on a Nb-CNT-Nb quantum dot on the same nanotube. Those results are compared with the Py-CNT-Nb quantum dot in Figure \ref{fig:scfmh8_superconductor_compare}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1.0\textwidth]{scfmdots/scfmh8_superconductor_compare.pdf}
+    \caption{Left column shows current as a function of magnetic field for the Py-CNT-Nb quantum dot. Right column shows the same data for a Nb-CNT-Nb quantum dot on the same nanotube.}
+    \label{fig:scfmh8_superconductor_compare}
+\end{figure}
+
+Figure \ref{fig:scfmh8_superconductor_compare} shows clearly that the hysteresis is missing from the field sweep in the Nb-CNT-Nb quantum dot. The conductance change associated with the superconducting critical field is still seen at 2T in each measurement. The sweep at $V_{bias}=-1$mV data seems to show the switching behavior at 0.5T remains in this quantum dot. To confirm, all of the Nb-CNT-Nb data is plotted in Figure \ref{fig:scfmh8_all_superconducting}.
+
+\begin{figure}
+    \centering
+    \includegraphics[height=0.8\textheight]{scfmdots/scfmh8_2-1_fieldswp_s_4K.pdf}
+    \caption{Current as a function of field measured at $V_{bias}$ between -2.5 and 2.5mV for a Nb-CNT-Nb quantum dot. }
+    \label{fig:scfmh8_all_superconducting}
+\end{figure}
+
+A close look at the data in Figure \ref{fig:scfmh8_all_superconducting} shows that the feature at 0.5T is present, but not nearly as well defined and without the hysteresis present in the field.
+
+\subsection{Discussion}
+
+A schematic of the full device with both measured quantum dots highlighted is shown in Figure \ref{fig:scfmh8_illustration}(a). 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{scfmdots/scfmh8_illustrated.pdf}
+    \caption{(a) A schematic of sample SCFMH8. Purple leads are Py, blue are Nb. The two quantum dots measured for Figure \ref{fig:scfmh8_positive_field_switching} and \ref{fig:scfmh8_all_superconducting} are circled in red. (b) An energy level diagram representing the tunneling at $V_{bias}=0$.}
+    \label{fig:scfmh8_illustration}
+\end{figure}
+
+More discussion coming soon.

@@ -6,7 +6,7 @@ In this thesis work a variety of low temperature and low noise measurement techn
 
 \section{Transport Measurements}
 
-All of the devices measurements carried out for this work have been two-probe, voltage biased measurements. The majority of measurements were DC, this was motivated by the fact that problems like gate leakage current and electronic noise in the room are much easier to identify in a DC measurement. A few AC measurements were made, especially in the beginning of this work. Each measurement setup will be reviewed here.
+All of the devices measurements carried out for this work have been two-probe, voltage biased measurements. The majority of measurements were DC, based on the fact that problems like gate leakage current and sources of electronic noise are much more easily identified in a DC measurement. A few AC measurements were made, especially in the beginning of this work. Each measurement setup will be reviewed here.
 
 \subsection{DC Current Measurements}
 \label{sec:DC}
@@ -39,7 +39,9 @@ Because the lock in amplifier can only be used to measure voltage signals, the c
 
 Some care must be taken to ensure the lockin signal is not being attenuated by any of the filtering in the AC-DC adder, cryostat, or current to voltage amplifier.  In this work, lockin signals of 27Hz were used, which was well below the cutoff frequency of any filtering in the experiment.
 
-\subsection{Current Amplification}
+\subsection{Custom Electronics}
+
+\subsubsection*{Current Amplification}
 \label{sec:CV_amp}
 
 The primary sources of noise in making low current DC measurements come from the 60Hz AC power lines and operational amplifiers in the current to voltage amplifier. The first source of noise can be largely eliminated by using an amplifier with battery power. While it is not possible to completely eliminate op amp noise, it can be reduced by choosing designing circuits using low noise amplifiers, metal film resistors, and appropriate filtering. 
@@ -68,7 +70,7 @@ Both the amplifier and subtractor are run using the same $\pm$12V battery power 
 
 A major drawback of this current amplifier/subtractor setup is that it fails for samples with a resistance above 20M$\Omega$. This makes this amplifier difficult to use for tunnel probe measurements, as tunnel probe junctions typically have resistances of the same order of magnitude. For tunnel probe measurements, and most lockin measurements, the Ithaco 1211 amplifier was used. The reason for this is that there is a 20M$\Omega$ short across the sample through the input of the subtractor circuit. This should be fixed for future measurements by the addition of current blocking diodes in the subtractor circuit. In carbon nanotube quantum dot measurements this was not a problem, because the resistances of interest are not typically so large. 
 
-\subsection{AC-DC Adder}
+\subsubsection*{AC-DC Adder}
 \label{sec:adder}
 
 When making AC measurements that incorporate a DC bias voltage, some care must be taken to add the two voltage biases together in the correct way. Several circuits were tested to do this, from a simple BNC tee, to an active adder circuit like the one seen in Figure \ref{fig:subtractor}. The design that yielded the least noise, most accurate output, and shortest decay times is seen in Figure \ref{fig:ac_dc}.
@@ -84,7 +86,7 @@ The 470$\mu$F capacitor on the AC input prevents any DC bias from the lockin amp
 
 \section{Cryogenics}
 
-A number of different cryostats and superconducting magnets were used for this work. This section will briefly review the various components used, including some new operating instructions that had to be developed during my work.
+A number of cryostats and superconducting magnets were used in this work. This section will briefly review the various components used.
 
 \subsection{Cryostat Wiring}
 
@@ -108,7 +110,11 @@ All the cryostats discussed below are wired in the same way. Samples are mounted
 
 A simple 4He dunker was built for our lab several years ago by Chris Merchant. The dunker, seen in Figure \ref{fig:dunker} consists mainly of a vacuum can, sample holder, and ribbon cable connected to a 24-pin Fischer connector at room temperature. The dunker is very useful for quick measurements, and is extremely reliable for reaching 4K. It is small enough to fit in just about any cryostat or transfer dewar and can be loaded and cooled down in about an hour. This dunker was used for many of the measurements in this thesis.
 
-\subsection{Oxford Heliox 3He Cryostat}
+\subsection{3He Cryostats}
+
+The primary cooling in 3He cryostat is from evaporative cooling of 3He liquid by cryopumping with a charcoal sorb. Before this is possible the 3He must be liquified. This is done by first pumping on a small volume of 4He known as the 1K pot. This pot will typically reach temperatures between 1.2 and 1.8K. The 3He gas, stored in a charcoal sorb in a separate volume, is released from the charcoal by heating the sorb to about 30K. The 3He gas then passes through the 1K pot, which is cold enough to condense the 3He gas into a liquid. The 3He liquid collects in a 3He pot, to which the sample has been thermally anchored. Once all the gas is released from the sorb, the sorb is cooled to 4K. The cold sorb the acts as a cryopump on the liquid 3He. This cryopumping cools the 3He pot to its base temperature of 250mK \cite{Balshaw2001}.
+
+\subsubsection*{Oxford Heliox}
 
 \begin{figure}
     \centering
@@ -119,28 +125,9 @@ A simple 4He dunker was built for our lab several years ago by Chris Merchant. T
 
 The Oxford 3He cryostat was used in this work for some very early measurements. After that it developed a leak in the 1K pot pumping line that made it very inconvenient for this work. The typical hold times were about 24 hours, 12 hours on a bad day.
 
-The primary cooling in 3He cryostat is from evaporative cooling of 3He liquid by cryopumping with a charcoal sorb. Before this is possible the 3He must be liquified. This is done by first pumping on a small volume of 4He known as the 1K pot. This pot will typically reach temperatures between 1.2 and 1.8K. The 3He gas, stored in a charcoal sorb in a separate volume, is released from the charcoal by heating the sorb to about 30K. The 3He gas then passes through the 1K pot, which is cold enough to condense the 3He gas into a liquid. The 3He liquid collects in a 3He pot, to which the sample has been thermally anchored. Once all the gas is released from the sorb, the sorb is cooled to 4K. The cold sorb the acts as a cryopump on the liquid 3He. This cryopumping cools the 3He pot to its base temperature of 250mK \cite{Balshaw2001}.
-
 The operation of these Oxford cyrostats is well-documented elsewhere. Temperature control is mainly done with an ITC503 temperature controller which monitors the temperature sensors and adjusts needle valve on the 1K pot line to keep the pot at the proper temperature during operation.
 
-\subsection{Oxford Kelvinox Dilution Refrigerator}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\textwidth]{measurements/dilution_fridge.png}
-    \caption{Oxford Kelvinox dilution refrigerator with custom built three sample holder (far right).}
-    \label{fig:kelvinox}
-\end{figure}
-
-Dilution refrigerators rely on a mixture of 3He and 4He to achieve temperatures as low as 5mK. Our Kelvinox system is said to be capable of 7mK base temperatures, although, due to various problems with the IVC vacuum I have been unable to cool it below 70mK.
-
-The process by which the dilution fridge achieves its based temperature is easiest to understand by following the path of the gas mixture through the system. From room temperature the mixture is cooled to 4K by passing through the LHe bath in the magnet dewar. The mixture then passes through the 1K pot where 3He is condensed. The condensed mixture then passes through the primary impedance, designed to control the flow rate to the mixing chamber. After the primary impedance are a series of heat exchangers which use outgoing cold gas to cool the incoming mixture to 50mK. From there the mixture moves into the mixing chamber. The mixing chamber contains two phases of the 3He/4He mixture, a dilute phase and a concentrated phase. The most important cooling stage of the dilution fridge is the evaporating of 3He from the concentrated phase into the dilute phase in the mixing chamber. 3He the moves from the dilute phase in the mixing chamber into the still, which is held at about 600mK. Osmotic pressure from the lower 3He concentration in the still drives this movement. Finally the mixture is pumped through the heat exchangers and out of the fridge through the still pumping line. It then passes through cold traps to remove any impurities before entering the condenser line \cite{Balshaw2001}.
-
-Because each dilution fridge has a little of its own character, instructions are provided here for the Markovic lab Kelvinox system. This system was not used for about 8 years before I cooled it down again in 2014. It required several repairs to the temperature control wiring and pump power supplies, but the gas handling systems were found to be in very good condition. After several cool downs, it became apparent that the system had a leak into the IVC from the top plate. 
-
-Instructions on cooling down the Kelvinox dilution refrigerator can be found in Appendix \ref{sec:kelvinox}.
-
-\subsection{RMC 3He Cryostat}
+\subsubsection*{RMC 3He Cryostat}
 
 \begin{figure}
     \centering
@@ -149,21 +136,35 @@ Instructions on cooling down the Kelvinox dilution refrigerator can be found in 
     \label{fig:rmc}
 \end{figure}
 
-After both of our Oxford cryostats were found to have leaks, we obtained this cryostat on loan from the Dan Reich's lab. This cryostat had not been used in about a decade before our lab adopted it. In order to make it compatible with our sample holders and breakout boxes, we rewired the cryostat with a 24-pin Fischer connector at room temperature and a 25-pin miniature D-sub connector anchored to the 3He pot. The original temperature control wiring was left in place, connected to a separate 19-pin connector which was then connected to a custom breakout box. Heater power was supplied with $\pm$12V power supplies on the breakout box. The RuOx and Pt 3He pot temperature sensors were read with a Neocera LTC21 temperature controller.
+After both of our Oxford cryostats were found to have leaks, we obtained this cryostat on loan from the Dan Reich's lab. This cryostat had not been used for a decade before our lab adopted it. In order to make it compatible with our sample holders and breakout boxes, we rewired the cryostat with a 24-pin Fischer connector at room temperature and a 25-pin miniature D-sub connector anchored to the 3He pot. The original temperature control wiring was left in place, connected to a separate 19-pin connector which was then connected to a custom breakout box. Heater power was supplied with $\pm$12V power supplies on the breakout box. The RuOx and Pt 3He pot temperature sensors were read with a Neocera LTC21 temperature controller.
 
 Instructions for cooling down the RMC 3He cryostat can be found in Appendix \ref{sec:rmc}
 
-\subsection{Oxford Magnet}
+\subsection{Dilution Refrigerator}
 
-This magnet was purchased along with the Oxford Heliox and Kelvinox cryostats. Those two cryostats are designed to fit easily into the magnet bore with the samples sitting at the center of the field as calibrated by the manufacturer. It is an 8T superconducting magnet mounted in an Oxford liquid helium dewar with a liquid nitrogen jacket. Current to the magnet is supplied by a matching Oxford IPS120 magnet power supply. This magnet was used for all of the measurements in Chapter \ref{sec:FMCNTQD}.
+Dilution refrigerators rely on a mixture of 3He and 4He to achieve temperatures as low as 5mK. Our Kelvinox system is said to be capable of 7mK base temperatures, although, due to various problems with the IVC vacuum I have been unable to cool it below 70mK.
 
-\subsection{BTI Magnet}
+The process by which the dilution fridge achieves its based temperature is easiest to understand by following the path of the gas mixture through the system. From room temperature the mixture is cooled to 4K by passing through the LHe bath in the magnet dewar. The mixture then passes through the 1K pot where 3He is condensed. The condensed mixture then passes through the primary impedance, designed to control the flow rate to the mixing chamber. After the primary impedance are a series of heat exchangers which use outgoing cold gas to cool the incoming mixture to 50mK. From there the mixture moves into the mixing chamber. The mixing chamber contains two phases of the 3He/4He mixture, a dilute phase and a concentrated phase. The most important cooling stage of the dilution fridge is the evaporating of 3He from the concentrated phase into the dilute phase in the mixing chamber. 3He the moves from the dilute phase in the mixing chamber into the still, which is held at about 600mK. Osmotic pressure from the lower 3He concentration in the still drives this movement. Finally the mixture is pumped through the heat exchangers and out of the fridge through the still pumping line. It then passes through cold traps to remove any impurities before reentering the condenser line \cite{Balshaw2001}.
+
+\subsubsection*{Oxford Kelvinox}
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\textwidth]{measurements/BMI_magnet_supply.png}
-    \caption{BMI magnet power supply. From the bottom: HP power supply, custom built energy absorber, AMI magnet controller, custom built interface box, two Kepco voltage sources used to set rate and output of the AMI controller.}
-    \label{fig:magnet_supply}
+    \includegraphics[width=0.9\textwidth]{measurements/dilution_fridge.png}
+    \caption{Oxford Kelvinox dilution refrigerator with custom built three sample holder (far right).}
+    \label{fig:kelvinox}
 \end{figure}
 
-This magnet was taken from a discarded BTI SQUID system. Similar to the Oxford magnet, it is a 9T superconducting magnet mounted in a liquid helium dewar with a liquid nitrogen jacket. This setup was assembled by, and borrowed from, Dan Reich's lab along with the RMC cryostat. Since the magnet could not be used with its original controller, a custom controller was assembled using an AMI controller with a HP power supply and custom made energy absorber/polarity switch. Upon receiving this system, it was tested and wired to a new BNC interface box to be controlled by a NI DAQ board along with transport measurements described above. A picture of the power supply is seen in Figure \ref{fig:magnet_supply}
+The Oxford Kelvinox used in our lab is pictures in Figure \ref{fig:kelvinox}. This system was not used for about 8 years before I cooled it down in 2014. It required several repairs to the temperature control wiring and pump power supplies, but the gas handling systems were found to be in very good condition. After several cool downs, it became apparent that the system had a leak into the IVC from the top plate. 
+
+Instructions on cooling down the Kelvinox dilution refrigerator can be found in Appendix \ref{sec:kelvinox}.
+
+\subsection{Superconducting Magnets}
+
+\subsubsection*{Oxford Magnet}
+
+This magnet was purchased along with the Oxford Heliox and Kelvinox cryostats. Those two cryostats are designed to fit easily into the magnet bore with the samples sitting at the center of the field as calibrated by the manufacturer. It is an 8T superconducting magnet mounted in an Oxford liquid helium dewar with a liquid nitrogen jacket. Current to the magnet is supplied by a matching Oxford IPS120 magnet power supply. This magnet was used for all of the measurements in Chapter \ref{sec:FMCNTQD}.
+
+\subsubsection*{BTI Magnet}
+
+This magnet was taken from a discarded BTI SQUID system. Similar to the Oxford magnet, it is a 9T superconducting magnet mounted in a liquid helium dewar with a liquid nitrogen jacket. This setup was assembled by, and borrowed from, Dan Reich's lab along with the RMC cryostat. Since the magnet could not be used with its original controller, a custom controller was assembled using an AMI controller with a HP power supply and custom made energy absorber/polarity switch. Upon receiving this system, it was tested and wired to a new BNC interface box to be controlled by a NI DAQ board along with transport measurements described above. This magnet was used for the data presented in Section \ref{sec:scfm_switching}.

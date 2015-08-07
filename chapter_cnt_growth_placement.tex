@@ -65,7 +65,7 @@ The growth procedure begins with filling a ceramic crucible with the iron cataly
 
 After the CVD process, the nanotubes remain attached to the iron\slash alumina\slash molybdenum catalyst particles, which must be removed before depositing onto a silicon substrate. The nanotube\slash catalyst powder is first scraped from the ceramic crucible used in the tube furnace. The powder is then mixed with either dichloroethane or dichlorobenzene in a \SI{1}{\milli\gram} to \SI{10}{\milli\liter} ratio. Dichlorobenzene has been found to leave less residue after deposition, but may promote more damage to nanotubes during sonication. This was noted by Justin Silverman, an undergraduate working with our lab on functionalizing short carbon nanotubes. Some attempts were made to use water along with the surfactant SDS. However, SDS turned out to be difficult to remove and no devices were made in this way.
 
-To remove the catalyst particles from the nanotubes, the solution described above must be placed in an ultrasonic bath for 1-60 minutes. The amount of time needed varied a great deal depending on the equipment and solvent used. The goal of this step is to break up large pieces of catalyst, separate nanotube bundles, and break individual nanotubes away from their catalyst particles. Sonication can be stopped when no large pieces of catalyst\slash nanotube material are visible and the solution has a uniform black color. Leaving the solution in the sonicator for too much time will begin to break long nanotubes. 
+To remove the catalyst particles from the nanotubes, the solution described above must be placed in an ultrasonic bath for 1-60 minutes. The amount of time needed varied a great deal depending on the equipment and solvent used. The goal of this step is to break up large pieces of catalyst, separate nanotube bundles, and break individual nanotubes away from their catalyst particles. Sonication can be stopped when no large pieces of catalyst\slash nanotube material are visible and the solution has a uniform black color. Leaving the solution in the sonicator for too much time will begin to break long nanotubes. This may be somewhat beneficial in breaking nanotubes at defects that might otherwise affect transport measurements.
 
 When sonication is complete, the solution is transferred to a centrifuge. This step is intended to precipitate the loose catalyst particles from the solution, while leaving the much lighter nanotubes suspended. The centrifuge used in our lab runs at \SI{2200}{\rpm} and nanotube solutions are left inside for 5-10 minutes. Once the centrifuge stops, the precipitate is discarded and the supernate, containing the suspended nanotubes, is reserved. We also tested using a high-speed, air-powered centrifuge running at \SI{100000}{\rpm} to separate nanotubes and catalyst. This did lead to much better catalyst separation and cleaner results,.
 
@@ -80,12 +80,12 @@ Now the solution is ready for deposition on a silicon substrate. The substrates 
 
 \subsection{Advantages and Disadvantages}
 
-Despite having some success fabricating devices using randomly dispersed nanotubes and Electric Force Microscopy scans (Section \ref{subsec:EFM}), the process was found to be too time consuming for frequent use. The main failure point was the preparation of nanotube solutions after growth. The concentrations varied significantly, often producing samples with dense nanotube coverage or no nanotubes found in the regions imaged. Additionally, the process of making a suspended nanotube solution is time consuming. Even those solutions with a useful concentration of nanotubes only remain fully suspended for less than 1 hour. Meaning the process must be repeated frequently.
+Despite having some success fabricating devices using randomly dispersed nanotubes and electric force microscopy scans (Section \ref{subsec:EFM}), the process was found to be too time consuming for frequent use. The main failure point was the preparation of nanotube solutions after growth. The concentrations varied significantly, often producing samples with dense nanotube coverage or no nanotubes found in the regions imaged. Additionally, the process of making a suspended nanotube solution is time consuming. Even those solutions with a useful concentration of nanotubes only remain fully suspended for less than 1 hour. Meaning the process must be repeated frequently.
 
 \section{Catalyst Island Growth}
 \label{sec:catalyst_island}
 
-In 1998 \cite{Kong1998a}, it was discovered that the same type of catalyst used to grow nanotubes in powder form (Section \ref{subsec:disperse_catalyst}), could be suspended in solution, patterned, and used to grow nanotubes directly on silicon substrates. When paired with high melting point metals and optical lithography, nanotubes can be grown directly on patterned substrates in known locations. Devices prepared this way take just a fraction of the time to produce. However, these devices were found to be much more prone to other modes of failure, such as leaks in the gate oxide and amorphous carbon contamination on the substrate from the CVD growth process.
+In 1998 \cite{Kong1998a}, it was discovered that the same type of catalyst used to grow nanotubes in powder form (Section \ref{subsec:disperse_catalyst}), could be suspended in solution, patterned, and used to grow nanotubes directly on silicon substrates. When paired with high melting point metals and optical lithography, nanotubes can be grown directly on patterned substrates in known locations. Devices prepared this way take just a fraction of the time to produce. However, these devices were found to be much more prone to other modes of failure, such as leaks in the gate oxide, amorphous carbon contamination on the substrate from the CVD growth process, and defects along the nanotube length.
 
 \subsection{Catalyst} 
 
@@ -144,13 +144,13 @@ The standard nanotube growth recipe used in this work is below:
 	\item Set temperature to \SI{0}{\degreeCelsius} and let the furnace cool while flowing \SI{300}{\sccm} Ar and \SI{150}{\sccm} \ce{H2}
 \end{enumerate}
 
-In almost every case this recipe has grown nanotubes successfully. Steps 2 and 3 are included to remove water vapor from the air that might have collected inside the quartz tube on humid days \cite{Dirks2010}. Steps 4 and 5 are meant to remove iron oxide from the iron nanoparticles that make up the catalyst. 
+In almost every test, this recipe has grown nanotubes successfully. Steps 2 and 3 are included to remove water vapor from the air that might have collected inside the quartz tube on humid days \cite{Dirks2010}. Steps 4 and 5 are meant to remove iron oxide from the iron nanoparticles that make up the catalyst. 
 
-The most common point of failure has been related to the patterned molybdenum leads on the substrate. Molybdenum oxidizes rapidly at high temperatures. Therefore, any oxygen contamination in the tube during the growth process will form a \ce{MoO} layer that is then quickly removed by reacting with the high temperature \ce{H2} flow. This process repeats and can lead to the Mo leads being entirely etched away. Additionally, it has been found that opening the furnace too soon during cooling can lead to the Mo leads peeling off of the substrate. This appears to be caused by some super-heating due to IR radiation reflecting off of the surfaces of the sample and quartz tube. It is a strange phenomenon that is avoided by allowing the furnace to cool to less than \SI{300}{\degreeCelsius} before opening the lid. These problems could also be solved by using a different high temperature metal such as a W/Pt bilayer, common in many other nanotube projects. Molybdenum was chosen for this work because it is easy to sputter and much more affordable.
+The most common point of failure in growth has been related to the patterned molybdenum leads/markers on the substrate. Molybdenum oxidizes rapidly at high temperatures. Therefore, any oxygen contamination in the tube during the growth process will form a \ce{MoO} layer that is then quickly removed by reacting with the high temperature \ce{H2} flow. This process repeats and can lead to the Mo leads being entirely etched away. Additionally, it has been found that opening the furnace too soon during cooling can lead to the Mo leads peeling off of the substrate. This appears to be caused by some super-heating due to IR radiation reflecting off of the surfaces of the sample and quartz tube. It is a strange phenomenon that is avoided by allowing the furnace to cool to less than \SI{300}{\degreeCelsius} before opening the lid. These problems could also be solved by using a different high temperature metal such as a W/Pt bilayer, common in many other nanotube projects. Molybdenum was chosen for this work because it is easy to sputter and much more affordable.
 
 \subsection{Advantages and Disadvantages}
 
-Growing nanotubes from catalyst islands near predefined leads and markers offers a large improvement in processing time over the method of random dispersion. Nanotubes produced with this method are longer, cleaner, and easier to locate. These improvements made this method the obvious choice for device fabrication. The disadvantages stemming from substrate contamination during growth or imaging can be overcome by simply increasing number of samples produced.
+Growing nanotubes from catalyst islands near predefined leads and markers offers a large improvement in processing time over the method of random dispersion. Nanotubes produced with this method are longer, cleaner, and easier to locate. These improvements made this method the obvious choice for device fabrication. The main disadvantage found in this technique is the introduction of defects along the nanotube length due to growth along the substrate. Because of this, a large number of devices must be fabricated in order to find one with clean transport properties at low temperature.
 
 \section{Imaging Nanotubes}
 \label{subsubsec:imaging_disperse}
@@ -163,8 +163,8 @@ With nanotubes that have been drop cast onto the surface, the standard method is
 
 \begin{figure}
 	\centering
-	\includegraphics[width = 0.8\textwidth]{chapter3/cnt_au_markers.png}
-	\caption{A composite image made from several AFM height measurements of a sample with nanotubes dispersed over a  substrate with \SI{1.5}{\micro\meter} gold markers. The scale bar is \SI{10}{\micro\meter}.}
+	\includegraphics[width = 1.0\textwidth]{chapter3/single_cnt_au_markers.pdf}
+	\caption{AFM height and amplitude scans of nanotubes dispersed over a substrate with \SI{1.5}{\micro\meter} gold markers. The scale bar is \SI{10}{\micro\meter}.}
 	\label{fig:cnt_au_markers}
 \end{figure}
 
@@ -332,6 +332,6 @@ Finally, the filter was tested with the original set of full device SEM images. 
 \begin{figure}
 	\centering
 	\includegraphics[width = 1.0\textwidth]{chapter3/full_image_filter_test.pdf}
-	\caption{Optimization of the matched filter bank threshold value.}
+	\caption{Two examples applying the matched filter bank to full SEM images of as-grown carbon nanotubes.}
 	\label{fig:full_image_filter}
 \end{figure}

@@ -4,9 +4,9 @@
 
 \section{NM-CNT-NM Quantum Dots}
 
-Palladium leads showed very low room temperature resistances of about \SI{20}{\kilo\ohm}. It was thought that by using a metal that makes very good contacts, fabrication problems with other materials might be easier to pinpoint. A few of these samples were made and measured in our dunker at 4K. 
+Palladium leads showed very low room temperature resistances of about \SI{20}{\kilo\ohm}. It was thought that by using a metal that makes very good contacts, fabrication problems not dependent on contact material might be easier to pinpoint. A few of these samples were made and measured in our dunker at 4K. 
 
-The room temperature gate voltage behavior can be seen in Figure \ref{fig:PdQD_rt}(a). This quantum dot was made on a small gap semiconducting nanotube. This sort of gate curve was typical of palladium contacted devices. That suggests we grow an anomalously large number of small band gap semiconducting nanotubes. It is possible this is due to the diameter of the catalyst particles used in nanotube growth.
+The room temperature gate voltage behavior can be seen in Figure \ref{fig:PdQD_rt}(a). This quantum dot was made on a small gap semiconducting nanotube. This sort of gate curve was typical of palladium contacted devices; suggesting we grow a majority of small band gap semiconducting nanotubes. This is likely due to the diameter of the catalyst particles used in nanotube growth.
 
 \begin{figure}
     \centering
@@ -15,7 +15,7 @@ The room temperature gate voltage behavior can be seen in Figure \ref{fig:PdQD_r
     \label{fig:PdQD_rt}
 \end{figure}
 
-At low temperatures this devices showed some weak Coulomb blockade behavior. Low temperature measurements of the same device are seen in Figure \ref{fig:PdQD_4K}. The charging and excitation energies are consistent with other devices measured in this work. Figure \ref{fig:PdQD_4K}(b) shows conductance peaks in the gate sweep have irregular spacing and no clear four fold symmetry. This suggests the quantum dot has impurities along its length causing more than one quantum dot to act in series along the nanotube (CITE old Bockrath paper). Again, this is consistent with other devices measured and suggests defects in the nanotube growth or contamination on the substrate near the nanotube.
+At low temperatures these devices showed weak Coulomb blockade behavior. Low temperature measurements of the device measured in Figure \ref{fig:PdQD_rt} are seen in Figure \ref{fig:PdQD_4K}. The charging and excitation energies are consistent with other devices measured in this work. Figure \ref{fig:PdQD_4K}(b) shows conductance peaks in the gate sweep have irregular spacing and no clear four fold symmetry. This suggests the quantum dot has impurities along its length causing more than one quantum dot to act in series along the nanotube \cite{Bockrath2001}. Again, this is consistent with other devices measured and suggests defects in the nanotube growth or contamination on the substrate near the nanotube.
 
 \begin{figure}
     \centering
@@ -24,9 +24,9 @@ At low temperatures this devices showed some weak Coulomb blockade behavior. Low
     \label{fig:PdQD_4K}
 \end{figure}
 
-\section{Top Gated Quantum Dots}
+\section{Locally Gated Quantum Dots}
 
-Due to the nature of the Schottky barriers between metals and carbon nanotubes, it can be difficult to tune the levels on a nanotube quantum dot without affecting the charging energies (CITE I think Guo's thesis had this). One solution to better control of the quantum dot is to add narrow local gates to the devices. This is most easily done by adding side gates or top gates. Figure \ref{fig:local_gating} shows an example of each of these device geometries.
+Due to the nature of the Schottky barriers between metals and carbon nanotubes, it can be difficult to tune the levels on a nanotube quantum dot without affecting the barrier height and charging energy of the dot \cite{Schottky1938, Svensson2011}. One solution to better control of the quantum dot is to add narrow local gates to the devices. This is most easily done by adding side gates or top gates. Figure \ref{fig:local_gating} shows an example of each of these device geometries.
 
 \begin{figure}
     \centering
@@ -53,7 +53,54 @@ Contacting nanotubes with ferromagnetic and superconducting metals proved so dif
 
 Figure \ref{fig:local_gate_4K}(top) shows how the resonant tunneling peaks behave as a function of both gates. The dashed white line across the plot is perpendicular to the path followed by the conductance peaks. By tuning the gates along this line, the tunnel barriers in the source and drain contacts can be held constant while the energy levels on the dot are varied relative to the Fermi level on the leads. A plot of the measured current along this detuning axis can be seen in the bottom of Figure \ref{fig:local_gate_4K}.
 
+\section{CNT Tunnel Probe into Aluminum Nanowires}
+
+Carbon nanotubes, because of their small diameter and high contact resistances with metals, make good candidates for tunnel probes into other mesoscopic systems. In this project, nanotubes were used in an attempt to probe the density of states of a quasi 1D aluminum wire. A schematic of the device being discussed can be seen in Figure \ref{fig:cnt_al_device}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{other_devices/cnt_al_device.pdf}
+    \caption{Schematic of a CNT tunnel probe under two narrow aluminum wires.}
+    \label{fig:cnt_al_device}
+\end{figure}
+
+\subsection{Background}
+
+Aluminum is a superconductor with a bulk transition temperature of 1.2K. When placed in a perpendicular magnetic field, thin films of aluminum allow magnetic vortices to pass through in the superconducting state. These vortices have a diameter on the order of the superconducting coherence length \cite{Tinkham1996}. When the width of the aluminum film is made to be on the order of the coherence length, these vortices are forced to pass through the superconductor in a single line. This geometric confinement makes it possible to tune the number of vortices trapped in the nanowire by varying the applied magnetic field. This effect is called the Weber blockade \cite{Pekker2011}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{other_devices/figure4_4.png}
+    \caption{Figure taken from Ref \cite{Morgan-Wall2015}. (a) Potential seen by vortices along width of the aluminum nanowire as a function of applied perpendicular magnetic field. (b) Potential seen by vortices along width of the aluminum nanowire as a function of applied current. (c) Critical current as a function of applied perpendicular magnetic field. The Weber blockade region can be seen clearly in Region III.}
+    \label{fig:aluminum_potential}
+\end{figure}
+
+Figure \ref{fig:aluminum_potential} is taken from our lab's publication on Weber blockade in aluminum nanowires \cite{Morgan-Wall2015}. In Figure \ref{fig:aluminum_potential}(a) the potential seen by a vortex is plotted as a function of the distance across the wire. A similar plot is shown in Figure \ref{fig:aluminum_potential}(b) Showing the potential across the wire as a function of the applied current. By tuning these parameters into Region III, as labelled in Figure \ref{fig:aluminum_potential}(c), vortices will hop from the vacuum onto the nanowire one at a time. The varying number of vortices can be identified by changes in the critical current of the nanowire, as seen in Region III of Figure \ref{fig:aluminum_potential}(c). This is analogous to the Coulomb blockade in quantum dots. In fact, if the critical current is plotted as a function of applied field, we find the data looks just like a Coulomb blockade plot, with the blockaded regions being replaced by regions of superconductivity containing a fixed number of vortices. This measurement can be seen in Figure \ref{fig:weber_measurement}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{other_devices/figure4_3.png}
+    \caption{Figure taken from Ref \cite{Morgan-Wall2015}. (a) IV curves as a function of applied magnetic field. The Weber blockade region can be clearly seen around 100mT. (b) Close up of the Weber blockade region. (c) Weber blockade effect with superconducting regions containing a fixed number of vortices seen in blue.}
+    \label{fig:weber_measurement}
+\end{figure}
+
+Because the vortices repel one another, their spacing is dependent on the number of vortices contained along the length of the nanowire. If a nanotube is placed at a fixed position under the aluminum wire, the tunnel current will depend on whether or not a vortex is positioned above the nanotube. Thus, by measuring the differential conductance through the nanotube tunnel probe, the position of vortices in the wire can be mapped as a function of applied magnetic field.
+
+\subsection{Device and Measurement}
+
+Several of these tunnel probe devices were created by placing aluminum nanowires across palladium carbon nanotube quantum dots. The fact that these were quantum dots is not really important, but does provide a means of judging the quality of the nanotube portion of the devices. Typical measurements of Pd contacted nanotube quantum dots under aluminum nanowires are seen in Figure \ref{fig:tunneling_device}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\textwidth]{other_devices/tunneling_device.pdf}
+    \caption{(a) SEM image of a typical aluminum wire tunnel probe device. The Pd leads connected to the nanotube form a quantum dot under the device. (b) Conductance through the nanotube quantum dot with aluminum nanowire on top. (c) Conductance as a function of back gate voltage through the same devices.}
+    \label{fig:tunneling_device}
+\end{figure}
+
+No useful measurements of the tunnel probe were made, mainly because of poor contact to the nanotube. The first few devices suffered from the Al-CNT resistances being larger than the input resistance of my current to voltage amplifier. This was improved in subsequent devices by adding thin titanium layers beneath the aluminum nanowire. However, later devices showed poor contact resistances between normal leads and nanotubes. With a little more time, I see no reason this project would not yield the predicted results.
+
 \section{Majorana Ferimons in CNTs}
+\label{sec:majorana}
 
 For a time, around 2010, finding Majorana fermions in condensed matter systems was a source of much excitement. Naturally, this lead to attempts to create a Majorana mode in a carbon nanotube device. Below is a brief description of the project and a summary of the results.
 
@@ -108,49 +155,3 @@ A typical device is seen in Figure \ref{fig:majorana_data}. Several of these dev
 \end{figure}
 
 These devices were measured very early on in my thesis work. The low resolution data, and very long data acquisition times, are what motivated a lot of future work to improve the measurement technique. Unfortunately, no more data was taken for this project.
-
-\section{CNT Tunnel Probe into Aluminum Nanowires}
-
-Carbon nanotubes, because of their small diameter and high contact resistances with metals, make good candidates for tunnel probes into other mesoscopic systems. In this project, nanotubes were used in an attempt to probe the density of states of a quasi 1D aluminum wire. A schematic of the device being discussed can be seen in Figure \ref{fig:cnt_al_device}
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.5\textwidth]{other_devices/cnt_al_device.pdf}
-    \caption{Schematic of a CNT tunnel probe under two narrow aluminum wires.}
-    \label{fig:cnt_al_device}
-\end{figure}
-
-\subsection{Background}
-
-Aluminum is a superconductor with a bulk transition temperature of 1.2K. When placed in a perpendicular magnetic field, thin films of aluminum allow magnetic vortices to pass through in the superconducting state. These vortices have a diameter on the order of the superconducting coherence length \cite{Tinkham1996}. When the width of the aluminum film is made to be on the order of the coherence length, these vortices are forced to pass through the superconductor in a single line. This geometric confinement makes it possible to tune the number of vortices trapped in the nanowire by varying the applied magnetic field. This effect is called the Weber blockade \cite{Pekker2011}.
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\textwidth]{other_devices/figure4_4.png}
-    \caption{Figure taken from Ref \cite{Morgan-Wall2015}. (a) Potential seen by vortices along width of the aluminum nanowire as a function of applied perpendicular magnetic field. (b) Potential seen by vortices along width of the aluminum nanowire as a function of applied current. (c) Critical current as a function of applied perpendicular magnetic field. The Weber blockade region can be seen clearly in Region III.}
-    \label{fig:aluminum_potential}
-\end{figure}
-
-Figure \ref{fig:aluminum_potential} is taken from our lab's publication on Weber blockade in aluminum nanowires \cite{Morgan-Wall2015}. In Figure \ref{fig:aluminum_potential}(a) the potential seen by a vortex is plotted as a function of the distance across the wire. A similar plot is shown in Figure \ref{fig:aluminum_potential}(b) Showing the potential across the wire as a function of the applied current. By tuning these parameters into Region III, as labelled in Figure \ref{fig:aluminum_potential}(c), vortices will hop from the vacuum onto the nanowire one at a time. The varying number of vortices can be identified by changes in the critical current of the nanowire, as seen in Region III of Figure \ref{fig:aluminum_potential}(c). This is analogous to the Coulomb blockade in quantum dots. In fact, if the critical current is plotted as a function of applied field, we find the data looks just like a Coulomb blockade plot, with the blockaded regions being replaced by regions of superconductivity containing a fixed number of vortices. This measurement can be seen in Figure \ref{fig:weber_measurement}.
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.9\textwidth]{other_devices/figure4_3.png}
-    \caption{Figure taken from Ref \cite{Morgan-Wall2015}. (a) IV curves as a function of applied magnetic field. The Weber blockade region can be clearly seen around 100mT. (b) Close up of the Weber blockade region. (c) Weber blockade effect with superconducting regions containing a fixed number of vortices seen in blue.}
-    \label{fig:weber_measurement}
-\end{figure}
-
-Because the vortices repel one another, their spacing is dependent on the number of vortices contained along the length of the nanowire. If a nanotube is placed at a fixed position under the aluminum wire, the tunnel current will depend on whether or not a vortex is positioned above the nanotube. Thus, by measuring the differential conductance through the nanotube tunnel probe, the position of vortices in the wire can be mapped as a function of applied magnetic field.
-
-\subsection{Device and Measurement}
-
-Several of these tunnel probe devices were created by placing aluminum nanowires across palladium carbon nanotube quantum dots. The fact that these were quantum dots is not really important, but does provide a means of judging the quality of the nanotube portion of the devices. Typical measurements of Pd contacted nanotube quantum dots under aluminum nanowires are seen in Figure \ref{fig:tunneling_device}.
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.75\textwidth]{other_devices/tunneling_device.pdf}
-    \caption{(a) SEM image of a typical aluminum wire tunnel probe device. The Pd leads connected to the nanotube form a quantum dot under the device. (b) Conductance through the nanotube quantum dot with aluminum nanowire on top. (c) Conductance as a function of back gate voltage through the same devices.}
-    \label{fig:tunneling_device}
-\end{figure}
-
-No useful measurements of the tunnel probe were made, mainly because of poor contact to the nanotube. The first few devices suffered from the Al-CNT resistances being larger than the input resistance of my current to voltage amplifier. This was improved in subsequent devices by adding thin titanium layers beneath the aluminum nanowire. However, later devices showed poor contact resistances between normal leads and nanotubes. With a little more time, I see no reason this project would not yield the predicted results.

@@ -278,25 +278,29 @@ In Section \ref{sec:RTN}, the characteristic times for charge hopping onto impur
 
 In previous measurements, the tunneling rates were tuned by varying the barrier heights with local gating. Here, the fluctuations in barrier height are not controlled, the quantum dot is in a static configuration. Therefore, the fluctuations in potential are related to impurity charge trapping in the tunnel barriers or gate oxide. This conclusion is supported by previous research into barrier height fluctuations \cite{Jung2004} and dependence of $1/f$ noise on charge trapping in different gate oxide materials \cite{Sydoruk2014}. It was suggested in Reference \cite{Sydoruk2014} that gamma irradiation of quantum dot samples may eliminate some of these charge trapping problems, which may be an interesting avenue for future work.
 
-\subsection{Multiple Quantum Dots}
+%%%%%%%%%%%%%%
 
-One final means of finding noise sources in the sample comes from the measurement of overlapping Coulomb diamonds in conductance plots. An example of this can be seen in Figure \ref{fig:overlapping_diamonds}.
+% This section has been removed for being redundant. 
 
-\begin{figure}
-    \centering
-    \includegraphics[width=1.0\textwidth]{chapter4/overlapping_diamonds.pdf}
-    \caption{Two different Coulomb diamond scales visible in the conductance plots. Top: A close view showing the islands corresponding to the device size. Bottom: Expanded view showing diamonds corresponding to a much smaller quantum dot.}
-    \label{fig:overlapping_diamonds}
-\end{figure}
-
-An estimate of the two quantum dot sizes seen in Figure \ref{fig:overlapping_diamonds} can be obtained using simple relations discussed in Chapter \ref{sec:CNT} \cite{Bockrath1997}. The top plot gives the following parameters, $\Delta E \sim 2.5meV$ and $\Delta \mu \sim 7meV$. There is no four-fold degeneracy visible in the diamond sizes, which suggests $E_{charging} \gg \Delta E$. With that approximation, the dot size can be estimated in two ways, seen in Equation \ref{eq:dot_sizes}.
-
-\begin{align}
-    \Delta E \sim \frac{0.5eV}{L(nm)} = 2.5meV \nonumber \\
-    E_{charging} = \frac{e^2}{C} \sim \frac{e^2}{L} = \frac{1.4eV}{L(nm)} = 7meV
-    \label{eq:dot_sizes}
-\end{align}
-
-Both of these relations gives a quantum dot size of $L\sim200nm$, which is roughly the size of the device as it was designed. 
-
-The larger dots seen in the image are a little more difficult to understand. A quick estimate can be obtained in the same way as Equation \ref{eq:dot_sizes}. Looking at the size of the diamond highlighted in black gives a rough estimate of $L \lesssim 100nm$ which is less than half the size of the device as it was designed. This suggests some contamination on the substrate or defect is acting like a quantum dot in series with the intended one. Similar measurements have been made in the past \cite{Stokes2010, McEuen1999, Park2001, Babi2003} in which the additional quantum dots were attributed to defects on the substrate; that explanation is consistent with these observations.
+%\%subsection{Multiple Quantum Dots}
+%
+%One final means of finding noise sources in the sample comes from the measurement of overlapping Coulomb diamonds in conductance plots. An example of this can be seen in Figure \ref{fig:overlapping_diamonds}.
+%
+%\begin{figure}
+%    \centering
+%    \includegraphics[width=1.0\textwidth]{chapter4/overlapping_diamonds.pdf}
+%    \caption{Two different Coulomb diamond scales visible in the conductance plots. Top: A close view showing the islands corresponding to the device size. Bottom: Expanded view showing diamonds corresponding to a much smaller quantum dot.}
+%    \label{fig:overlapping_diamonds}
+%\end{figure}
+%
+%An estimate of the two quantum dot sizes seen in Figure \ref{fig:overlapping_diamonds} can be obtained using simple relations discussed in Chapter \ref{sec:CNT} \cite{Bockrath1997}. The top plot gives the following parameters, $\Delta E \sim 2.5meV$ and $\Delta \mu \sim 7meV$. There is no four-fold degeneracy visible in the diamond sizes, which suggests $E_{charging} \gg \Delta E$. With that approximation, the dot size can be estimated in two ways, seen in Equation \ref{eq:dot_sizes}.
+%
+%\begin{align}
+%    \Delta E \sim \frac{0.5eV}{L(nm)} = 2.5meV \nonumber \\
+%    E_{charging} = \frac{e^2}{C} \sim \frac{e^2}{L} = \frac{1.4eV}{L(nm)} = 7meV
+%    \label{eq:dot_sizes}
+%\end{align}
+%
+%Both of these relations gives a quantum dot size of $L\sim200nm$, which is roughly the size of the device as it was designed. 
+%
+%The larger dots seen in the image are a little more difficult to understand. A quick estimate can be obtained in the same way as Equation \ref{eq:dot_sizes}. Looking at the size of the diamond highlighted in black gives a rough estimate of $L \lesssim 100nm$ which is less than half the size of the device as it was designed. This suggests some contamination on the substrate or defect is acting like a quantum dot in series with the intended one. Similar measurements have been made in the past \cite{Stokes2010, McEuen1999, Park2001, Babi2003} in which the additional quantum dots were attributed to defects on the substrate; that explanation is consistent with these observations.
