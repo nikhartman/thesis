@@ -2,7 +2,7 @@
 \label{sec:FMCNTQD}
 \chaptermark{Ferromagnetic CNTQD}
 
-Of the many samples discussed in Chapter \ref{chap:contacts}, seven FM-CNT-FM devices were measured at low temperatures. Details, including room temperature resistance, can be seen in Table \ref{table:rt_fm_devices}.
+Of the many samples discussed in Chapter \ref{chap:contacts}, seven F-CNT-F devices were measured at low temperatures. Details, including room temperature resistance, can be seen in Table \ref{table:rt_fm_devices}.
 
 \begin{table}
     \centering
@@ -17,7 +17,7 @@ Of the many samples discussed in Chapter \ref{chap:contacts}, seven FM-CNT-FM de
         SCF98 & 11-12 & Co & electron beam evaporation & \SI{120}{\kilo\ohm}\\
         \label{table:rt_fm_devices}  
     \end{tabular}
-    \caption{Details of measured FM-CNT-FM devices}
+    \caption{Details of measured F-CNT-F devices}
 \end{table}
 
 Each of these samples was measured at 4K, with the exception of SCF98 (11-12) which was measured at 150mK. Figure \ref{fig:all_FM_QD} shows Coulomb diamond plots for each of the samples. These were used to calculate the quantum dot properties seen in Table \ref{table:cold_fm_devices}
@@ -36,7 +36,7 @@ Each of these samples was measured at 4K, with the exception of SCF98 (11-12) wh
         SCF98 & 11-12 & 7  & 1.8 & 5.2  & 280 & 300 & 15 & 0.005 \\
         \label{table:cold_fm_devices}  
     \end{tabular}
-    \caption{Low temperature characteristics of FM-CNT-FM quantum dots}
+    \caption{Low temperature characteristics of F-CNT-F quantum dots}
 \end{table}
 
 \begin{figure}
@@ -76,7 +76,7 @@ Of the ferromagnetic devices measured, only sample SCF72 showed clear tunneling 
 \begin{figure}
     \centering
     \includegraphics[width=0.9\textwidth]{fmdots/scf72_17-19_TMR_4K.pdf}
-    \caption{Tunneling magnetoresistance measurements taken on device SCFM72 (17-19) at $V_{gate} = 0V$. The plots show data for $V_{bias} = 5mV$ (left) and $V_{bias} = 10mV$ (right).}
+    \caption{Tunneling magnetoresistance measurements taken on device SCF72 (17-19) at $V_{gate} = 0V$. The plots show data for $V_{bias} = 5mV$ (left) and $V_{bias} = 10mV$ (right).}
     \label{fig:TMR_real}
 \end{figure}
 
@@ -126,13 +126,102 @@ In sample SCF72, the TMR signal was only significant in a narrow range of gate v
     \label{fig:TMR_gate}
 \end{figure}
 
-%%%%%%%%%%%%%%%%
+\section{Negative Differential Conductance in Coulomb Blockade Regime}
 
-%\section{Magnetoresistance with Non-Colinear Ferromagnetic Leads}
-%
-%Maybe later
+Negative differential conductance resulting from spin blockade has been observed in two devices measured. The data is pressented in Figure \ref{fig:negative_differential_conductance}. This section will attempt to explain the NDC feature in terms of two models. Neither model is dependent on the fact that the leads are ferromagnetic. No TMR was measured in these devices. An exchange interaction still exists between the ferromagnets and quantum dot levels to lift the spin degeneracy. Additionally, the tunnel barriers between the leads and sample should be spin dependent.
 
-%%%%%%%%%%%%%%%%
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{fmdots/scf75_scf96_ndc.pdf}
+    \caption{Conductance as a function of $V_{bias}$ and $V_{gate}$ in samples SCF75 (left) and SCF96 (right). Note the differential conductance peaks in dark blue running parallel to the diamond edges in each sample.}
+    \label{fig:negative_differential_conductance}
+\end{figure}
+
+\subsection{Spin Blockade in a Double Quantum Dot}
+\label{sec:dqd_model}
+
+Defects or impurities along the length of a nanotube quantum dot can form small tunnel barriers that interrupt electron transport through the dot \cite{McEuen1999, Bockrath2001}. These tunnel barriers define multiple quantum dots between the fabricated leads on the sample. This is a commonly observed problem in substrate grown carbon nanotubes. Other work has exploited similar defects to form tunable double quantum dots \cite{Mason2004, Jorgensen2007}.
+
+With careful analysis, the formation of multiple quantum dots in series can lead to interesting physical situations not observed in single quantum dot devices. Two quantum dots formed in series by a defect or impurity have much lower tunnel barriers and stronger coupling than double quantum dots formed by the patterning of local gates. Thanks to this strong coupling between dots, spin interactions can be observed that are not seen in as-fabricated double quantum dot structures. In 2008, Buitelaar et al. used this idea to measure Pauli spin blockade in a carbon nanotube double quantum dot \cite{Buitelaar2008}. The model relies on the formation of a double quantum dot by an impurity.
+
+Table \ref{table:cold_fm_devices} shows samples SCF75 (15-16) and SCF96 (9-12) have calculated lengths of 140nm and 110nm, respectively. Comparing this to the 300nm spacing between cobalt leads suggests that the quantum dot being measured in each case is defined by defects along the nanotube. This is supported by the gate measurements that show no clear periodicity in Figure \ref{fig:scf75_scf96_gates}. One final piece of evidence for a double quantum dot is the suppressed conductance in the SCF75 levels around $V_{gate}=5.9V$, this can be attributed to one dot being off resonance while the other is not. This feature also suggests the back gate coupling for each quantum dot is quite different, thus the gate dependent features are dominated by a single dot in the series.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{fmdots/scf75_scf96_gates.pdf}
+    \caption{Current as a function of $V_{gate}$ in samples SCF75 (left) and SCF96 (right). No clear periodicity is visible in either measurement implying disorder along the nanotube.}
+    \label{fig:scf75_scf96_gates}
+\end{figure}
+
+Figure \ref{fig:buitelaar_levels} illustrates the basic principles of the proposed model. It based on a hybridization between levels in the two strongly coupled quantum dots. Spin blockade then comes from a forbidden transition between the (1,1) spin triplet state and the (0,2) spin singlet state.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1.0\textwidth]{fmdots/buitelaar_levels.png}
+    \caption{Figure adapted from \cite{Buitelaar2008}. (a) Double quantum dot levels. Numbering refers to the occupation of (QDA,QDB). $\delta \epsilon$ is the splitting between single particle energy levels. $U$ and $U'$ are the charging energies. (b) With strong coupling the (1,1) and (0,2) states hybridize to form bonding and anti-bonding orbitals $S_1$ and $S_2$ different from the triplet state $T$. (c) At negative bias the (1,1) to (0,2) transition is forbidden by spin blockade as the (0,2) must be a spin singlet. (d) The transition is allowed in the reverse bias situation.}
+    \label{fig:buitelaar_levels}
+\end{figure}
+
+Figure \ref{fig:dqd_model_compare} shows the data from SCF75 alongside the simulation from Buitelaar et al. Note the similarities in the negative differential conductance peak in the data and simulation. The simulation was run for a device 300nm in length with a defect in the center, giving two dots of size 150nm, consistent with Table \ref{table:cold_fm_devices}. Using $\alpha_G = 0.11$ , gives an energy spacing between the two zero bias conductance peaks of 15.4meV, which agrees well with the simulation parameters. The situation is identical for SCF96, with the exception of the gate coupling.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{fmdots/dqd_model_compare.png}
+    \caption{A comparison of the SCF75 negative differential conductance data (a) with double quantum dot data (b) and simulations (c) from Reference \cite{Buitelaar2008}.}
+    \label{fig:dqd_model_compare}
+\end{figure}
+
+\subsection{NDC from Spin Selection Rules}
+\label{sec:single_dot_model}
+
+The negative differential conductance peaks seen in Figure \ref{fig:negative_differential_conductance} may be explained by a simpler, single dot model, but not necessarily captured by the constant interaction model discussed in Section \ref{sec:constant_interaction_model}. As electrons fill the quantum dot, they are not only subject to charge interactions, but also spin interactions. Each quantum dot occupation number has multiple posible spin states. Figure \ref{fig:spin_states} tabulates some of these states for low occupation numbers \cite{Weinmann1994}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{fmdots/spin_states.png}
+    \caption{Table tabulating possible occupation numbers, spin states, and relevant energy level splittings for low occupation number quantum dots as calculated by Weinmann et al. \cite{Weinmann1994}.}
+    \label{fig:spin_states}
+\end{figure}
+
+This means that there are spin selection rules that can determine the lifetime of a given quantum dot state. Consider, for example, a state with occupation number $n$ and maximal spin, $S=n/2$. This is possible when transport occurs though excited states in a 1D quantum dot. The $S=n/2$ state must transition to a nearby state ($n-1$, $S'=(n-1)/2$). Since the spin can only change by -1/2, not $\pm$1/2, $S=n/2$ is a relatively long lived state. When this state is brought into resonance with the Fermi level on the leads, the current through the dot is reduced, leading to a negative differential conductance peak. Figure \ref{fig:weinmann_compare} compares qualitatively a simulation of this effect with the data from SCF96. \cite{Weinmann1995}. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{fmdots/weinmann_compare.pdf}
+    \caption{A comparison between simulated transport through a quantum dot with spin selection rules and data from SCF75. The simulation is taken from Weinmann et al. \cite{Weinmann1995}. Simulation data shows regions of negative differential conductance as bright white lines. Data on the right shows regions of negative differential conductance in dark blue.}
+    \label{fig:weinmann_compare}
+\end{figure}
+
+A similar effect can explain the missing ground state transitions seen in the data for SCF96. If the spin ground states for two adjacent quantum dot occupation numbers differ by more than $1/2$ the conductance peak is missing from the stability diagram.
+
+These calculations assume spin degenerate levels and symmetric coupling to normal metal leads. Without a direct measure of the exchange coupling in ferromagnetically contacted nanotubes, it is unclear if the first criterion is met. The second condition is clearly not met, but it is not required, just a simplification. It is easy to imagine that these types of spin selection rules will be exaggerated further by reducing one spin population and introducing spin dependent tunnel barriers. See Figure \ref{fig:scf72_info}(a) for a model of such a quantum dot.
+
+\section{Spin Selection Rules with Applied Magnetic Field}
+\label{sec:spin_selection_field}
+
+Additional data supporting the suppression of conductance peaks in ferromagnetic quantum dots due to spin selection rules is observed in sample SCF72. This dot has been used throughout this thesis as the canonical example of a Coulomb blockade measurement. It shows regular oscillations in the gate, suggesting a single dot with levels that are not split by exchange coupling or disorder. An energy level diagram of the quantum dot, tunnel barriers, and the data can be seen in Figure \ref{fig:scf72_info}(a). 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{fmdots/scf72_info.pdf}
+    \caption{(a) Energy level diagram for an F-CNT-F quantum dot. The two barrier colors represent the two spin dependent tunnel barrier heights for spin up and spin down electrons. Blue and red arrows illustrate the different tunneling rates for up and down spins. (b) SCF72 conductance at $B=0$. (c) SCF72 conductance at $B=4T$.}
+    \label{fig:scf72_info}
+\end{figure}
+
+Figure \ref{fig:scf72_spin_selection} shows Coulomb diamond data for SCF72 at $B=0$T and -4T; suppressed conductance levels are marked with dashed lines. Conductance peaks that mark transitions between different dot occupation numbers (those that cross $V_{bias}=0mV$) are suppressed as the applied field is increased. This can be understood in light of the discussion in Section \ref{sec:single_dot_model}. Applying a strong magnetic field changes the spin ground state to one in which adjacent occupation numbers have spin levels differing by more than $\Delta S = 1/2$ as predicted by the constant interaction model. Looking at the excited states, it is clear that there is a similar change in which excited states are suppressed based on the change in lowest energy spin states.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{fmdots/scf72_spin_selection.pdf}
+    \caption{Conductance as a function of $V_{gate}$ ang $V_{bias}$ for sample SCF72 at $B=0$T (left) and -4T (right). Solid lines trace conductance peaks. Dashed lines trace suppressed peaks.}
+    \label{fig:scf72_spin_selection}
+\end{figure}
+
+The Zeeman splitting can be measured by measuring the change in excited state energies as the magnitude of the field is increased. At zero field, excited states are separated by $\Delta E = 1.8$meV. In a field of -4T, the levels are separated by $\Delta E = 2.0meV$. This certainly shows that the excited states are spin dependent. It is also consistent with the Zeeman splitting of $g \mu_B (-4T) =-0.25 g$meV. The $g$-factor in carbon nanotubes is measured to be approximately 2 \cite{Cobden1998}, but has been found to be tunable in some devices \cite{Lai2014}. This measurement really shows that the excited state levels are not spin degenerate. If the levels were, the spacing would not only change, but single excited state levels would be seen to split into two. This implies a non-zero exchange coupling field in the nanotube from the ferromagnetic leads.
+
+\subsection{Results and Discussion}
+
+Effects of spin selection rules have potentially been observed in three samples. At least one of these samples, SCF72, is proven to be a clean, single quantum dot. This suggests that spin selection rules beyond the constant interaction model might be a better explanation for suppressed and negative differential conductance features though these quantum dots. Additional work must be done in modeling transport though a F-CNT-F dot to confirm that the features observed here can be accurately fit with this model. However, given the rich nature of spin physics in ferromagnetic quantum dots this is a much more attractive model with which to compare the data.
 
 \section{Spectroscopy of a Magnetic Impurity}
 \label{sec:imurity_tunneling}
@@ -167,30 +256,15 @@ The charging energy for the impurity can be measured using the lever arm calcula
 
 The most likely origin of this impurity is a piece of magnetic contamination. The size of the impurity can be estimated in two ways. First, it can be estimated using the capacitance calculated above. Considering the impurity as a spherical metal shell gives $C_{\Sigma} \sim 4\pi \epsilon_0 r = 0.8$aF. With that, the radius is calculated to be $r = 7$nm. The size can also be estimated quantum mechanically from the level spacing, $\Delta E = 5$meV. Assuming the impurity is a 3D spherical well, the levels are $E_{n,l} = \frac{\hbar^2}{2ma^2}z_{n,l}^2$ where $z_{n,l}$ is the nth zero of the lth spherical Bessel function. For $l=0$, the level spacing is $\Delta E = \frac{\pi \hbar^2}{2mr^2}$. Using the measured value $\Delta E = 5meV$ gives an estimate for the radius of $r = 5$nm. These two estimates are in good agreement and suggest an origin for the impurity. A 10nm diameter magnetic particle on the substrate perfectly describes the iron nanoparticles used in the nanotube catalyst.
 
-%(add sketch of parallel quantum dot and energy level diagrams)
-
 \subsection{Effects on CNT Quantum Dot Levels}
 
-Discuss the negative differential conductance observed in finite field in terms of the proposed magnetic impurity model.
+Additional interactions between the dot and impurity levels can be seen at negative bias in the 2T magnetic field data. This region is highlighted in Figure \ref{fig:scf96_ndc_impurity}.
 
-\section{Negative Differential Conductance in Coulomb Blockade Regime}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{fmdots/scf96_ndc_impurity.pdf}
+    \caption{Conductance as a function of $V_{bias}$ and $V_{gate}$ at $B=2T$ in sample SCF96. Note the difference in slope in the excited states of the two Coulomb diamonds seen at negative bias and the strong negative differential conductance.}
+    \label{fig:scf96_ndc_impurity}
+\end{figure}
 
-Negative differential conductance resulting from spin blockade has been observed in two devices. The data is discussed below in terms of two possible models.
-
-\subsection{Single Dot Spin Blockade Model}
-
-Discuss.
-
-\subsection{Spin Blockade in a Double Quantum Dot}
-
-%Table \ref{table:cold_fm_devices} shows sample SCF75 (15-16) has a measured energy level spacing of $\Delta E = 3.5meV$, which corresponds to a quantum dot length of $L \sim 140$nm. This is only about half of the device length of 300nm. That implies that there is more than one quantum dot in series along the nanotube and the Coulomb blockade effects seen in Figure \ref{fig:all_FM_QD} come from transport through multiple quantum dots in series. This is a commonly observed problem in carbon nanotube devices grown on silicon substrates and is attributed to defects or impurities along the length of the nanotube forming small tunnel barriers that interrupt electron transport through the dot \cite{McEuen1999, Bockrath2001}. 
-%
-%With careful analysis, the formation of multiple quantum dots in series can lead to interesting physical situation not observed in typical devices. Two quantum dots formed in series by a defect or impurity have much lower tunnel barriers and stronger coupling than double quantum dots formed by the patterning of local gates. Thanks to this strong coupling spin interactions can be observed in these double quantum dots that are not seen in as-fabricated double quantum dot structures. In 2008, Buitelaar et al. used this idea to measure Pauli spin blockade in a carbon nanotube double quantum dot \cite{Buitelaar2008}. The model relies on the formation of a double quantum dot by an impurity. Remarkably, the data taken on SCF75 matches this model quite well.
-%
-%\cite{Mason2004, Jorgensen2007}
-
-Discuss.
-
-\section{Zeeman Splitting and Conductance Modulation}
-
-Discuss that data from SCF72 in and out of the field.
+There are two features to note in Figure \ref{fig:scf96_ndc_impurity}. The first is the change in slope of the two Coulomb diamonds seen at negative bias. This is a clear indication that the conductance measured is not due to a single quantum dot as described by the constant interaction model. Additionally, note the strong negative differential conductance seen in these same diamonds. Both of these features suggest some coupling between the levels on the nanotube quantum dot and in the nearby magnetic impurity. A similar coupling has been observed previously between a magnetic impurity and vibrational modes in a suspended nanotube \cite{Ganzhorn2013}. The exact nature of the coupling is not known, but it is likely that both of these observed features can be attributed to the presence of the magnetic impurity. The negative differential conductance in particular may fit with some existing models of hybridized levels in two quantum dots resulting negative differential conductance from spin blockade between the two dots as discussed in Section \ref{sec:dqd_model}.
