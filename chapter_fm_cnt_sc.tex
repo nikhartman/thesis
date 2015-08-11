@@ -6,7 +6,7 @@
 
 In 1971, Tedrow and Meservey made their famous measurement of the spin polarization in a ferromagnetic nickel thin film \cite{Tedrow1971}. This was done by creating a tunnel junction between the thin nickel film and a thin aluminum film. The density of states of the aluminum film was used as a probe into the spin polarization of the nickel film by measuring the conductance through the junction. Tedrow and Meservey later used this same technique to characterize a number of ferromagnetic materials \cite{Tedrow1973}
 
-The motivation for the work present in this chapter was to make the same type of measurement using a carbon nanotube quantum dot as a spin tunable tunnel barrier between a ferromagnetic and superconducting lead. In doing so, the spin resolved density of states of each material could be inferred from the differential conductance through the quantum dot as a function of magnetic field.
+The motivation for the work in this chapter was to make the same type of measurement using a carbon nanotube quantum dot as a spin tunable tunnel barrier between a ferromagnetic and superconducting lead. In doing so, the spin resolved density of states of each material could be inferred from the differential conductance through the quantum dot as a function of magnetic field.
 
 \section{Background}
 
@@ -134,7 +134,7 @@ Sample SCFMH8 was one of the last samples made for this work. Nanotubes were gro
     \label{fig:scfmh8}
 \end{figure}
 
-As fabricated the thermally evaporated permalloy leads had contact resistances in the 100M$\Omega$ range. After fabrication, the samples were annealed at 325$^\circ$C for 3 hours in an Ar/\ce{H2} atmosphere. After annealing, Py-CNT-Py junctions and Nb-CNT-Nb junctions were around 100k$\Omega$. Tuning the back gate on this device was found to have no effect on the transport properties. It is possible that the high temperature growth or anneal damaged the gate oxide.
+As fabricated the thermally evaporated permalloy leads had contact resistances in the 100M$\Omega$ range. After fabrication, the samples were annealed at 325$^\circ$C for 3 hours in an Ar/\ce{H2} atmosphere. After annealing, both Py-CNT-Py and Nb-CNT-Nb junctions were around 100k$\Omega$. Tuning the back gate on this device was found to have no effect on the transport properties. It is possible that the high temperature growth or anneal damaged the gate oxide.
 
 Figure \ref{fig:scfmh8_vi} shows the current and conductance as a function of the bias voltage. The sample is clearly in the Coulomb Blockade regime, but the level spacings are difficult to determine. A two probe resistance measurement was made across a niobium wire fabricated on the same chip as SCFMH8. The critical field in this wire was found to be 2T.
 
@@ -147,7 +147,7 @@ Figure \ref{fig:scfmh8_vi} shows the current and conductance as a function of th
 
 \section{Zeeman Splitting of Differential Conductance Peaks}
 
-In calculating Equation \ref{eq:fis_diffcond_field}, a tunnel barrier with a height independent of energy was assumed. By replacing the tunnel barrier used in that model with a quantum dot, the assumption no longer holds. In order to capture the energy dependence of the quantum dot an energy dependent hopping amplitude must be added to the integral over the superconducting density of states. The data discussed in this section correspond to such a model.
+In calculating Equation \ref{eq:fis_diffcond_field}, a tunnel barrier with a height independent of energy was assumed. By replacing the tunnel barrier used in that model with a quantum dot, the assumption no longer holds. In order to capture the energy dependence of the quantum dot a term proportional to the density of states on the quantum dot must be added to the integral over the superconducting density of states. The data discussed in this section correspond to such a model.
 
 Figure \ref{fig:mt7_bisweep_edit} shows the evolution of the differential conductance peaks in sample MT7 as a function of the magnetic field. Yellow dashed lines in the bottom plot serve as a guide to the eye for each of the differential conductance peaks.
 
@@ -178,7 +178,7 @@ To more easily discuss the differential conductance as a function of field, vert
 
 Figure \ref{fig:bisweep_cuts_all} shows how the tunneling differential conductance evolves as a function of the magnetic field in each sample. Sample SCFMH8 shows very little movement of the peaks with the magnetic field. There are a number of reasons this might be the case. Most importantly, the splitting could be obscured by thermal noise in the system, which is on the order of 500$\mu$eV. Zeeman splitting of opposite spin levels on a nanotube quantum dot has been observed in the past to be of the same order of magnitude \cite{Tans1997}. This seem to be the most reasonable explanation. It is difficult to speculate any more on what splittings are expected from the Coulomb blockade features alone without the device being gate tunable. Looking closely at Figure \ref{fig:scfmh8_bisweep_edit} it is possible that there is some evidence of the superconducting gap closing in the outermost conductance peaks near $B=2T$.
 
-In Figures \ref{fig:bisweep_cuts_all} and \ref{fig:mt7_bisweep_edit} it is clear that there is some field dependent movement of the conductance peaks in sample MT7. Again, it is important to remember a change in conductance at low bias is not solely due to the superconducting gap, but rather a combination of the gap and Coulomb blockade. From $B=0$T to 0.5T conductance peak 1 (labelled in Figure \ref{fig:mt7_bisweep_edit}) shifts from $V_{bias}=-4.2meV$ to $V_{bias}=3meV$. This agrees well with the closing of the calculated superconducting gap of 1.2meV. Similar features are observed in the other three conductance peaks. At fields above 0.5T, peaks 1-3 have a slight field dependance. Peaks 1 and 2 show positive slopes of 1.5 and 0.3 meV/T, respectively. Peak 3 has a slope of -0.1meV/T. Qualitatively this makes senes in terms of the Coulomb blockade. The magnitudes of the slopes are consistent with Zeeman splitting energies, $g \mu_B$, B in carbon nanotubes with a g-factor of 2. The opposite sign of the splitting on each side of the Coulomb diamond makes sense for a quantum dot with no spin degeneracy. Each successive diamond should have opposite spin polarization, therefore excited states on opposite sides of a single diamond will have opposite spin. 
+In Figures \ref{fig:bisweep_cuts_all} and \ref{fig:mt7_bisweep_edit} it is clear that there is some field dependent movement of the conductance peaks in sample MT7. Again, it is important to remember a change in conductance at low bias is not solely due to the superconducting gap, but rather a combination of the gap and Coulomb blockade. From $B=0$T to 0.5T conductance peak 1 (labelled in Figure \ref{fig:mt7_bisweep_edit}) shifts from $V_{bias}=-4.2meV$ to $V_{bias}=3meV$. This agrees well with the closing of the calculated superconducting gap of 1.2meV. Similar features are observed in the other three conductance peaks. At fields above 0.5T, peaks 1-3 have a slight field dependance. Peaks 1 and 2 show positive slopes of 1.5 and 0.3 meV/T, respectively. Peak 3 has a slope of -0.1meV/T. Qualitatively this makes senes in terms of the Coulomb blockade. The magnitudes of the slopes are consistent with Zeeman splitting energies, $g \mu_B B$, in carbon nanotubes with a g-factor of 2. The opposite sign of the splitting on each side of the Coulomb diamond makes sense for a quantum dot with no spin degeneracy. Each successive diamond should have opposite spin polarization, therefore excited states on opposite sides of a single diamond will have opposite spin. 
 
 Further measurements to resolve these features at lower temperatures will be necessary for a more quantitative analysis.
 
@@ -236,7 +236,7 @@ A schematic of the full device with both measured quantum dots highlighted is sh
 
 It is difficult to determine the source of the hysteresis in these current versus field measurements. To begin, several possibilities can be ruled out. First, the effect cannot be due to the switching of the ferromagnetic lead magnetization. As mentioned above, the coercive field of Py is expected to be much smaller than 0.5T. Second, the field is swept repeatedly from 0 to 3T and back. There should be no switching of the magnetization unless the polarization of the field is changed.
 
-We will rule out subgap transport phenomena, such as Kondo states (CITE), cotunneling (CITE), and Andreev reflection (CITE) due to the magnitude of the field and relatively high temperature. The change in conductance, at least at 0.5T, could be attributed to a level coming into resonance with the edge of the superconducting gap due to Zeeman splitting. A diagram of the process is seen in Figure \ref{fig:zeeman_split_resonance}.
+We will rule out subgap transport phenomena, such as Kondo states \cite{Nygard2000, Grove-Rasmussen2007, Jarillo-Herrero2005}, cotunneling \cite{Liang2002}, and Andreev reflection \cite{Pillet2010} due to the magnitude of the field and relatively high temperature. The change in conductance, at least at 0.5T, could be attributed to a level coming into resonance with the edge of the superconducting gap due to Zeeman splitting. A diagram of the process is seen in Figure \ref{fig:zeeman_split_resonance}.
 
 \begin{figure}
     \centering
@@ -245,9 +245,9 @@ We will rule out subgap transport phenomena, such as Kondo states (CITE), cotunn
     \label{fig:zeeman_split_resonance}
 \end{figure}
 
-There are a few reasons to rule out the situation in Figure \ref{fig:zeeman_split_resonance}. First, the conductance switching exists independent of the bias voltage. Second, there is no reason to expect the process depicted in Figure \ref{fig:zeeman_split_resonance} to be hysteretic. Finally, it is unlikely the Nb-CNT-Nb to have the same configuration of levels.
+There are a few reasons to rule out the situation in Figure \ref{fig:zeeman_split_resonance}. First, the conductance switching exists independent of the bias voltage. Second, there is no reason to expect the process depicted in Figure \ref{fig:zeeman_split_resonance} to be hysteretic. Finally, it is unlikely for the Nb-CNT-Nb to have the same configuration of levels.
 
-To investigate the bias dependence of the switching behavior, the field values at which the conductance switching occurs are plotted in Figure \ref{fig:scfmh8_peak_positions}. Based on the data, it does not appear that the switching behavior depends on the bias. Both the switching positions and the width of the hysteresis appears to be constant as a function of $V_{bias}$. It is also interesting to note that the Nb-CNT-Nb data corresponds to the Py-CNT-Nb down sweep.
+To investigate the bias dependence of the switching behavior, the field values at which the conductance switching occurs are plotted in Figure \ref{fig:scfmh8_peak_positions}. Based on the data, it does not appear that the switching behavior depends on the bias. Both the switching positions and the width of the hysteresis appears to be constant as a function of $V_{bias}$. It is also interesting to note that the Nb-CNT-Nb switching fields correspond to those measured in the Py-CNT-Nb down sweep.
 
 \begin{figure}
     \centering

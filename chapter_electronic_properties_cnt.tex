@@ -25,7 +25,7 @@ As mentioned above, single layers of carbon atoms, graphene, form a honeycomb la
     \label{fig:graphene_unit_cell}
 \end{figure}
 
-In Figure \ref{fig:graphene_unit_cell} the unit cell is defined by the two lattice vectors $\vec{a}_1$ and $\vec{a}_2$. Each unit cell is comprised of two atoms. The honeycomb lattice can be thought of as to interpenetrating triangular sublattices. With that picture, the honeycomb unit cell contains one atom from each of the two sublattices, highlighted in Figure \ref{fig:graphene_unit_cell} as red (A) and blue (B). Each atom on the lattice contributes one conduction electron.
+The unit cell is in Figure \ref{fig:graphene_unit_cell} is defined by the two lattice vectors $\vec{a}_1$ and $\vec{a}_2$. Each unit cell is comprised of two atoms. The honeycomb lattice can be thought of as two interpenetrating triangular sublattices. With that picture, the honeycomb unit cell contains one atom from each of the two sublattices, highlighted in Figure \ref{fig:graphene_unit_cell} as red (A) and blue (B). Each atom on the lattice contributes one conduction electron.
 
 Using the coordinates defined in Figure \ref{fig:graphene_unit_cell}, the lattice vectors are defined, from the center of a honeycomb.
 
@@ -103,7 +103,7 @@ For simplicity, the rest of this calculation will assume $\braket{u_i | u_j} = \
     \begin{pmatrix} H_{AA}-\varepsilon & H_{AB} \\ H_{BA} & H_{BB}-\varepsilon \end{pmatrix} \begin{pmatrix} C_A \\ C_B \end{pmatrix} = 0
 \end{equation}
 
-Non-trival solutions to Equation \ref{eq:secular} exist only when:
+Non-trival solutions to Equation \ref{eq:secular} exist when:
 
 \begin{equation}
 \label{eq:eigenvals}
@@ -165,7 +165,7 @@ Note, there is only one hopping amplitude, independent of the index $i$, since t
     H_{AB} = t \sum_{i=1}^{3} e^{i\vec{k}\cdot\vec{\delta}_i}
 \end{equation}
 
-Equation \ref{eq:AB_final} can be combined with the assumption that the onsite energy can be set to zero, $\varepsilon_{p_z} = 0$ to give the final effective Hamiltonian for this model.
+Equation \ref{eq:AB_final} can be combined with the assumption that the onsite energy can be set to zero, $\varepsilon_{p_z} = 0$ to give the final effective Hamiltonian.
 
 \begin{equation}
 \label{eq:effective_H}
@@ -383,7 +383,7 @@ Measurements on carbon nanotube field effect transistors (CNTFETs) depend on the
     \label{transistor_curves.png}
 \end{figure}
 
-Metallic source/drain contacts typically form Schottky barriers with carbon nanotubes. The polarity of the resulting CNTFET is thus determined by the relation between the work function of the contact material and nanotube. For metals with a relatively high work function, such as Pd, Ti, Cr, and Co, the devices are expected to be p-type. Metals with a lower work function, such as Al, Mg, and Sc, can produce n-type transistors. However, many of these low work function metals also happen to have a very poor wetability on the nanotube surface, which leads to large contact resistances, making the devices very difficult to fabricate and measure.
+Metallic source/drain contacts typically form Schottky barriers with carbon nanotubes. The polarity of the resulting CNTFET is thus determined by the relation between the work function of the contact material and nanotube. For metals with a relatively high work function, such as Pd, Ti, Cr, and Co, the devices are expected to be p-type. Metals with a lower work function, such as Al, Mg, and Sc, can produce n-type transistors. However, many of these low work function metals also happen to have a very poor wetability on the nanotube surface, which leads to large contact resistances, making the devices difficult to fabricate and measure.
 
 \section{Carbon Nanotube Quantum Dots}
 \label{sec:constant_interaction_model}
@@ -438,7 +438,7 @@ The simplest measurement to make on a quantum dot like the one described here, i
     \label{fig:gate_blockade}
 \end{figure}
 
-Figure \ref{fig:real_gate} shows conductance as a function of gate voltage through an actual carbon nanotube quantum dot device. A close look at the spacing of the conductance peaks reveals some hints of four-fold symmetry that is an important part of the structure of the nanotube quantum dot \cite{Cobden2002}. Adding the first electron to the dot costs an energy $ \Delta \mu(N) = \frac{e^2}{2C} + \Delta E$. However, the electron spin and valley degeneracy combine to give each level in the quantum potential well a degeneracy of four. The next three electrons added move into the same level, which only requires an energy of $\Delta \mu(N) = \frac{e^2}{2C}$ for each electron. This pattern continues for each level on the dot, such that the energy required to add the $N$ electron is always larger than the energy required to add the $N+1$, $N+2$, and $N+3$ electrons.
+Figure \ref{fig:real_gate} shows conductance as a function of gate voltage through an actual carbon nanotube quantum dot device. The inset reveals some hints of four-fold symmetry that is an important part of the structure of the nanotube quantum dot \cite{Cobden2002}. Adding the first electron to the dot costs an energy $ \Delta \mu(N) = \frac{e^2}{2C} + \Delta E$. However, the electron spin and valley degeneracy combine to give each level in the quantum potential well a degeneracy of four. The next three electrons added move into the same energy level, which only requires an energy of $\Delta \mu(N) = \frac{e^2}{2C}$ for each electron. This pattern continues for each level on the dot, such that the energy required to add the $N$ electron is always larger than the energy required to add the $N+1$, $N+2$, and $N+3$ electrons.
 
 \begin{figure}
     \centering
@@ -474,4 +474,4 @@ Finally, measuring conductance as a function of both the bias and gate produces 
     \label{fig:coulomb_diamonds}
 \end{figure}
 
-As an illustrative example the properties of the device measured in Figure \ref{fig:coulomb_diamonds} can be calculated. Here the level spacing on the dot is measured to be $\Delta E = 4meV$ and the addition energy $E_{Add} = 9meV$. At low energies the dispersion relation of the nanotube can be assumed to be roughly linear $\varepsilon(k) = \hbar v_f k$. $k$ is quantized because of the confinement potential created by the leads $k = \frac{n\pi}{L}$. The level splitting can then be written as $\Delta E = \frac{\hbar v_f \pi}{L}$. Using the measured value of $\Delta E$ gives an estimate of $L = 520nm$, which is consistent with the device design of \SI{500}{\nano\meter}. This result can now be used, along with the addition energy, to find the total capacitance of the quantum dot. Starting with $E_{Add} = \frac{e^2}{2C} + \Delta E$ gives an estimate of $C=10^{-17}F$, which is consistent with typical carbon nanotube quantum dot measurements.
+As an illustrative example the properties of the device measured in Figure \ref{fig:coulomb_diamonds} can be calculated. Here the level spacing on the dot is measured to be $\Delta E = 4meV$ and the addition energy $E_{Add} = 9meV$. At low energies the dispersion relation of the nanotube can be assumed to be roughly linear $\varepsilon(k) = \hbar v_f k$. $k$ is quantized because of the confinement potential created by the leads $k = \frac{n\pi}{L}$. The level splitting can then be written as $\Delta E = \frac{\hbar v_f \pi}{L}$, where $v_f=c/300$. Using the measured value of $\Delta E$ gives an estimate of $L = 520nm$, which is consistent with the device design of \SI{500}{\nano\meter}. This result can now be used, along with the addition energy, to find the total capacitance of the quantum dot. Starting with $E_{Add} = \frac{e^2}{2C} + \Delta E$ gives an estimate of $C=10^{-17}F$, which is consistent with typical carbon nanotube quantum dot measurements.

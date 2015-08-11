@@ -2,17 +2,17 @@
 \label{chap:contacts}
 \chaptermark{Contacts to CNTs}
 
-In the course of making the devices measured in later chapters of this thesis, many carbon nanotube quantum dots were tested in our room temperature probe station. It became clear that there were problems with producing devices with consistent two-probe resistances. The only two possible sources for the anomalously large resistances (>\SI{100}{\mega\ohm})are poor quality nanotubes and large contact resistances between thin films deposited for source and drain contacts. 
+In the course of making the devices measured in later chapters of this thesis, hundreds of carbon nanotube quantum dots were tested in our room temperature probe station. It became clear that there were problems with producing devices with consistent two-probe resistances. The only two possible sources for the anomalously large resistances (>\SI{100}{\mega\ohm}) are poor quality nanotubes and large contact resistances between thin films deposited for source and drain contacts. 
 
-All devices measured for this chapter were created by growing nanotubes directly on silicon substrates using the methods discussed in Section \ref{sec:catalyst_island}. The quality of these nanotube was tested with several measurements. Atomic force microscope measurements of the tube diameter confirmed nanotubes were individual, single-walled nanotubes with typical diameters around \SI{2}{\nano\meter}. Scanning Electron Microscope measurements checked the nanotube lengths and density. Finally, electrical measurements of three-terminal devices with low contact resistances showed the expected gate dependence, as seen in in Figure \ref{fig:fet_measurements}.
+All devices measured for this chapter were created by growing nanotubes directly on silicon substrates using the methods discussed in Section \ref{sec:catalyst_island}. The quality of these nanotube was tested with several measurements. Atomic force microscope measurements of the tube diameter confirmed nanotubes were individual, single-walled nanotubes with typical diameters around \SI{2}{\nano\meter}. Scanning electron microscope measurements checked the nanotube lengths and density. Finally, electrical measurements of three-terminal devices with low contact resistances showed the expected gate dependence, as seen in in Figure \ref{fig:fet_measurements}.
 
 While the nanotubes often show defects along their length that affect low temperature transport, these do not have a significant effect when testing devices at room temperature.  Metal/nanotube interfaces are the most obvious source of the high resistances measured in many two-probe devices. More importantly, devices on the same chip did not show a broad distribution of contact resistances. Rather, when a silicon chip had working devices, it tended to have many, low resistance (<\SI{10}{\mega\ohm}) devices. This suggests that some step in the fabrication on a chip wide scale was responsible the large metal/nanotube contact resistances. Additional evidence for contamination and impurities, as seen in transport measurements, is discussed at the end of this chapter
 
-To determine the source of the large contact resistances, detailed notes were kept on the fabrication methods and resulting probe station measurements for over 300 silicon chips (one chip typically contains tens of possible quantum dot devices). The first sections of this chapter discuss the results of several fabrication methods. Recommendations are made for producing more reliable carbon nanotube quantum dots on the basis of these results.
+To determine the source of the large contact resistances, detailed notes were kept on the fabrication methods and resulting probe station measurements for over 300 silicon chips (one chip typically contains tens of possible quantum dot devices). The first few sections of this chapter discuss the results of several fabrication methods. Recommendations are made for producing more reliable carbon nanotube quantum dots on the basis of these results.
 
 \section{Statistics of Carbon Nanotube Contacts}
 
-The clearest evidence for chip-wide contamination was in the almost binary nature of the two probe nanotube resistances measured in our probe station. If a chip showed low resistances on one device, that typically held for all devices on the chip, even those built on different nanotubes. Based on this observation, the first statistic checked was the total yield of devices with resistances less than \SI{1}{\giga\ohm}. Figure \ref{fig:quantum_dot_yield} shows that data, separated by the type of metals used to create the two terminal nanotube device measured. This data includes all metals, all lithography methods, and all substrate preparations.
+The clearest evidence for chip-wide contamination was in the almost binary nature of the two probe nanotube resistances measured in our probe station. If a chip showed low resistances on one device that typically held for all devices on the chip, even those built on different nanotubes. Based on this observation, the first statistic checked was the total yield of devices with resistances less than \SI{1}{\giga\ohm}. Figure \ref{fig:quantum_dot_yield} shows that data, separated by the type of metals used to create the two terminal nanotube device measured. This data includes all metals, all lithography methods, and all substrate preparations.
 
 \begin{figure}
     \centering
@@ -52,7 +52,7 @@ Table \ref{table:all_contact_results} summarizes all of the materials and deposi
 
 \subsection{Ferromagnetic Contacts}
 
-Ferromagnetic materials comprise the largest portion of the dataset collected for this analysis. This is because they were the first materials tested, and the widest variety of materials was available. No sticking layers were used in any of the depositions discussed here for fear of ruining the spin transport properties of the metal/nanotube interface, which are discussed in Chapter \ref{sec:FMCNTQD}.
+Ferromagnetic materials comprise the largest portion of the dataset collected for this analysis. They were the first materials tested and the widest variety of materials was available. No sticking layers were used in any of the depositions discussed here for fear of ruining the spin transport properties of the metal/nanotube interface, which are discussed in Chapter \ref{sec:FMCNTQD}.
 
 \begin{figure}
     \centering
@@ -63,11 +63,11 @@ Ferromagnetic materials comprise the largest portion of the dataset collected fo
 
 Two claims are made based on the results summarized in Figure \ref{fig:fm_contacts}. First, sputtered cobalt consistently makes good contact to nanotubes. Second, electron beam evaporation produces lower device resistance devices, which is supported by previous work \cite{Churchill2012}. Only a small number of electron beam evaporated devices were tested due to limited access to the evaporator.
 
-The permalloy plots are hiding an important detail. Most thermally evaporated permalloy devices did not have a measurable resistance until after they were annealed at \SI{300}{\celsius} for 3 hours in an Ar/\ce{H2} atmosphere. This lowered the resistances to the values recorded in this data set. However, annealing under these conditions often introduced gate leaks in the devices, making the method useless for later measurements.
+The permalloy plots are hiding an important detail. Most thermally evaporated permalloy devices did not have a measurable resistance until after they were annealed at \SI{325}{\celsius} for 3 hours in an Ar/\ce{H2} atmosphere. This lowered the resistances to the values recorded in this dataset. However, annealing under these conditions often introduced gate leaks in the devices, making the method useless for later measurements. See Section \ref{sec:annealing} for further discussion on attempts to anneal nanotube devices.
 
 \subsection{Superconducting Contacts}
 
-Superconducting contacts were first measured on carbon nanotubes in 2006. In that work Ti/Al was used as the superconducting layer. Aluminum is a cheap superconducting material with a relatively long coherence length, making it useful in proximity effect devices, such as nanotube quantum dots. The other commonly used superconductor in nanotube devices is niobium or a Ti/Nb bilayer. Niobium has the advantage of having a transition temperature above 4K, making it possible to measure superconductivity in a simple liquid helium dunker. The Ti layers, in each case, are added because titanium is thought to make good contact with carbon nanotubes by wetting and forming titanium carbide compounds on the nanotube surface. Ti/Al and Ti/Nb bilayers were tested for this work, with the titanium layer being deposited, without breaking vacuum, in the same way as the superconductor. Despite the difficulty in thermally evaporating titanium, it was necessary here because chromium introduces some trace magnetic contamination to the superconductoring material that was deemed unacceptable.
+Superconducting contacts were first measured on carbon nanotubes in 1999 \cite{Kasumov1999}. In that work Re/Au and Ta/Au was used as the superconducting layer, but the fabrication involved some unusual processing. In 2006, Ti/Al was used to make a similar measurement using the same process described here \cite{JarilloHerrero2006}. Aluminum is a cheap superconducting material with a relatively long coherence length, making it useful in proximity effect devices, such as nanotube quantum dots. The other commonly used superconductor in nanotube devices is niobium or a Ti/Nb bilayer. Niobium has the advantage of having a transition temperature above 4K, making it possible to measure superconductivity in a simple liquid helium dunker. The Ti layers, in each case, are added because titanium is thought to make good contact with carbon nanotubes by wetting and forming titanium carbide compounds on the nanotube surface. Ti/Al and Ti/Nb bilayers were tested for this work. The titanium layer was deposited, without breaking vacuum, in the same way as the superconductor. Despite the difficulty in thermally evaporating titanium, it was necessary here because chromium introduces some trace magnetic contamination to the superconductoring material that was deemed unacceptable.
 
 \begin{figure}
     \centering
@@ -79,6 +79,7 @@ Superconducting contacts were first measured on carbon nanotubes in 2006. In tha
 The results in Figure \ref{fig:sc_contacts} are difficult to interpret. The Ti/Al layers have much better statistics, but the Ti/Nb results seem to suggest a better device yield. It is suspected that this is due to difficulty in thermal evaporation of the titanium sticking layer, which is discussed more in the next section.
 
 \subsection{Normal Metal Contacts}
+\label{sec:nm_contacts}
 
 Thanks to their application in CNTFET technologies, normal metal contacts to carbon nanotubes are the best researched of all of the materials discussed here. There are three popular choices for normal metal contacts to nanotubes. The first is palladium, which was first tested because its work function is very close to that of a typical single-walled  nanotube \cite{Javey2003, Jejurikar2010}. The second and third are Ti/Au and Cr/Au. These are common evaporated materials and, like palladium, gold is thought to make good contact by wetting carbon nanotubes. The Ti and Cr layers are necessary for sticking layers. Titanium is difficult to thermally evaporate and had a tendency to overheat samples and melting the PMMA layer while under vacuum, for this reason it was not used. 
 
@@ -93,7 +94,7 @@ Figure \ref{fig:nm_contacts} shows the results for the different normal metal de
 
 \subsection{Additional Comments}
 
-Contrary to popular opinons, this work suggests that sputtering produces the most consistent, low resistance metallic contacts to carbon nanotubes. Many factors could contribute to this, such as materials choice, energy scales of the deposited materials, substrate temperatures during deposition, and contamination in the vacuum chambers. A wide range of materials were tested showing that when a device had a measurable resistance, it was consistent with existing literature. 
+Contrary to popular opinons, this work suggests that sputtering produces the most consistent, low resistance metallic contacts to carbon nanotubes. Many factors could contribute to this, such as materials choice, different energy scales required for deposition methods, substrate temperatures during deposition, and contamination in the vacuum chambers. A wide range of materials were tested showing that when a device had a measurable resistance, it was consistent with existing literature. 
 
 The results of depositions done in the sputtering chamber were relatively consistent across the different materials tested. Additionally, the rate of deposition and partial pressure in the sputtering chamber did not seem to have a noticeable effect on the resulting devices over the ranges tested. More information is available in Appendix \ref{subsec:sputtering}. 
 
@@ -126,7 +127,7 @@ In addition to the nanotube device measurements, AFM measurements were used to i
     \label{fig:roughness}
 \end{figure}
 
-The roughness results for all developers tested are summarized in Table \ref{table:surface_roughness} Room temperature IPA:water roughness was not measured, but it appears to be consistent with cold IPA:water. 
+The roughness results for all developers tested are summarized in Table \ref{table:surface_roughness} Room temperature IPA:water roughness was not measured, but the data suggests it should be similar to room temperature MIBK:IPA.
 
 \begin{table}
     \centering
@@ -164,17 +165,18 @@ The dose must be scaled by the inverse of this, $\frac{1}{2}\times(Perimeter/Are
 
 Scaling the doses in this way allows for the nanotube contacts to be overexposed, reducing the PMMA residue in those areas, without overexposing the larger features connecting to bonding pads. Overexposing the larger features can lead to degradation of the developed pattern and shorts in the final device.
 
-Implementing this geometry based dose scaling was seen to improve the yield of low resistance nanotube contacts. It also lowered the failure rate of electron beam lithography and metal liftoff by preventing shorts caused by overexposure in large features. The lowest resistance contacts with the best lithograhy resolution and device yield appear to be possible with a combination of cold IPA:water developer and the dose scaling described here.
+Implementing this geometry based dose scaling was seen to improve the yield of low resistance nanotube contacts. It also lowered the failure rate of electron beam lithography and metal liftoff by preventing shorts caused by overexposure in large features. The lowest resistance contacts with the best lithograhy resolution and device yield were made with a combination of cold IPA:water developer and the dose scaling described here.
 
 \subsection{Annealing}
+\label{sec:annealing}
 
-Three types of annealing were tested to improve contact resistances in carbon nanotubes. The first is high temperature annealing in an \ce{Ar}/\ce{H2} atmosphere \cite{Garcia2012, Lee2000, Kane2009, Kane2011, Stokes2010} designed to remove residue from polymer resists. Similarly, vacuum annealing at slightly higher temperatures was tested to remove water contamination and polymer resist residue \cite{Derycke2002, Kim2003, Pirkle2011, Chan2012, Cheng2011}. Finally, current annealing was tested. The motivation behind this method was to increase the current enough to cause a dielectric breakdown in any oxides inhibiting the nanotube/metal contacts \cite{Gramich2015, Wu2010}.
+Three types of annealing were tested to improve contact resistances in carbon nanotubes. The first is high temperature annealing in an \ce{Ar}/\ce{H2} atmosphere \cite{Garcia2012, Lee2000, Kane2009, Kane2011, Stokes2010} designed to remove residue from polymer resists. Similarly, vacuum annealing at slightly higher temperatures was tested to remove water contamination and polymer resist residue \cite{Derycke2002, Kim2003, Pirkle2011, Chan2012, Cheng2011}. Finally, current annealing was tested on a several devices \cite{Gramich2015, Wu2010}.
 
-High temperature annealing in an \ce{Ar}/\ce{H2} atmosphere was the most successful method tested. Samples were loaded into the same tube furnace used in CVD growth and heated to \SI{325}{\celsius} while flowing \SI{500}{\sccm} Ar and \SI{500}{\sccm} \ce{H2} for 3 hours. In Cobalt and Permalloy contacts this method was found to improve contact resistances by a factor of 2-10x. While annealing did improve room temperature resistances, it did not lower noise levels, which is supported by previous work \cite{Preusche2009}. For metals requiring a titanium or chromium sticking layer, such as Nb, Al, and Au, this method did not noticeably improve contact resistances and often destroyed the contacts completely. Based on the data collected, it appears the high temperature annealing either cause, or worsened, gate leaks in the devices. It is not clear why these gate leaks appear after this anneal and not after the much higher temperature CVD growth of carbon nanotubes on the substrates. Gate leaks ultimately made this method useless for producing quantum dot devices. 
+High temperature annealing in an \ce{Ar}/\ce{H2} atmosphere was the most successful method tested. Samples were loaded into the same tube furnace used in CVD growth and heated to \SI{325}{\celsius} while flowing \SI{500}{\sccm} Ar and \SI{500}{\sccm} \ce{H2} for 3 hours. In cobalt and permalloy contacts this method was found to improve contact resistances by a factor of 2-10x. While annealing did improve room temperature resistances, it did not lower noise levels, which is supported by previous work \cite{Preusche2009}. For metals requiring a titanium or chromium sticking layer, such as Nb, Al, and Au, this method did not noticeably improve contact resistances and often destroyed the contacts completely. Based on the data collected, it appears the high temperature annealing either caused, or worsened, gate leaks in the devices. Determining the exact cause of the gate leaks is difficult without further experiments. 
 
-Vacuum annealing was tested on only a few devices. The method was adopted from similar work done on graphene. Samples were loaded into the tube furnace, which was evacuated to \SI{1e-6}{\torr} and heated to \SI{500}{\celsius} In the few experiments done, vacuum annealing was not seen to improve the contact resistances in any metals tested. 
+Vacuum annealing was tested on only a small number of devices. The method was adopted from similar work done on graphene in our lab. Samples were loaded into the tube furnace, which was evacuated to \SI{1e-6}{\torr} and heated to \SI{500}{\celsius} In the few experiments done, vacuum annealing was not seen to improve the contact resistances in any metals tested. 
 
-Current annealing was tested on a number of devices as a last effort to get the sample working. Samples were placed in the probe station and the two contacts of interest were probed. A voltage bias was ramped repeatedly from 0 to a few volts, with a safety resistor preventing the current from exceeding \SI{25}{\micro\ampere}. This method was seen to lower contact resistances after many sweeps. This is either due to dielectric breakdown in the contacts or high temperature annealing due to Joule heating \cite{Maki2004, Woo2007, Dong2007}. Despite some success the method was extremely difficult to control. Most samples were destroyed in the process. A typical trace is seen in Figure \ref{fig:current_anneal}. Contact resistances were never successfully lowered to a useful value before the device died.
+Current annealing was tested on a number of devices as a last effort to get the sample working. Samples were placed in the probe station and the two contacts of interest were probed. A voltage bias was ramped repeatedly from 0 to a few volts, with a safety resistor preventing the current from exceeding \SI{25}{\micro\ampere}. This method was seen to lower contact resistances after 5-10 sweeps. This is either due to dielectric breakdown in the contacts or high temperature annealing due to Joule heating \cite{Maki2004, Woo2007, Dong2007}. Despite some success the method was extremely difficult to control. Most samples were destroyed in the process. A typical trace is seen in Figure \ref{fig:current_anneal}. Contact resistances were never successfully lowered to a useful value before the device died.
 
 \begin{figure}
     \centering
@@ -189,21 +191,12 @@ Electronic noise in the measured current can be used as a measure of the amount 
 
 All of the measurements discussed in this thesis were voltage biased, DC current measurements. For each data point, the applied voltages ($V_{gate}$, $V_{bias}$) were set, and the current sampled at a fixed rate for a specified amount of time. Typically, data was taken at 3-\SI{40}{\kilo\hertz} for 0.1-\SI{0.5}{\second}. In many cases, the entire time series at each point was dumped into a binary data file for later analysis. These current versus time measurements at fixed gate and bias voltages provide the data used in the following noise analysis.
 
-A simulated current noise power spectrum is plotted in Figure \ref{fig:simulated_noise}. At low frequencies, the noise is dominated by the $1/f$ contribution. At higher frequencies the $1/f$ becomes insignificant and the noise level is dominated by shot noise, which is attributable to the discrete nature of charge moving through the device. Over all frequency ranges, there is a constant contribution from Johnson thermal noise.
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.6\textwidth]{chapter4/noise_types.png}
-    \caption{Simulated noise power spectrum for a CNTFET.}
-    \label{fig:simulated_noise}
-\end{figure}
-
 \subsection{Random Telegraph Noise}
 \label{sec:RTN}
 
-Random telegraph noise in electronic transport measurements is caused by the hopping of charge on and off of impurity charge traps capacitively coupled to the device. In a nanotube quantum dot, these impurities are most likely in one of three places; at the nanotube-metal interface \cite{Liu 2006}, at the nanotube-substrate interface \cite{Liu2006, Sydoruk2014}, or traps can be located at defects in the nanotube itself \cite{Stokes2010}.
+Random telegraph noise in electronic transport measurements is caused by the hopping of charge on and off of impurity charge traps capacitively coupled to the device. In a nanotube quantum dot, these impurities are most likely in one of three places; at the nanotube-metal interface \cite{Liu 2006}, at the nanotube-substrate interface \cite{Liu2006, Sydoruk2014}, or located at defects in the nanotube itself \cite{Stokes2010}.
 
-Random telegraph noise manifests in the time series data as square pulses in the measured current with random durations. The heigh of each pulse can be used to identify the pulses as being caused by one or more impurities with different charging energies.
+Random telegraph noise manifests in the time series data as square pulses in the measured current with random durations. The height of each pulse can be used to identify the pulses as being caused by one or more impurities with different charging energies.
 
 \begin{figure}
     \centering
@@ -212,7 +205,7 @@ Random telegraph noise manifests in the time series data as square pulses in the
     \label{fig:diamond_noise}
 \end{figure}
 
-Looking at the conductance as a function of $V_{bias}$ and $V_{gate}$ voltage in Figure \ref{fig:diamond_noise}, two types of random telegraph noise are apparent, with distinctly different time scales. Consider first the switching behavior seen as a function of the gate voltage near $V_{gate} = 0.36V$ in Figure \ref{fig:diamond_noise}. This behavior can be explained by charge trapping in impurities at the gate oxide/nanotube interface. As the gate voltage is swept charge can be trapped and released from impurities capacitively coupled to the nanotube. These impurity charge traps act as local gates which shift the Coulomb diamond plot abruptly to the left or right. This can be thought of as a random telegraph signal with a long time constant, on the order of tens of minutes at low temperatures. At room temperature these trapping events are much more frequent leading to a hysteresis behavior in the gate sweep rather than a discrete charging/discharging event. Figure \ref{fig:gate_hyst} shows an example of this gate hysteresis caused by impurities capacitively coupling to the nanotube.
+Looking at the conductance as a function of $V_{bias}$ and $V_{gate}$ voltage in Figure \ref{fig:diamond_noise}, two types of random telegraph signal are present, with distinctly different time scales. Consider first the switching behavior seen as a function of the gate voltage near $V_{gate} = 0.36V$ in Figure \ref{fig:diamond_noise}. This behavior can be explained by charge trapping in impurities at the gate oxide/nanotube interface. As the gate voltage is swept charge can be trapped and released from impurities capacitively coupled to the nanotube. These impurity charge traps act as local gates which shift the Coulomb diamond plot abruptly to the left or right. This can be thought of as a random telegraph signal with a long time constant, on the order of tens of minutes at low temperatures. At room temperature these trapping events are much more frequent leading to a hysteresis behavior in the gate sweep rather than a discrete charging/discharging event. Figure \ref{fig:gate_hyst} shows an example of this gate hysteresis caused by impurities capacitively coupling to the nanotube.
 
 \begin{figure}
     \centering
@@ -230,13 +223,22 @@ Near $V_{gate} = 0.3V$ in Figure \ref{fig:diamond_noise}, random telegraph noise
     \label{fig:rts_bias}
 \end{figure}
 
-The time series data in the right panel of Figure \ref{fig:rts_bias} clearly shows the random telegraph noise in the current measurement. The distribution of switching times has not been carefully measured, but appears to range from about 10-\SI{1000}{\milli\second}. Because the current is only sampled for 0.1-0.5s in a typical measurement (0.4s in the sample being discussed here), it is difficult to get accurate distributions of switching times. Some useful information can be gathered from the fact that there appears to be only two levels in the system. That means the random telegraph noise signal originates from charge tunneling to and from a single defect, most likely at one of the metal/CNT contacts. 
+The time series data in the right panel of Figure \ref{fig:rts_bias} clearly shows the random telegraph noise in the current measurement. The distribution of switching times has not been carefully measured, but appears to range from about 10-\SI{1000}{\milli\second}. Because the current is only sampled for 0.1-0.5s in a typical measurement (0.4s in the sample being discussed here), it is difficult to get accurate distributions of switching times. Some useful information can be gathered from the fact that there appears to be only two levels in the system. That means the random telegraph noise signal originates from charge tunneling to and from a single impurity, most likely at one of the metal/CNT contacts or along the nanotube itself.
 
 \subsection{$1/f$ Noise}
 
 $1/f$ noise, or pink noise, is the dominate noise source in nearly every electronic device at low frequencies. Measurements of $1/f$ noise amplitude and how it scales with applied bias and fields can offer insight into the origins of noise and disorder in a semiconductor device. Because the devices made for this thesis had such persistant problems with noise and contamination, it was thought that investigating the $1/f$ noise data could illuminate the source of some of the noise.
 
-The first work on $1/f$ noise was published in 2000 \cite{Collins2000}. This, and additional work in 2006 \cite{Ishigami2006}, confirmed that carbon nanotube field effect transistors operating at room temperature have a $1/f$ noise amplitude that follows the empirical model proposed by Hooge in 1969 \cite{Hooge1969}. This model predicts that the noise amplitude in a semiconductor device should be proportional to $I^2$ and inversely proportional to $f$:
+A simulated current noise power spectrum is plotted in Figure \ref{fig:simulated_noise}. At low frequencies, the noise is dominated by the $1/f$ contribution. At higher frequencies the $1/f$ becomes insignificant and the noise level is dominated by shot noise, which is attributable to the discrete nature of charge moving through the device. Over all frequency ranges, there is a constant contribution from Johnson thermal noise.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{chapter4/noise_types.png}
+    \caption{Simulated noise power spectrum for a CNTFET.}
+    \label{fig:simulated_noise}
+\end{figure}
+
+The first work on $1/f$ noise in nanotubes was published in 2000 \cite{Collins2000}. This, and additional work in 2006 \cite{Ishigami2006}, confirmed that carbon nanotube field effect transistors operating at room temperature have a $1/f$ noise amplitude that follows the empirical model proposed by Hooge in 1969 \cite{Hooge1969}. This model predicts that the noise amplitude in a semiconductor device should be proportional to $I^2$ and inversely proportional to $f$:
 
 \begin{equation}
     \label{eq:hooge}
@@ -276,7 +278,7 @@ The $1/f$ noise increases when there are impurity charge traps that can be acces
 
 In Section \ref{sec:RTN}, the characteristic times for charge hopping onto impurities was found to be on the order of 10-\SI{1000}{\milli\second}. This corresponds to a frequency range of 1-\SI{100}{\hertz}. Those frequencies are well within the range considered in calculating the $1/f$ noise amplitude. Therefore, it should be no surprise that the noise amplitude increases in regions showing excess random telegraph noise. This also suggests that the characteristic times for electrons tunneling onto the quantum dot levels fall into a similar range of 0.1-\SI{1000}{\milli\second}. This range of characteristic tunneling times is consistent with previous measurements of the tunneling rate onto a nanotube quantum dot \cite{Gotz2008}. 
 
-In previous measurements, the tunneling rates were tuned by varying the barrier heights with local gating. Here, the fluctuations in barrier height are not controlled, the quantum dot is in a static configuration. Therefore, the fluctuations in potential are related to impurity charge trapping in the tunnel barriers or gate oxide. This conclusion is supported by previous research into barrier height fluctuations \cite{Jung2004} and dependence of $1/f$ noise on charge trapping in different gate oxide materials \cite{Sydoruk2014}. It was suggested in Reference \cite{Sydoruk2014} that gamma irradiation of quantum dot samples may eliminate some of these charge trapping problems, which may be an interesting avenue for future work.
+In previous measurements, the tunneling rates were tuned by varying the barrier heights with local gating. Here, the fluctuations in barrier height are not controlled, the quantum dot is in a static configuration. Therefore, the fluctuations in potential are related to impurity charge trapping. This conclusion is supported by previous research into barrier height fluctuations \cite{Jung2004} and dependence of $1/f$ noise on charge trapping in different gate oxide materials \cite{Sydoruk2014}. It was suggested in Reference \cite{Sydoruk2014} that gamma irradiation of quantum dot samples may eliminate some of these charge trapping problems, which may be an interesting avenue for future work.
 
 %%%%%%%%%%%%%%
 

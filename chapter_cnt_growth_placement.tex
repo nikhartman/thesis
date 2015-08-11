@@ -4,17 +4,17 @@
 \label{sec:growth}
 \chaptermark{Growth and Placement}
 
-In the years since their discovery, many methods of producing electronic devices from carbon nanotubes have been developed. These include random dispersion (Section \ref{sec:random_dispersion}), on-substrate catalyst island growth (Section \label{sec:catalyst_island}) and stamping \cite{Wu2010, Pei2012}. For this work, the first two methods were successfully used to produce carbon nanotube quantum dots. It was found that the catalyst island growth was much easier to implement and required much less processing time per device.
+In the years since their discovery, many methods of producing electronic devices from carbon nanotubes have been developed. These include random dispersion (Section \ref{sec:random_dispersion}), on-substrate catalyst island growth (Section \ref{sec:catalyst_island}) and stamping \cite{Wu2010, Pei2012}. For this work, the first two methods were successfully used to produce carbon nanotube quantum dots. It was found that the catalyst island growth was much easier to implement and required much less processing time per device at the cost of increased disorder in resulting devices.
 
 \section{Random Dispersion}
 \label{sec:random_dispersion}
 
-The first successful method of nanotube device fabrication was what will be referred to here as random dispersion. First, nanotubes are grown in bulk through chemical vapor deposition (or other preferred method). Then, the nanotubes are suspended in a solution. Finally, the nanotubes are cast onto a substrate. Nanotubes can then be located relative to some predefined markers on the substrate.
+The first successful method of nanotube device fabrication was what will be referred to here as random dispersion. First, nanotubes are grown in bulk through chemical vapor deposition (or other preferred method). Then, the nanotubes are suspended in a solution. Finally, the nanotubes are cast onto a substrate. Nanotubes can then be located relative to predefined markers on the substrate.
 
 \subsection{Catalyst}
 \label{subsec:disperse_catalyst}
 
-All of the devices discussed in this thesis have utilized the same, iron-based catalyst \cite{Kong1998, Kong1998a}. The simplest way to create this catalyst is to combine the ingredients in Table \ref{table:powder_catalyst} in a mortar and pestle and grind until it turns a uniform dark orange color. Adding some additional alumina seems to promote growth of longer tubes, possibly by lowering the density of tubes grown from each alumina/iron/molybdenum particle.
+All of the devices discussed in this thesis have utilized the same, iron-based catalyst \cite{Kong1998, Kong1998a}. The simplest way to create this catalyst is to combine the ingredients in Table \ref{table:powder_catalyst} in a mortar and pestle and grind until it turns a uniform dark orange color. Adding some additional alumina seems to promote growth of longer tubes, possibly by lowering the density of tubes grown from each alumina/iron/molybdenum cluster.
 
 \begin{table}
 	\centering
@@ -80,7 +80,7 @@ Now the solution is ready for deposition on a silicon substrate. The substrates 
 
 \subsection{Advantages and Disadvantages}
 
-Despite having some success fabricating devices using randomly dispersed nanotubes and electric force microscopy scans (Section \ref{subsec:EFM}), the process was found to be too time consuming for frequent use. The main failure point was the preparation of nanotube solutions after growth. The concentrations varied significantly, often producing samples with dense nanotube coverage or no nanotubes found in the regions imaged. Additionally, the process of making a suspended nanotube solution is time consuming. Even those solutions with a useful concentration of nanotubes only remain fully suspended for less than 1 hour. Meaning the process must be repeated frequently.
+Despite having some success fabricating devices using randomly dispersed nanotubes and electric force microscopy scans (Section \ref{subsec:EFM}), the process was found to be too time consuming for frequent use. The main failure point was the preparation of nanotube solutions after growth. The concentrations varied significantly, often producing samples with dense nanotube coverage or no nanotubes found in the regions imaged. Additionally, the process of making a suspended nanotube solution is time consuming. Even those solutions with a useful concentration of nanotubes only remain fully suspended for less than 1 hour; meaning the process must be repeated frequentlyto .
 
 \section{Catalyst Island Growth}
 \label{sec:catalyst_island}
@@ -89,7 +89,7 @@ In 1998 \cite{Kong1998a}, it was discovered that the same type of catalyst used 
 
 \subsection{Catalyst} 
 
-Many different types of catalyst particles can be used in the growth of carbon nanotubes. The ideal catalyst for patterned growth must be compatible with electron beam or optical lithography. Table \ref{table:catalysts} lists most of the catalysts tested in the Markovic lab. To test each catalyst, sputtered molybdenum leads were patterned using the mask aligner and Futurex NR9 resist. Catalyst islands were then patterned using electron beam lithography. Figure \ref{fig:catalyst_islands} shows an example of a substrate with Mo leads and catalyst islands.
+Many different types of catalyst particles can be used in the growth of carbon nanotubes. The ideal catalyst for patterned growth must be compatible with electron beam or optical lithography. Table \ref{table:catalysts} lists most of the catalysts tested in the Markovic lab. To test each catalyst, sputtered molybdenum markers were patterned using the mask aligner and Futurex NR9 resist. Catalyst islands were then patterned using electron beam lithography. Figure \ref{fig:catalyst_islands} shows an example of a substrate with Mo markers/leads and catalyst islands.
 
 \begin{figure}
 	\centering
@@ -113,7 +113,7 @@ Many different types of catalyst particles can be used in the growth of carbon n
     \label{table:catalysts}
 \end{table}
 
-All of the devices discussed in this thesis were produced using the Fe\slash Mo\slash alumina catalyst suspended in water. The islands were patterned using electron beam lithography. Catalyst is deposited in the following way:
+All but one of the devices discussed in this thesis were produced using the Fe\slash Mo\slash alumina catalyst suspended in water. The islands were patterned using electron beam lithography. Catalyst is deposited in the following way:
 
 \begin{enumerate}
 	\item Add the powder catalyst from Table \ref{table:powder_catalyst} to \SI{15}{\milli\liter} of DI water and stir for 12 hours
@@ -150,12 +150,12 @@ The most common point of failure in growth has been related to the patterned mol
 
 \subsection{Advantages and Disadvantages}
 
-Growing nanotubes from catalyst islands near predefined leads and markers offers a large improvement in processing time over the method of random dispersion. Nanotubes produced with this method are longer, cleaner, and easier to locate. These improvements made this method the obvious choice for device fabrication. The main disadvantage found in this technique is the introduction of defects along the nanotube length due to growth along the substrate. Because of this, a large number of devices must be fabricated in order to find one with clean transport properties at low temperature.
+Growing nanotubes from catalyst islands near predefined leads and markers offers a large improvement in processing time over the method of random dispersion. Nanotubes produced with this method are longer, cleaner, and easier to locate. These improvements made this method the obvious choice for device fabrication. The main disadvantage found in this technique is the introduction of defects along the nanotube length due to growth along the substrate. Because of this, a large number of devices must be fabricated in order to find one with clean transport properties at low temperature. It is also helpful to limit device lengths to less than 200nm to reduce the chances of a defect being included in the resulting device.
 
 \section{Imaging Nanotubes}
 \label{subsubsec:imaging_disperse}
 
-Nanotubes on a \ce{SiO2} surface can be located in a number of ways. This section will review a number of different methods, focusing on improvements made in the course of this thesis work.
+Nanotubes on a \ce{SiO2} surface can be located in a number of ways. This section will review a several different methods, focusing on improvements made in the course of this thesis work.
 
 \subsection{Atomic Force Microscopy}
 
@@ -168,12 +168,12 @@ With nanotubes that have been drop cast onto the surface, the standard method is
 	\label{fig:cnt_au_markers}
 \end{figure}
 
-This method is very reliable, but extremely time consuming. In order to resolve nanotubes, as well as the predefined markers in the image, AFM scan sizes must be limited to \SI{25}{\square\micro\meter}. Each of these scans takes 30 minutes and many scans are needed to fully image one patterned substrate. Looking closely at Figure \ref{fig:cnt_au_markers}, there are 12 scans covering less than half the substrate. Due to vibrational noise and piezo limits, some images are slightly warped. Stitching the images together is time consuming and inaccurate.
+This method is very reliable, but extremely time consuming. In order to resolve nanotubes, as well as the predefined markers in the image, AFM scan sizes must be limited to 25 sq$\mu$m. Each of these scans takes 30 minutes and many scans are needed to fully image one patterned substrate. Looking closely at Figure \ref{fig:cnt_au_markers}, there are 12 scans covering less than half the substrate. Due to vibrational noise and piezo limits, some images are slightly warped. Stitching the images together is time consuming and inaccurate. One major advantage to AFM imaging is that it is easy to distinguish single tubes from bundles and multiwalled nanotubes, as well as measure nanotube diameter.
 
 \subsection{Electric Force Microscopy}
 \label{subsec:EFM}
 
-The Digital Instruments Nanoscope 3 used in our lab is also capable of making electric force microscope (EFM) measurements. An EFM image is made by first measuring the height across the sample in standard tapping mode, then using that height data to run a second 'interleave' scan at a fixed height with a bias voltage applied between the tip and sample. By holding the tip at a fixed height, van der Waals interactions between the tip and sample are constant and the only force measured is the electrostatic force from the applied bias voltage. Contrast in the resulting images is related to the different conductivities of the objects on the sample \cite{Bockrath2002}. Thus, conducting (and semiconducting) nanotubes have a high contrast against the insulating \ce{SiO2} substrate. An example of this type of image is shown in Figure \ref{fig:cnt_efm}
+The Digital Instruments Nanoscope 3 used in our lab is also capable of making electric force microscope (EFM) measurements. An EFM image is made by first measuring the height across the sample in standard tapping mode, then using that height data to run a second `interleave' scan at a fixed height with a bias voltage applied between the tip and sample. By holding the tip at a fixed height, van der Waals interactions between the tip and sample are constant and the only force measured is the electrostatic force from the applied bias voltage. Contrast in the resulting images is related to the different conductivities of the objects on the sample \cite{Bockrath2002}. Thus, conducting (and semiconducting) nanotubes have a high contrast against the insulating \ce{SiO2} substrate. An example of this type of image is shown in Figure \ref{fig:cnt_efm}
 
 \begin{figure}
 	\centering
@@ -182,13 +182,13 @@ The Digital Instruments Nanoscope 3 used in our lab is also capable of making el
 	\label{fig:cnt_efm}
 \end{figure}
 
-An entire patterned substrate can be scanned using this method in about 1 hour. The scan size can be increased up to \SI{75}{\square\micro\meter} due to the false contrast provided by the large electrostatic forces between the nanotubes and the tip. Rather than appearing as \SI{1}{\nano\meter} in diameter, the tubes appear in the EFM image to be about 100 times their real diameter. This was a notable improvement over locating nanotubes using AFM height scans alone. Comparing Figure \ref{fig:cnt_au_markers} and Figure \ref{fig:cnt_efm}, it is clear the EFM image is far more useful in locating nanotubes.
+An entire patterned substrate can be scanned using this method in about 1 hour. The scan size can be increased up to 75 sq$\mu$m due to the false contrast provided by the large electrostatic forces between the nanotubes and the tip. Rather than appearing as \SI{1}{\nano\meter} in diameter, the tubes appear in the EFM image to be about 100 times their real diameter. This was a notable improvement over locating nanotubes using AFM height scans alone. Comparing Figure \ref{fig:cnt_au_markers} and Figure \ref{fig:cnt_efm}, it is clear the EFM image is far more useful in locating nanotubes.
 
 \subsection{EFM Through PMMA}
 
 All of the same techniques from Section \ref{subsubsec:imaging_disperse} can be applied to imaging nanotubes grown from patterned catalyst islands. However, because the substrates are not covered in closely spaced markers, it was found that tapping mode AFM height scans were not useful. Scans could only cover a small part of the sample and the resulting images were difficult to orient.
 
-Using electric force microscopy (EFM) made it possible to scan the entire region of interest on the sample in one measurement. An example of this type of scan is shown in Figure \ref{fig:efm_islands}a. As can be seen in that figure, it was difficult for the AFM tip to avoid crashing into the catalyst islands during the EFM sweep. The catalyst islands are several hundred nanometers in height while the other features on the substrate are less than \SI{10}{\nano\meter}. Such height differences make large area scans difficult in tapping mode. This problem can be avoided by coating the sample in PMMA before scanning with the EFM, as seen in Figure \ref{fig:efm_islands}b. The PMMA coating smooths the height differences between the substrate and catalyst islands, without compromising the contrast between the insulating substrate and conducting nanotubes. The idea was adopted from a 2007 paper in which the authors attempted to locate nanotubes suspended in a PMMA layer in three dimensions \cite{Jespersen2007}.
+Using electric force microscopy (EFM) made it possible to scan the entire region of interest on the sample in one measurement. An example of this type of scan is shown in Figure \ref{fig:efm_islands}(a). As can be seen in that figure, it was difficult for the AFM tip to avoid crashing into the catalyst islands during the EFM sweep. The catalyst islands are several hundred nanometers in height while the other features on the substrate are less than \SI{10}{\nano\meter}. Such height differences make large area scans difficult in tapping mode. This problem can be avoided by coating the sample in PMMA before scanning with the EFM, as seen in Figure \ref{fig:efm_islands}(b.) The PMMA coating smooths the height differences between the substrate and catalyst islands, without compromising the contrast between the insulating substrate and conducting nanotubes. The idea was adopted from a 2007 paper in which the authors attempted to locate nanotubes suspended in a PMMA layer in three dimensions \cite{Jespersen2007}.
 
 \begin{figure}
 	\centering
@@ -209,7 +209,7 @@ In 2002, a paper \cite{Brintlinger2002} was published illustrating that a scanni
 	\label{fig:sem_islands}
 \end{figure}
 
-Typically, an EFM scan of a sample will take 45 minutes. A SEM image of the same sample takes less than 2 minutes. However, the SEM can introduce some carbon contamination from the high energy electrons passing through small amounts of oil mist back-streaming into the vacuum chamber from the mechanical roughing pump. Due to the large number of samples that were produced to obtain the data in this thesis, it was decided that contamination from the SEM was an acceptable risk, given the immense time savings.
+Typically, an EFM scan of a sample will take 45 minutes. A SEM image of the same sample takes less than 2 minutes. However, the SEM can introduce carbon contamination from the high energy electrons passing through small amounts of oil mist back-streaming into the vacuum chamber from the mechanical roughing pump. Due to the large number of samples that were produced to obtain the data in this thesis, it was decided that contamination from the SEM was an acceptable risk, given the immense time savings.
 
 \section{Image Filtering}
 
@@ -217,7 +217,7 @@ Once it became clear that the scanning electron microscope was by far the most e
 
 \subsection{Histogram Equalization}
 
-This method was based on two corrections. First, a plane fit to correct for the position of the secondary electron detector. Second, finding the histogram then transforming it such that there are equal numbers of pixels at each brightness level. An illustration of this can be seen in Figure \ref{fig:hist_eq}
+This method was based on two corrections. First, a plane fit to correct for the position of the secondary electron detector. Second, calculating the histogram of pixel brightness then transforming it such that there are equal numbers of pixels at each brightness level. An illustration of this can be seen in Figure \ref{fig:hist_eq}
 
 \begin{figure}
 	\centering
@@ -286,12 +286,12 @@ Once the kernel is defined on the $N \times N$ matrix, the kernel is normalized 
 
 \subsubsection{Filter Bank}
 
-To build the full filter bank, the kernel, built using Equation \ref{eq:kernel}, is rotated by a set of angles between $0$ and $\pi$. Each of these filters is then convolved with the image separately. By doing this, it is possible to identify nanotube sections lying along any direction on the substrate. A binary result is created using thresholding on the convolved image. The filter bank and resulting binary images can be seen in Figures \ref{fig:filter_bank_results}c and d. 
+To build the full filter bank, the kernel, built using Equation \ref{eq:kernel}, is rotated by a set of angles between $0$ and $\pi$. Each of these filters is then convolved with the image separately. By doing this, it is possible to identify nanotube sections lying along any direction on the substrate. A binary result is created by thresholding the convolved image. The filter bank and resulting binary images can be seen in Figures \ref{fig:filter_bank_results}(c) and (d). 
 
 \begin{figure}
 	\centering
 	\includegraphics[width = 0.8\textwidth]{chapter3/filter_bank_results.eps}
-	\caption{a) Original image. b) Final filtered image, which is the sum of the binary images in (d). c) The rotated kernels that form the full matched filter bank. d) Each rotated kernel applied to an image in (a).}
+	\caption{(a) Original image. (b) Final filtered image, which is the sum of the binary images in (d). (c) The rotated kernels that form the full matched filter bank. d) Each rotated kernel applied to an image in (a).}
 	\label{fig:filter_bank_results}
 \end{figure}
 
@@ -308,7 +308,7 @@ In building this filter, many parameters had to be optimized simultaneously and 
 
 The results of this optimization are seen in Table \ref{table:filter_parameters}. The optimized values for $k$ and $L$ were very close to those obtained from the original analysis of extracted nanotube profiles. Note that $A$ and $threshold$ are not independent values and $A$ remained fixed for this optimization procedure. 
 
-It is also important to note that the length scale for these parameters is in pixels $(px)$. The randomly selected SEM images that were used for this analysis were not all take at the same magnification level. However, the average magnification was $850\times$ giving a pixel size of $\sim$\SI{140}{\nano\meter}
+It is also important to note that the length scale for these parameters is in pixels $(px)$. The randomly selected SEM images that were used for this analysis were not all taken at the same magnification level. However, the average magnification was $850\times$ giving a pixel size of $\sim$\SI{140}{\nano\meter}
 
 \begin{table}
 	\centering
