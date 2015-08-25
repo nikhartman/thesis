@@ -12,7 +12,7 @@ To determine the source of the large contact resistances, detailed notes were ke
 
 \section{Statistics of Carbon Nanotube Contacts}
 
-The clearest evidence for chip-wide contamination was in the almost binary nature of the two probe nanotube resistances measured in our probe station. If a chip showed low resistances on one device that typically held for all devices on the chip, even those built on different nanotubes. Based on this observation, the first statistic checked was the total yield of devices with resistances less than \SI{1}{\giga\ohm}. Figure \ref{fig:quantum_dot_yield} shows that data, separated by the type of metals used to create the two terminal nanotube device measured. This data includes all metals, all lithography methods, and all substrate preparations.
+The clearest evidence for chip-wide contamination was in the almost binary nature of the two probe nanotube resistances measured in our probe station. If a chip showed low resistances on one device, that typically held for all devices on the chip, even those built on different nanotubes. Based on this observation, the first statistic checked was the total yield of devices with resistances less than \SI{1}{\giga\ohm}. Figure \ref{fig:quantum_dot_yield} shows that data, separated by the type of metals used to create the two terminal nanotube device measured. Data includes all metals, all lithography methods, and all substrate preparations.
 
 \begin{figure}
     \centering
@@ -61,7 +61,7 @@ Ferromagnetic materials comprise the largest portion of the dataset collected fo
     \label{fig:fm_contacts}
 \end{figure}
 
-Two claims are made based on the results summarized in Figure \ref{fig:fm_contacts}. First, sputtered cobalt consistently makes good contact to nanotubes. Second, electron beam evaporation produces lower device resistance devices, which is supported by previous work \cite{Churchill2012}. Only a small number of electron beam evaporated devices were tested due to limited access to the evaporator.
+Two claims are made based on the results summarized in Figure \ref{fig:fm_contacts}. First, sputtered cobalt consistently makes good contact to nanotubes. Second, electron beam evaporation produces lower resistance devices, which is supported by previous work \cite{Churchill2012}. Only a small number of electron beam evaporated devices were tested due to limited access to the evaporator.
 
 The permalloy plots are hiding an important detail. Most thermally evaporated permalloy devices did not have a measurable resistance until after they were annealed at \SI{325}{\celsius} for 3 hours in an Ar/\ce{H2} atmosphere. This lowered the resistances to the values recorded in this dataset. However, annealing under these conditions often introduced gate leaks in the devices, making the method useless for later measurements. See Section \ref{sec:annealing} for further discussion on attempts to anneal nanotube devices.
 
@@ -81,7 +81,7 @@ The results in Figure \ref{fig:sc_contacts} are difficult to interpret. The Ti/A
 \subsection{Normal Metal Contacts}
 \label{sec:nm_contacts}
 
-Thanks to their application in CNTFET technologies, normal metal contacts to carbon nanotubes are the best researched of all of the materials discussed here. There are three popular choices for normal metal contacts to nanotubes. The first is palladium, which was first tested because its work function is very close to that of a typical single-walled  nanotube \cite{Javey2003, Jejurikar2010}. The second and third are Ti/Au and Cr/Au. These are common evaporated materials and, like palladium, gold is thought to make good contact by wetting carbon nanotubes. The Ti and Cr layers are necessary for sticking layers. Titanium is difficult to thermally evaporate and had a tendency to overheat samples and melting the PMMA layer while under vacuum, for this reason it was not used. 
+Thanks to their application in CNTFET technologies, normal metal contacts to carbon nanotubes are the best researched of all of the materials discussed here. There are three popular choices for normal metal contacts to nanotubes. The first is palladium, which was first tested because its work function is very close to that of a typical single-walled  nanotube \cite{Javey2003, Jejurikar2010}. The second and third are Ti/Au and Cr/Au. These are common evaporated materials and, like palladium, gold is thought to make good contact by wetting carbon nanotubes. The Ti and Cr layers are necessary for sticking layers. Titanium was not used because it is difficult to thermally evaporate and has a tendency to overheat samples and melt the PMMA layer while under vacuum.
 
 \begin{figure}
     \centering
@@ -107,16 +107,16 @@ Faster deposition rates in the thermal evaporator did show a connection to lower
 
 Recent research has shown that the choice of developer and developer temperature can have a large effect on the resolution of and residue left by electron beam lithography \cite{Maximov2009, Macintyre2009, Aurich2012}. All electron beam lithography in this thesis used PMMA as the copolymer resist. Two different developers and two different temperatures were tested. More details on recipes and developer choice are available in Appendix \ref{chap:fabrication}
 
-Figure \ref{fig:developer_tests} shows the distribution of carbon nanotube devices resistances obtained using each developer. Again, this data includes all materials and deposition methods.
+Figure \ref{fig:developer_tests} shows the distribution of carbon nanotube devices resistances obtained using each developer. Again, data includes all materials and deposition methods.
 
 \begin{figure}
     \centering
     \includegraphics[width=0.6\textwidth]{chapter4/developer_tests.png}
-    \caption{Histograms showing contact resistance as a function of developer choice. Data includes all metals and deposition methods. Insets show the yield of devices with resistance below \SI{1}{\giga\ohm}}
+    \caption{Histograms showing contact resistance as a function of developer choice. Data include all metals and deposition methods. Insets show the yield of devices with resistance below \SI{1}{\giga\ohm}}
     \label{fig:developer_tests}
 \end{figure}
 
-Room temperature development using a 1:3 mixture of MIBK:IPA is the most common recipe and appears to yield the most working devices. However, low temperature development with 7:3 IPA:water appears to result in lower resistances for working devices. Since this data doesn't control for other variables, it is difficult to say which is the better choice. Development in low temperature IPA:water does give considerably better resolution. 
+Room temperature development using a 1:3 mixture of MIBK:IPA is the most common recipe and appears to yield the most working devices. However, low temperature development with 7:3 IPA:water appears to result in lower resistances for working devices. Since these data do not control for other variables, it is difficult to say which is the better choice. Development in low temperature IPA:water does give considerably better resolution. 
 
 In addition to the nanotube device measurements, AFM measurements were used to investigate the amount of residue left behind by different developers. An example of this can be seen in Figure \ref{fig:roughness}. These roughness measurements were motivated by the inconclusive results in Figure \ref{fig:developer_tests}.
 
@@ -141,7 +141,7 @@ The roughness results for all developers tested are summarized in Table \ref{tab
     \label{table:surface_roughness}  
 \end{table}
 
-Based on the roughness measurements, IPA:water seems to be the clear choice of developer to minimize PMMA residue after development. The poor device yield seen in Figure \ref{fig:developer_tests} is likely a result of another variable not being controlled for.
+Based on the roughness measurements, IPA:water seems to be the clear choice of developer to minimize PMMA residue after development. To determine the the reason for the poor device yield in Figure \ref{fig:developer_tests}, more tests should be done with strict control over other variables.
 
 \subsection{Dose Scaling}
 
@@ -187,7 +187,7 @@ Current annealing was tested on a number of devices as a last effort to get the 
     
 \section{Electrical Noise in CNT Contacts}
 
-Electronic noise in the measured current can be used as a measure of the amount of contamination in the metal/nanotube interfaces and on the substrate. The primary sources of contamination on the devices are polymer residues left by the lithography process, organic contamination from thin film deposition, and amorphous carbon deposited during the CVD growth of carbon nanotubes. Each of these contaminates affects the transport properties of the completed device. 
+Electronic noise in the measured current can be used as a measure of the amount of contamination in the metal/nanotube interfaces and on the substrate. The primary sources of contamination on the devices are polymer residues left by the lithography process, organic contamination from thin film deposition, and amorphous carbon deposited during the CVD growth of carbon nanotubes. Each of these contaminants affects the transport properties of the completed device. 
 
 All of the measurements discussed in this thesis were voltage biased, DC current measurements. For each data point, the applied voltages ($V_{gate}$, $V_{bias}$) were set, and the current sampled at a fixed rate for a specified amount of time. Typically, data was taken at 3-\SI{40}{\kilo\hertz} for 0.1-\SI{0.5}{\second}. In many cases, the entire time series at each point was dumped into a binary data file for later analysis. These current versus time measurements at fixed gate and bias voltages provide the data used in the following noise analysis.
 
@@ -227,7 +227,7 @@ The time series data in the right panel of Figure \ref{fig:rts_bias} clearly sho
 
 \subsection{$1/f$ Noise}
 
-$1/f$ noise, or pink noise, is the dominate noise source in nearly every electronic device at low frequencies. Measurements of $1/f$ noise amplitude and how it scales with applied bias and fields can offer insight into the origins of noise and disorder in a semiconductor device. Because the devices made for this thesis had such persistant problems with noise and contamination, it was thought that investigating the $1/f$ noise data could illuminate the source of some of the noise.
+$1/f$ noise, or pink noise, is the dominant noise source in nearly every electronic device at low frequencies. Measurements of $1/f$ noise amplitude and how it scales with applied bias and fields can offer insight into the origins of noise and disorder in a semiconductor device. Because the devices made for this thesis had such persistant problems with noise and contamination, it was thought that investigating the $1/f$ noise data could illuminate the source of some of the noise.
 
 A simulated current noise power spectrum is plotted in Figure \ref{fig:simulated_noise}. At low frequencies, the noise is dominated by the $1/f$ contribution. At higher frequencies the $1/f$ becomes insignificant and the noise level is dominated by shot noise, which is attributable to the discrete nature of charge moving through the device. Over all frequency ranges, there is a constant contribution from Johnson thermal noise.
 
@@ -254,9 +254,9 @@ Later results \cite{Tobias2008} showed that this model holds down to $1.2K$ for 
     \label{fig:1-f_data}
 \end{figure}
 
-The data in Figure \ref{fig:1-f_data} does fit the $1/f$ dependence well. To test if this data fit with Hooge's law, the left side of Figure \ref{fig:noise_current} shows the average value of $S_I \cdot f$ plotted against the measured current (each measured current corresponds to a single applied bias voltage) for a range of gate voltage values annotated in the plot legend. It is immediately clear from this plot that the noise amplitude does not scale with $I^2$. Much of the data shows a plateau in $S_I \cdot f$ near resonances in the Coulomb diamond diagram, and an abrupt drop in noise off resonance. The fact that the noise amplitude does not follow Hooge's law suggests that the $1/f$ noise is not dominated by noise from the carbon nanotube itself. Instead, the noise must come from another source, most likely from charge trapping in impurity and quantum dot levels. Additional experiments might check the temperature and frequency dependence of this behavior to determine the exact mechanism.
+The data in Figure \ref{fig:1-f_data} does fit the $1/f$ dependence well. To test if the data fit Hooge's law, the left side of Figure \ref{fig:noise_current} shows the average value of $S_I \cdot f$ plotted against the measured current (each measured current corresponds to a single applied bias voltage) for a range of gate voltage values annotated in the plot legend. It is immediately clear from this plot that the noise amplitude does not scale with $I^2$. Most curves show plateaus in $S_I \cdot f$ near resonances in the Coulomb diamond diagram, and an abrupt drop in noise off-resonance. The fact that the noise amplitude does not follow Hooge's law suggests that the $1/f$ noise is not dominated by noise from the carbon nanotube itself. Instead, the noise must come from another source, most likely from charge trapping in impurity and quantum dot levels. Additional experiments might check the temperature and frequency dependence of this behavior to determine the exact mechanism.
 
-The plot on the right in Figure \ref{fig:noise_current} shows $S_I \cdot f$ as a function of the measured conductance. This data does not show any obvious relation between the two quantities. 
+The plot on the right in Figure \ref{fig:noise_current} shows $S_I \cdot f$ as a function of the measured conductance. These data do not show any obvious relation between the two quantities. 
 
 \begin{figure}
     \centering

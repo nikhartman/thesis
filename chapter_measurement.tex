@@ -2,11 +2,11 @@
 \label{sec:measurement}
 \chaptermark{Measurements}
 
-In this thesis work a variety of low temperature and low noise measurement techniques have been used. This chapter will summarize these techniques with a focus on my own work and making the measurements reproducible by future lab members. 
+In this thesis work, a variety of low temperature and low noise measurement techniques have been used. This chapter will summarize these techniques with a focus on my own work and making the measurements reproducible by future lab members. 
 
 \section{Transport Measurements}
 
-All of the devices measurements carried out for this work have been two-probe, voltage biased measurements. The majority of measurements were DC, based on the fact that problems like gate leakage current and sources of electronic noise are much more easily identified in a DC measurement. A few AC measurements were made, especially in the beginning of this work. Each measurement setup will be reviewed here.
+All of the devices measurements carried out for this work have been two-probe, voltage-biased measurements. The majority of measurements were DC, based on the fact that problems like gate leakage current and sources of electronic noise are much more easily identified in a DC measurement. A few AC measurements were made, especially in the beginning of this work. Each measurement setup will be reviewed here.
 
 \subsection{DC Current Measurements}
 \label{sec:DC}
@@ -20,11 +20,11 @@ Figure \ref{fig:dc_measurement} shows a typical DC measurement setup. The sample
     \label{fig:dc_measurement}
 \end{figure}
 
-Current through the nanotube is measured by a current to voltage converter with an output of 1V/$10^7$A. For this work two different amplifiers have been used, an Ithaco 1211, and a battery-powered homemade amplifier, these are discussed further in Section \ref{sec:CV_amp}. The output of the current to voltage amplifier is measured either by the NI DAQ board or a Keithley 2182A nanovoltmeter. Most measurements were made using the NI DAQ board for its speed and ability to save time series data for every measurement. To eliminate aliasing effects in the DAQ measurements a 10kHz RC filter was used for anti-aliasing. Measurements were taken at 21.6kHz. To sample the current, data was collected at 21.6kHz for up to one second. The time series data was dumped to a binary file and the current value was calculated from the mean of the acquired data. Saving all the time series data allows for further analysis, such as 1/f and shot noise, to be done later. For differential conductance measurements, the DC current data was numerically differentiated. 
+Current through the nanotube is measured by a current-to-voltage converter with an output of 1V/$10^7$A. For this work two different amplifiers have been used, an Ithaco 1211, and a battery-powered homemade amplifier, which are discussed further in Section \ref{sec:CV_amp}. The output of the current-to-voltage amplifier is measured either by the NI DAQ board or a Keithley 2182A nanovoltmeter. Most measurements were made using the NI DAQ board for its speed and ability to save time series data for every measurement. To eliminate aliasing effects in the DAQ measurements a 10kHz RC filter was used for anti-aliasing. Measurements were taken at 21.6kHz. To sample the current, data was collected at 21.6kHz for up to one second. The time series data was dumped to a binary file and the current value was calculated from the mean of the acquired data. Saving all the time series data allows for further analysis, such as 1/f and shot noise, to be done later. For differential conductance measurements, the DC current data were numerically differentiated. 
 
 \subsection{AC Conductance Measurements}
 
-AC measurements take advantage of lockin amplifiers to eliminate noise and make direct measurements of differential conductance. Two lockin amplifiers were used for this work, an analog Princeton Applied Research 124A and a digital SRS830. The SRS830 is a standard choice because of its easy setup and remote programming. The 124A, however, has much less output noise and was used for most of this work. The output of the 124A was read by an NI DAQ board in the same way as described in Section \ref{sec:DC}.
+AC measurements take advantage of lock-in amplifiers to eliminate noise and make direct measurements of differential conductance. Two lock-in amplifiers were used for this work, an analog Princeton Applied Research 124A and a digital SRS830. The SRS830 is a standard choice because of its easy setup and remote programming. The 124A, however, has much less output noise and was used for most of this work. The output of the 124A was read by an NI DAQ board in the same way as described in Section \ref{sec:DC}.
 
 \begin{figure}
     \centering
@@ -33,25 +33,25 @@ AC measurements take advantage of lockin amplifiers to eliminate noise and make 
     \label{fig:ac_measurement}
 \end{figure}
 
-Samples are biased in the same way as the DC measurement with addition of an AC signal taken from the output of the lock in amplifier. The AD and DC bias voltages are added together using a passive AC-DC adder, described in Section \ref{sec:adder}. 
+Samples are biased in the same way as the DC measurement with addition of an AC signal taken from the output of the lock-in amplifier. The AD and DC bias voltages are added together using a passive AC-DC adder, described in Section \ref{sec:adder}. 
 
-Because the lock in amplifier can only be used to measure voltage signals, the current to voltage amplifier is still needed. The output of the current to voltage amplifier is sent to the input of the lockin. Using this setup, the differential conductance can be directly measured.
+Because the lock-in amplifier can only be used to measure voltage signals, the current-to-voltage amplifier is still needed. The output of the current-to-voltage amplifier is sent to the input of the lock-in. Using this setup, the differential conductance can be directly measured.
 
-Some care must be taken to ensure the lockin signal is not being attenuated by any of the filtering in the AC-DC adder, cryostat, or current to voltage amplifier.  In this work, lockin signals of 27Hz were used, which was well below the cutoff frequency of any filtering in the experiment.
+Some care must be taken to ensure the lock-in signal is not being attenuated by any of the filtering in the AC-DC adder, cryostat, or current-to-voltage amplifier.  In this work, lock-in signals of 27Hz were used, which was well below the cutoff frequency of any filtering in the experiment.
 
 \subsection{Custom Electronics}
 
 \subsubsection*{Current Amplification}
 \label{sec:CV_amp}
 
-The primary sources of noise in making low current DC measurements come from the 60Hz AC power lines and operational amplifiers in the current to voltage amplifier. The first source of noise can be largely eliminated by using an amplifier with battery power. While it is not possible to completely eliminate op amp noise, it can be reduced by choosing designing circuits using low noise amplifiers, metal film resistors, and appropriate filtering. 
+The primary sources of noise in making low current DC measurements come from the 60Hz AC power lines and operational amplifiers in the current-to-voltage amplifier. The first source of noise can be largely eliminated by using an amplifier with battery power. While it is not possible to completely eliminate op amp noise, it can be reduced by choosing designing circuits using low noise amplifiers, metal film resistors, and appropriate filtering. 
 
-A custom made current to voltage amplifier was designed for our lab by Chris Merchant. It uses two OPA27GP op amps in series before and after the sample. The design is two simple transimpedance amplifiers in series with the sample. For this work, the design was expanded upon by adding power line filtering, a low pass filter on each amplifier, and a simplified output configuration. The design can be seen in Figure \ref{fig:current_amp}. With this amplifier, the sample is symmetrically biased by having the same amplifier impedance on each side.
+A custom made current-to-voltage amplifier was designed for our lab by Chris Merchant. It uses two OPA27GP op amps in series before and after the sample. The design is two simple transimpedance amplifiers in series with the sample. For this work, the design was expanded upon by adding power line filtering, a low pass filter on each amplifier, and a simplified output configuration. The design can be seen in Figure \ref{fig:current_amp}. With this amplifier, the sample is symmetrically biased by having the same amplifier impedance on each side.
 
 \begin{figure}
     \centering
     \includegraphics[width=0.75\textwidth]{measurements/amplifier.pdf}
-    \caption{Circuit diagram and photo of the current to voltage amplifier. The amplifier has a fixed gain of 1V/$10^7$A. Each power line is filtered with a 0.47$\mu$F capacitor. The 5pF capacitor in the feedback loop forms a low pass filter with the 10M$\Omega$ resistor, with a cutoff frequency of about 3kHz.}
+    \caption{Circuit diagram and photo of the current-to-voltage amplifier. The amplifier has a fixed gain of 1V/$10^7$A. Each power line is filtered with a 0.47$\mu$F capacitor. The 5pF capacitor in the feedback loop forms a low pass filter with the 10M$\Omega$ resistor, with a cutoff frequency of about 3kHz.}
     \label{fig:current_amp}
 \end{figure}
 
@@ -61,14 +61,14 @@ When not making noise measurements, it is simpler to measure just one signal for
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.6\textwidth]{measurements/active_adder.pdf}
+    \includegraphics[width=0.75\textwidth]{measurements/active_adder.pdf}
     \caption{Circuit diagram and photo of the active subtractor/adder circuit. The DPDT switch is used to change between adder/subtractor circuits. The output state also features an antialiasing filter with 10kHz cutoff not drawn here.}
     \label{fig:subtractor}
 \end{figure}
 
 Both the amplifier and subtractor are run using the same $\pm$12V battery power supply, which is housed in a separate aluminum enclosure and connected with a 5-pin cable. Two identical battery sources were constructed so that one could charge while the other is in use. Measurements can be paused in the software control during battery changes. Most data in this thesis was taken using this setup.
 
-%A major drawback of this current amplifier/subtractor setup is that it fails for samples with a resistance above 20M$\Omega$. This makes this amplifier difficult to use for tunnel probe measurements, as tunnel probe junctions typically have resistances of the same order of magnitude. For tunnel probe measurements, and most lockin measurements, the Ithaco 1211 amplifier was used. The reason for this is that there is a 20M$\Omega$ short across the sample through the input of the subtractor circuit. This should be fixed for future measurements by the addition of current blocking diodes in the subtractor circuit. In carbon nanotube quantum dot measurements this was not a problem, because the resistances of interest are not typically so large. 
+%A major drawback of this current amplifier/subtractor setup is that it fails for samples with a resistance above 20M$\Omega$. This makes this amplifier difficult to use for tunnel probe measurements, as tunnel probe junctions typically have resistances of the same order of magnitude. For tunnel probe measurements, and most lock-in measurements, the Ithaco 1211 amplifier was used. The reason for this is that there is a 20M$\Omega$ short across the sample through the input of the subtractor circuit. This should be fixed for future measurements by the addition of current blocking diodes in the subtractor circuit. In carbon nanotube quantum dot measurements this was not a problem, because the resistances of interest are not typically so large. 
 
 \subsubsection*{AC-DC Adder}
 \label{sec:adder}
@@ -77,12 +77,12 @@ When making AC measurements that incorporate a DC bias voltage, some care must b
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.6\textwidth]{measurements/ac_dc.pdf}
+    \includegraphics[width=0.75\textwidth]{measurements/ac_dc.pdf}
     \caption{Circuit diagram and photo of the AC-DC adder. The voltage is added in the first stage, while the second state consists of a two-pole RC low pass filter with a cutoff frequency of 1kHz to suppress any switching noise from the voltage sources.}
     \label{fig:ac_dc}
 \end{figure}
 
-The 470$\mu$F capacitor on the AC input prevents any DC bias from the lockin amplifier from affecting the measurements. The second stage is a two voltage dividers (100:1 AC and 100000:1) DC which also serves as the adder circuit by adding the two currents through the 100$\Omega$ resistor to ground. The last stage is a two-pole low pass filter. This circuit works well with AC signals up to 100Hz, but is best used with signals of 10-20Hz.
+The 470$\mu$F capacitor on the AC input prevents any DC bias from the lock-in amplifier from affecting the measurements. The second stage is a two voltage dividers (100:1 AC and 100000:1) DC which also serves as the adder circuit by adding the two currents through the 100$\Omega$ resistor to ground. The last stage is a two-pole low pass filter. This circuit works well with AC signals up to 100Hz, but is best used with signals of 10-20Hz.
 
 \section{Cryogenics}
 
@@ -97,7 +97,7 @@ A number of cryostats and superconducting magnets were used in this work. This s
     \label{fig:wiring}
 \end{figure}
 
-All the cryostats discussed below are wired in the same way. Samples are mounted on 28-pin chip carriers, which are placed in custom built sample holders with custom circuit board designed by our lab. The sample holders, seen in Figure \ref{fig:wiring}(a), can are screwed onto the cryostat at the coldest point. Each sample holder has a mount for a chip carrier, as well as a RuOx or Pt temperature sensor and heater. Lines from the sample are connected using 25 pin Dsub connectors mounted on the sample holder and at the coldest point on the cryostat. From the Dsub connectors the signal moves through twisted pair ribbon cables to a Fisher connector mounted on the cryostat at room temperature. A 24-lead cable connects the cryostat to a BNC breakout box, seen in Figure \ref{fig:wiring}(b). None of the cryostats discussed here have low temperature filtering other than that formed by the impedance of the ribbon cable. Typical cutoff frequencies for this setup are around 10kHz, which dictates the choice of measurement frequency in DC measurements. Adding additional high frequency filtering would certainly improve the noise in our measurements by lowering the electron temperature in the samples and should be implemented in future work.
+All the cryostats discussed below are wired in the same way. Samples are mounted on 28-pin chip carriers, which are placed in custom built sample holders with custom circuit board designed by our lab. The sample holders, seen in Figure \ref{fig:wiring}(a), can are attached to the cryostat at the coldest point. Each sample holder has a mount for a chip carrier, as well as a RuOx or Pt temperature sensor and heater. Lines from the sample are connected using 25 pin Dsub connectors mounted on the sample holder and at the coldest point on the cryostat. From the Dsub connectors, the signal moves through twisted pair ribbon cables to a Fisher connector mounted on the cryostat at room temperature. A 24-lead cable connects the cryostat to a BNC breakout box, seen in Figure \ref{fig:wiring}(b). None of the cryostats discussed here have low temperature filtering other than that formed by the impedance of the ribbon cable. Typical cutoff frequencies for this setup are around 10kHz, which dictates the choice of measurement frequency in DC measurements. Adding additional high frequency filtering would certainly improve the noise in our measurements by lowering the electron temperature in the samples and should be implemented in future work.
 
 \subsection{Dunker}
 
@@ -144,7 +144,7 @@ Instructions for cooling down the RMC 3He cryostat can be found in Appendix \ref
 
 Dilution refrigerators rely on a mixture of 3He and 4He to achieve temperatures as low as 5mK. Our Kelvinox system is said to be capable of 7mK base temperatures, although, due to various problems with the IVC vacuum I have been unable to cool it below 70mK.
 
-The process by which the dilution fridge achieves its based temperature is easiest to understand by following the path of the gas mixture through the system. From room temperature the mixture is cooled to 4K traveling in the condenser line through the LHe bath in the magnet dewar. The mixture then passes through the 1K pot where 3He is condensed. The condensed mixture then passes through the primary impedance, designed to control the flow rate to the mixing chamber. After the primary impedance are a series of heat exchangers which use outgoing cold gas to cool the incoming mixture to 50mK. From there the mixture moves into the mixing chamber. The mixing chamber contains two phases of the 3He/4He mixture, a dilute phase and a concentrated phase. The most important cooling stage of the dilution fridge is the evaporating of 3He from the concentrated phase into the dilute phase in the mixing chamber. 3He the moves from the dilute phase in the mixing chamber into the still, which is held at about 600mK. Osmotic pressure from the lower 3He concentration in the still drives this movement. Finally the mixture is pumped through the heat exchangers and out of the fridge through the still pumping line. It then passes through cold traps to remove any impurities before reentering the condenser line \cite{Balshaw2001}.
+The process by which the dilution fridge achieves its based temperature is easiest to understand by following the path of the gas mixture through the system. The mixture is cooled from room temperature to 4K by traveling in the condenser line through the LHe bath in the magnet dewar. The mixture then passes through the 1K pot where 3He is condensed. The condensed mixture then passes through the primary impedance, designed to control the flow rate to the mixing chamber. After the primary impedance is a series of heat exchangers, which use outgoing cold gas to cool the incoming mixture to 50mK. From there, the mixture moves into the mixing chamber. The mixing chamber contains two phases of the 3He/4He mixture, a dilute phase and a concentrated phase. The most important cooling stage of the dilution fridge is the evaporating of 3He from the concentrated phase into the dilute phase in the mixing chamber. 3He moves from the dilute phase in the mixing chamber into the still, which is held at about 600mK. Osmotic pressure from the lower 3He concentration in the still drives this movement. Finally, the mixture is pumped through the heat exchangers and out of the fridge through the still pumping line. It then passes through cold traps to remove any impurities before reentering the condenser line \cite{Balshaw2001}.
 
 \subsubsection*{Oxford Kelvinox}
 
@@ -155,7 +155,7 @@ The process by which the dilution fridge achieves its based temperature is easie
     \label{fig:kelvinox}
 \end{figure}
 
-The Oxford Kelvinox used in our lab is pictures in Figure \ref{fig:kelvinox}. This system was not used for about 8 years before I cooled it down in 2014. It required several repairs to the temperature control wiring and pump power supplies, but the gas handling systems were found to be in very good condition. After several cool downs, it became apparent that the system had a leak into the IVC from the top plate. 
+The Oxford Kelvinox used in our lab is pictured in Figure \ref{fig:kelvinox}. This system was not used for about 5 years before I cooled it down in 2014. It required several repairs to the temperature control wiring and pump power supplies, but the gas handling systems were found to be in very good condition. After several cool downs, it became apparent that the system had a leak into the IVC from the top plate. 
 
 Instructions on cooling down the Kelvinox dilution refrigerator can be found in Appendix \ref{sec:kelvinox}.
 

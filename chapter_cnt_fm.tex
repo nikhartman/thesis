@@ -21,7 +21,7 @@ Of the many samples discussed in Chapter \ref{chap:contacts}, seven F-CNT-F devi
     \caption{Details of measured F-CNT-F devices}
 \end{table}
 
-Each of these samples was measured at 4K, with the exception of SCF98 (11-12) which was measured at 150mK. Figure \ref{fig:all_FM_QD} shows Coulomb diamond plots for each of the samples. These were used to calculate the quantum dot properties seen in Table \ref{table:cold_fm_devices}
+Each of these samples was measured at 4K, with the exception of SCF98 (11-12) which was measured at 150mK. Figure \ref{fig:all_FM_QD} shows Coulomb diamond plots for each of the samples. These plots were used to calculate the quantum dot properties seen in Table \ref{table:cold_fm_devices}
 
 \begin{table}
     \centering
@@ -47,7 +47,7 @@ Each of these samples was measured at 4K, with the exception of SCF98 (11-12) wh
     \label{fig:all_FM_QD}
 \end{figure}
 
-The lever arm, $\alpha_{G}$, defined as $\alpha_{G} = C_G/C_{\Sigma}$ and is used to convert gate voltages to energies, $U_{gate} = \alpha_{G}eV_{gate}$ \cite{Ihn2004}. It can be calculated based on the geometry of the Coulomb diamonds, as illustrated in Figure \ref{fig:alpha_calc} and characterizes the coupling regime for each device. Looking at the lever arm values, the electron beam evaporated samples are in a much weaker coupling regime than the sputtered samples. All other aspects of the fabrication were the same over all four chips. 
+The lever arm, $\alpha_{G}$, defined as $\alpha_{G} = C_G/C_{\Sigma}$ and is used to convert gate voltages to energies, $U_{gate} = \alpha_{G}eV_{gate}$ \cite{Ihn2004}. It is calculated based on the geometry of the Coulomb diamonds, as illustrated in Figure \ref{fig:alpha_calc} and characterizes the coupling regime for each device. The electron beam evaporated samples are in a much weaker coupling regime than the sputtered samples. All other aspects of the fabrication were the same over all four chips. 
 
 \begin{figure}
     \centering
@@ -59,9 +59,9 @@ The lever arm, $\alpha_{G}$, defined as $\alpha_{G} = C_G/C_{\Sigma}$ and is use
 \section{Tunneling Magnetoresistance}
 \label{sec:TMR}
 
-Tunneling magnetoresistance is a change in resistance measured across a ferromagnet/insulator/ferromagnet structure as a function of magnetic field. The spin transport through such an interface can be made tunable by replacing the insulator with a carbon nanotube quantum dot. Exchange coupling with the ferromagnetic leads will split the spin degeneracy of the quantum dot, making it possible to tune the magnitude and even the sign of the tunneling magnetoresistance \cite{Tsymbal2003, Sahoo2005, Thamankar2006}.
+Tunneling magnetoresistance is a change in resistance measured across a ferromagnet/insulator/ferromagnet structure as a function of magnetic field \cite{Julliere1975}. The spin transport through such an interface can be made tunable by replacing the insulator with a tunable quantum dot. Carbon nanotubes quantum dots are an attractive choice due to their well-understood spin and orbital filling. Exchange coupling with the ferromagnetic leads will split the spin degeneracy of the quantum dot, making it possible to tune the magnitude and even the sign of the tunneling magnetoresistance \cite{Tsymbal2003, Sahoo2005, Thamankar2006}.
 
-The magnetization of the carbon nanotube contacts is dominated by their shape anisotropy. This is typical for polycrystaline sputtered and electron beam evaporated films, such as the ones used in these samples. By patterning the contacts with different widths, they have different coercive fields at which the magnetization will be flipped as an external, parallel magnetic field is varied. A schematic of the situation can be seen in Figure \ref{fig:spin_valve}.
+The magnetization of the carbon nanotube contacts is dominated by their shape anisotropy \cite{Morrish1983}. This is typical for polycrystaline sputtered and electron beam evaporated films, such as the ones used in these samples \cite{Johnson1999}. For long, narrow, rectangular ferromagnet films, the shape anisotropy depends primarily on the width of the film. Wider films have slightly lower coercive fields at which the magnetization will be flipped as an external, parallel magnetic field is varied. By patterning two ferromagnetic contacts of different widths on a carbon nanotube, tunneling magnetoresistance can be measured through the nanotube quantum dot. A schematic of the situation can be seen in Figure \ref{fig:spin_valve}.
 
 \begin{figure}
     \centering
@@ -72,7 +72,7 @@ The magnetization of the carbon nanotube contacts is dominated by their shape an
 
 \subsection{Results}
 
-Of the ferromagnetic devices measured, only sample SCF72 showed clear tunneling magnetoresistance behavior. Refer to the previous section for details on that sample. In the other devices the effect was overwhelmed by random telegraph noise in the data, which can look a lot like false TMR signals, or metal/nanotube barriers had impurities causing spin-flip events that destroyed the TMR effect.
+Of the ferromagnetic devices measured, only sample SCF72 showed clear tunneling magnetoresistance behavior. In the other devices the effect was overwhelmed by random telegraph noise in the data, which can look like false TMR signals, or metal/nanotube barriers with impurities causing spin-flip events that destroyed the TMR effect.
 
 \begin{figure}
     \centering
@@ -81,7 +81,7 @@ Of the ferromagnetic devices measured, only sample SCF72 showed clear tunneling 
     \label{fig:TMR_real}
 \end{figure}
 
-In the simplest mode, tunneling magnetoresistance is defined as:
+In the simplest model, tunneling magnetoresistance is defined as:
 
 \begin{align}
     TMR &\equiv \frac{G_P - G_{AP}}{G_P + G_{AP}} = \frac{R_{AP} - R_{P}}{R_P + R_{AP}} \\
@@ -94,7 +94,7 @@ Where $P_{L(R)}$ are the spin polarizations at the Fermi level for the left and 
     P_{L(R)} = \frac{\rho^{L(R)}_{+} - \rho^{L(R)}_{-}}{\rho^{L(R)}_{+} + \rho^{L(R)}_{-}}
 \end{equation}
 
-And $\rho^{L(R)}_{+(-)}$ are the tunneling density of states for the majority (minority) spins at the Fermi level. With all of this one expects that $P_{L(R)}$ will be positive, thus the TMR signal will be positive.
+Where $\rho^{L(R)}_{+(-)}$ are the tunneling density of states for the majority (minority) spins at the Fermi level. In this picture, $P_{L(R)}$ will be positive, thus the TMR signal will be positive.
 
 In the data shown in Figure \ref{fig:TMR_real}, the TMR signal is measured to be about -6.0\% and -0.8\% in the left and right plots, respectively. Additionally, the coercive fields for the two cobalt contacts are 40mT and 60mT. These coercive field measurements are consistent with the predicted values for narrow cobalt wires.
 
@@ -118,7 +118,7 @@ When the quantum dot is tuned off resonance, $|E-E_i| \gg \Gamma_L + \Gamma_R$, 
 
 By using a carbon nanotube quantum dot, the TMR signal can be modulated by tunning the resonant energy level $E_i$ with the gate voltage. Additionally, the magnitude can be modulated because the levels on the quantum dot are spin non-degenerate due to the exchange coupling field introduced by the magnetic leads. This effect has been observed previously in carbon nanotube quantum dots \cite{Sahoo2005, Thamankar2006}. 
 
-In sample SCF72, the TMR signal was only significant in a narrow range of gate voltages near $V_{gate}=0V$, as shown in Figure \ref{fig:TMR_real}. Looking at the conductance data as a function of the gate voltage in Figure \ref{fig:TMR_gate}, it is clear that at $V_{gate}=0V$ there is a quantum dot level $E_i$ resonant with the Fermi level on the leads. Therefore, the observed negative TMR signal makes sense in terms of the model described.
+In sample SCF72, the TMR signal was only significant in a narrow range of gate voltages near $V_{gate}=0V$, as shown in Figure \ref{fig:TMR_real}. Looking at the conductance data as a function of the gate voltage in Figure \ref{fig:TMR_gate}, it is clear that at $V_{gate}=0V$ there is a quantum dot level $E_i$ resonant with the Fermi level on the leads. This TMR measurement is used in Section \ref{sec:spin_selection_field} to establish that tunneling onto the dot conserves spin, and tunnel rates from the source and drain are asymmetric.
 
 \begin{figure}
     \centering
@@ -129,7 +129,7 @@ In sample SCF72, the TMR signal was only significant in a narrow range of gate v
 
 \section{Negative Differential Conductance in Coulomb Blockade Regime}
 
-Negative differential conductance resulting from spin blockade has been observed in two devices measured. The data is presented in Figure \ref{fig:negative_differential_conductance}. This section will attempt to explain the NDC feature in terms of two models. Neither model is dependent on the fact that the leads are ferromagnetic. No TMR was measured in these devices. An exchange interaction still exists between the ferromagnets and quantum dot levels to lift the spin degeneracy. Additionally, the tunnel barriers between the leads and sample should be spin dependent.
+Negative differential conductance resulting from spin blockade has been observed in two devices measured, seen in Figure \ref{fig:negative_differential_conductance}. These measurements will be compared to a previous measurement of a carbon nanotube double quantum dot \cite{Buitelaar2008} as well as a theoretical model predicting spin suppression in single quantum dots \cite{Weinmann1994}. This work is the first instance of these effects being observed in a F-CNT-F device. Neither device showed clear TMR measurements, but we assume there is some spin transport through the tunnel barriers, as well as asymmetry in the source/drain tunneling rates based on the contact widths.
 
 \begin{figure}
     \centering
@@ -175,7 +175,7 @@ Figure \ref{fig:dqd_model_compare} shows the data from SCF75 alongside the simul
 \subsection{NDC from Spin Selection Rules}
 \label{sec:single_dot_model}
 
-The negative differential conductance peaks seen in Figure \ref{fig:negative_differential_conductance} may be explained by a simpler, single dot model, but not necessarily captured by the constant interaction model discussed in Section \ref{sec:constant_interaction_model}. As electrons fill the quantum dot, they are not only subject to charge interactions, but also spin interactions. Each quantum dot occupation number has many possible collective spin states. Figure \ref{fig:spin_states} tabulates some of these states for low occupation numbers, calculated from Clebsh-Gordan coefficients \cite{Weinmann1994} .
+The negative differential conductance peaks seen in Figure \ref{fig:negative_differential_conductance} may be explained by a simpler, single dot model, but not necessarily captured by the constant interaction model discussed in Section \ref{sec:constant_interaction_model}. As electrons fill the quantum dot, they are not only subject to charge interactions, but also spin interactions. Each quantum dot occupation number has many possible collective spin states. Figure \ref{fig:spin_states} tabulates some of these states for low occupation numbers, calculated from Clebsh-Gordan coefficients \cite{Weinmann1994}.
 
 \begin{figure}
     \centering
@@ -200,7 +200,7 @@ These calculations assume spin degenerate levels and symmetric coupling to norma
 \section{Spin Selection Rules with Applied Magnetic Field}
 \label{sec:spin_selection_field}
 
-Additional data supporting the suppression of conductance peaks in ferromagnetic quantum dots due to spin selection rules is observed in sample SCF72. This dot has been used throughout this thesis as the canonical example of a Coulomb blockade measurement. It shows regular oscillations in the gate, suggesting a single dot with levels that are not split by exchange coupling or disorder. An energy level diagram of the quantum dot, tunnel barriers, and the data can be seen in Figure \ref{fig:scf72_info}(a). 
+Additional data supporting the suppression of conductance peaks in ferromagnetic quantum dots due to spin selection rules is observed in sample SCF72. This dot has been used throughout this thesis as the canonical example of a Coulomb blockade measurement. It shows regular oscillations in the gate, suggesting a single dot with levels that are not split by exchange coupling or disorder.  From the TMR measurement it is clear that tunneling onto the device preserves spin and there is an asymmetry in the source/drain tunneling rates, as seen in Figure \ref{fig:scf72_info}(a).  
 
 \begin{figure}
     \centering
@@ -214,20 +214,20 @@ Figure \ref{fig:scf72_spin_selection} shows Coulomb diamond data for SCF72 at $B
 \begin{figure}
     \centering
     \includegraphics[width=1.0\textwidth]{fmdots/scf72_spin_selection.pdf}
-    \caption{Conductance as a function of $V_{gate}$ ang $V_{bias}$ for sample SCF72 at $B=0$T (left) and -4T (right). Solid lines trace conductance peaks. Dashed lines trace suppressed peaks.}
+    \caption{Conductance as a function of $V_{gate}$ ang $V_{bias}$ for sample SCF72 at $B=0$T (a) and -4T (b). Solid lines trace conductance peaks. Dashed lines trace suppressed peaks. (c) Schematic of energies on the dot. (d) Sketch of energy levels as seen in the Coulomb diamond plots.}
     \label{fig:scf72_spin_selection}
 \end{figure}
 
-The Zeeman splitting can be measured by measuring the change in excited state energies as the magnitude of the field is increased. At zero field, excited states are separated by $\Delta E = 1.8$meV. In a field of -4T, the levels are separated by $\Delta E = 2.0meV$. This certainly shows that the excited states are spin dependent. It is also consistent with the Zeeman splitting of $g \mu_B (-4T) =-0.25 g$meV. The $g$-factor in carbon nanotubes is measured to be approximately 2 \cite{Cobden1998}, but has been found to be tunable in some devices \cite{Lai2014}. This measurement really shows that the excited state levels are not spin degenerate. If the levels were, the spacing would not only change, but single excited state levels would be seen to split into two. This implies a non-zero exchange coupling field in the nanotube from the ferromagnetic leads.
+The Zeeman splitting can be measured by measuring the change in excited state energies as the magnitude of the field is increased. At zero field, excited states are separated by $\Delta E = 1.8$meV. In a field of -4T, the levels are separated by $\Delta E = 2.0meV$.  This is consistent with the Zeeman splitting energies previously measured in carbon nanotube quantum dots \cite{Cobden1998, Lai2014}. This measurement does not show any splitting of degenerate levels. This suggests that the levels were not degenerate, or that some of the split levels do not participate in the conduction due to the same spin selection rules being discussed here.
 
 \subsection{Results and Discussion}
 
-Effects of spin selection rules have potentially been observed in three samples. At least one of these samples, SCF72, is proven to be a clean, single quantum dot. This suggests that spin selection rules beyond the constant interaction model might be a better explanation for suppressed and negative differential conductance features though these quantum dots. Additional work must be done in modeling transport though a F-CNT-F dot to confirm that the features observed here can be accurately fit with this model. However, given the rich nature of spin physics in ferromagnetic quantum dots this is a much more attractive model with which to compare the data.
+Effects of spin selection rules have been observed in three samples. At least one of these samples, SCF72, is proven to be a clean, single quantum dot. This suggests that spin selection rules beyond the constant interaction model can be used to explain suppressed and negative differential conductance features in the Coulomb diamond data. Additional work must be done in modeling transport though a F-CNT-F dot to confirm that the features observed here can be fit using such a model. 
 
 \section{Spectroscopy of a Magnetic Impurity}
 \label{sec:imurity_tunneling}
 
-It is possbile, through transport spectroscopy, to identify impurities near a quantum dot and infer some of their characteristics. Sample SCF96 shows such impurity levels. The transport through the impurity was found to be tunable by varying the gate voltage and external magnetic field. The data is show in Figure \ref{fig:resonant_tunneling}
+Coupling a nanoparticle to a carbon nanotube quantum dot makes it possible, through transport spectroscopy, to measure physical properties of nanoscale particles too small to contact using typical lithographic methods. Sample SCF96 shows such coupling to a magnetic impurity. The transport through the impurity was found to be tunable by varying the gate voltage and external magnetic field. The data are shown in Figure \ref{fig:resonant_tunneling}
 
 \begin{figure}
     \centering
@@ -249,9 +249,7 @@ Figure \ref{fig:resonance_cuts} shows cuts through each of the three Coulomb dia
     \label{fig:resonance_cuts}
 \end{figure}
 
-From the data in Figure \ref{fig:resonance_cuts} it is possible to derive the relevant energy scales of the impurity level. Positive and negative conductance peaks are split by 2meV. Adjacent positive peaks are separated by 5meV. This suggests that the impurity has at least 3 energy levels that are separated by 5meV. These three levels are spin split by 2meV, most likely because the impurity is itself ferromagnetic.
-
-%The negative differential conductance can be understood in terms of spin blockade. The impurity levels are split such that levels with the same spin polarization as the nearest ferromagnetic contact are lower energy than those with opposite polarization. When a level with spin polarized anti-parallel to the lead is in resonance, current is suppressed through the impurity. This leads to a decrease in the conductance. In regions where transport through the nanotube is suppressed by the Coulomb blockade, the total measured conductance is negative.
+From the data in Figure \ref{fig:resonance_cuts} it is possible to derive the relevant energy scales of the impurity level. Positive and negative conductance peaks are split by 2meV. Adjacent positive peaks are separated by 5meV. This suggests that the impurity has at least 3 energy levels that are separated by 5meV. These three levels are spin split by 2meV, most likely because the impurity is ferromagnetic.
 
 The charging energy for the impurity can be measured using the lever arm calculated in Table \ref{table:cold_fm_devices}. Resonant tunneling through the impurity is observed for gate voltages between 10 and 20V. With the lever arm of $\alpha_G = 0.006$ the charging energy can be estimated to be roughly 100meV, which corresponds to a capacitance of about $C_{\Sigma} = 0.8$aF. 
 

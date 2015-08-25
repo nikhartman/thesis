@@ -8,7 +8,7 @@ Carbon nanotubes exhibit a variety of interesting material and electrical proper
 
 \section{Electronic Bandstructure of Graphene}
 
-The electronic bandstructure of graphene was first calculated in 1947 by P.R. Wallace \cite{Wallace1947}. This was done as part of an effort to understand the electronic structure of bulk graphite. In this paper, there is mention of the two lowest energy bands and the half filling of a single layer of carbon atoms. It was not until 1984 that Semenoff discussed the existence of a linear dispersion relation for low energy electronic excitations in single layers of carbon atoms \cite{Semenoff1984}. This was done by looking at a generic honeycomb lattice as an analoge of 2+1 dimensional electrodynamics. Semenoff found the low energy electronic band structure of the monoatomic honeycomb lattice matched that of Dirac fermions.
+The electronic bandstructure of graphene was first calculated in 1947 by P.R. Wallace \cite{Wallace1947}. This was done as part of an effort to understand the electronic structure of bulk graphite. In this paper, there is mention of the two lowest energy bands and the half filling of a single layer of carbon atoms. It was not until 1984 that Semenoff discussed the existence of a linear dispersion relation for low energy electronic excitations in single layers of carbon atoms \cite{Semenoff1984}. This was done by looking at a generic honeycomb lattice as an analogue of 2+1 dimensional electrodynamics. Semenoff found the low energy electronic band structure of the monoatomic honeycomb lattice matched that of Dirac fermions.
 
 Graphene was first isolated on silicon wafers through mechanical exfoliation in 2004. The semimetallic characteristics were confirmed through measuring transistor curves and the charge carrier sign change through the Hall effect \cite{Novoselov2004}. Shortly after, the same research group confirmed the existance of low energy Dirac fermions in graphene \cite{Novoselov2005}.
 
@@ -68,7 +68,7 @@ Given that the model deals with the motion of individual electrons and their wav
     \hat{H}\Psi = \varepsilon\Psi
 \end{equation}
 
-$\Psi$ is a single particle wavefunction over the whole graphene lattice. As such, it can be written as a linear combination of Bloch wavefucntions.
+$\Psi$ is a single particle wavefunction over the whole graphene lattice. As such, it can be written as a linear combination of Bloch wavefunctions.
 
 \begin{align}
     u_A(\vec{r}) &= \frac{1}{\sqrt{N}}\sum_{\vec{r}_A}^{} e^{i\vec{k}\cdot\vec{r}_A} \phi_{2p_z}(\vec{r}-\vec{r}_A) \\
@@ -96,7 +96,7 @@ Where:
     S_{ij} &= \braket{u_i | u_j}
 \end{align}
 
-For simplicity, the rest of this calculation will assume $\braket{u_i | u_j} = \delta_{ij}$. Meaning, there is no overlap of the two Bloch wavefunctions and that each of the wave functions is already properly normalized. Rewriting Equation \ref{eq:TISE} yields:
+Where $H_{ij}$ and $S_{ij}$ are the hopping integral and wavefunction overlap for electrons on nearest neighbor sites. For simplicity, the rest of this calculation will assume $\braket{u_i | u_j} = \delta_{ij}$. Meaning, there is no overlap of the two Bloch wavefunctions and that each of the wave functions is already properly normalized. Rewriting Equation \ref{eq:TISE} yields:
 
 \begin{equation}
 \label{eq:secular}
@@ -226,7 +226,7 @@ By defining $v_f \equiv {3at}/{2\hbar}$, using the standard Pauli matrices, and 
     \hat{H}_{K'} &= \hbar v_f \pvec{\sigma}^*\cdot\vec{q} \nonumber
 \end{align}
 
-These Hamiltonians describe massless Dirac fermions in 2D. This is clear in the low-energy dispersion relation.
+These Hamiltonians describe massless Dirac fermions in 2D. Meaning, low-energy conduction electrons are fermions with dispersion relations like that of a massless photon. This is clear in the low-energy dispersion relation.
 
 \begin{equation}
 \label{eq:massless_disp}
@@ -354,7 +354,7 @@ Where $\mu$ is the band index, $d$ is the nanotube diameter, and k is the electr
     \varepsilon(k) &= \pm\hbar v_f k
 \end{align}
 
-These are the approximate bandstructures at low energy. Semiconducting nanotubes have a bandgap, $E_g(n,m)$ dependent on the chirality, and an effective mass $m^*$ dependent on the lowest band curvature. Metallic nanotubes maintain the massless Dirac fermion properties found in graphene at low energies.
+These are the approximate bandstructures at low energy. Semiconducting nanotubes have a bandgap, $E_g(n,m)$ dependent on the chirality, and an effective mass $m^*$ dependent on the lowest band curvature. Metallic nanotubes maintain the massless Dirac fermion properties found in graphene at low energies. This calculation has ignored spin-orbit coupling that can be derived from the curvature of the graphene lattice to form the nanotube, and curvature along the nanotube length \cite{Jeong2009}
 
 \section{Carbon Nanotube Field Effect Transistors}
 
@@ -383,7 +383,7 @@ Measurements on carbon nanotube field effect transistors (CNTFETs) depend on the
     \label{transistor_curves.png}
 \end{figure}
 
-Metallic source/drain contacts typically form Schottky barriers with carbon nanotubes. The polarity of the resulting CNTFET is thus determined by the relation between the work function of the contact material and nanotube. For metals with a relatively high work function, such as Pd, Ti, Cr, and Co, the devices are expected to be p-type. Metals with a lower work function, such as Al, Mg, and Sc, can produce n-type transistors. However, many of these low work function metals also happen to have a very poor wetability on the nanotube surface, which leads to large contact resistances, making the devices difficult to fabricate and measure.
+Metallic source/drain contacts typically form Schottky barriers with carbon nanotubes. The polarity of the resulting CNTFET is thus determined by the relation between the work function of the contact material and nanotube. For metals with a relatively high work function, such as Pd, Ti, Cr, and Co, the devices are expected to be p-type. Metals with a lower work function, such as Al, Mg, and Sc, can produce n-type transistors. However, many of these low work function metals also happen to have a very poor wettability on the nanotube surface, which leads to large contact resistances, making the devices difficult to fabricate and measure.
 
 \section{Carbon Nanotube Quantum Dots}
 \label{sec:constant_interaction_model}

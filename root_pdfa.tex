@@ -1,0 +1,94 @@
+
+% This template was originally by R. Jacob Vogelstein
+% Updated on March 1, 2010 by Noah J. Cowan
+
+
+\documentclass[12pt,oneside,final]{thesis}
+
+\newcommand{\pvec}[1]{\vec{#1}\mkern2mu\vphantom{#1}}
+
+\listfiles
+\usepackage{cite}
+\usepackage[T1]{fontenc} %recommended to override the default font encoding package OT1
+					%contains additional/standard ascii characters
+\usepackage{amsmath, amsfonts, amssymb}
+%it would be great if i could change the spacing above/below equations with a line here
+\usepackage{braket}
+% \usepackage{tabularx}
+\usepackage{siunitx}
+\DeclareSIUnit{\torr}{Torr}
+\DeclareSIUnit{\sccm}{sccm}
+\DeclareSIUnit{\gram}{g}
+\DeclareSIUnit{\rpm}{rpm}
+\usepackage[version=3]{mhchem}
+%\usepackage{textcomp}   %brought in for \textdegree on wiki recommendation
+\usepackage{graphicx}
+\graphicspath{{./figures/}}
+\usepackage{fixltx2e}
+\usepackage{array}
+%\usepackage{wrapfig} 
+%wrapfig is fragile: use sparingly
+\usepackage[outdir=./figures/converted/]{epstopdf} 
+%\usepackage{times}  % Use this for ugly fonts
+\usepackage{fancyhdr}    % Use nice looking headers along with the required footer page numbers  
+\usepackage[a-1b]{pdfx}
+\usepackage{hyperref} %may require [hypertex] option
+% \setlength{\paperheight}{11in}
+
+%Define the header/footer style
+\pagestyle{fancy}
+\fancyhf{}
+\setlength{\headheight}{15pt}
+\lhead{\leftmark}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{% Redefine ``plain'' style for chapter boundaries
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[C]{\thepage} % except the center
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+
+\input{defs.tex}
+
+\tolerance=10000 %I don't know what this is for
+
+%\makeglossary % enable the glossary
+
+\begin{document}
+
+\title{Fabrication and Transport Properties of Carbon Nanotube Quantum Dots with Ferromagnetic and Superconducting Leads}
+\author{Nikolaus Hartman}
+\degreemonth{August}
+\degreeyear{2015} 
+\dissertation
+\doctorphilosophy
+\copyrightnotice %not really copyrighted 
+
+% add your chapters, best way is to have separate TeX files for each chapter
+\include{chapter_front_matter}  % title, abstract, acknowledgement, dedication, TOC, figure list
+\include{chapter_intro}  % an introduction to the field and some bullshit to tie the whole thing together
+\include{chapter_electronic_properties_cnt} % derivation of CNT band structure, explanation of QD + measurements
+\include{chapter_cnt_growth_placement} % growth of CNT, placement on substrate, imaging
+\include{chapter_cnt_contacts} %barrier info, statistics on lithography/deposition methods
+\include{chapter_measurement} % explanation of cryogenic and transport measurements used in this work
+\include{chapter_cnt_fm} % describe results of FMCNTQD made in the ebeam evaporator that showed possibly interesting behavior.%
+\include{chapter_fm_cnt_sc} % explore spin transport through a FM-CNT-SC junction
+\include{chapter_other_devices} % discuss other projects
+\include{chapter_conclusion} % discuss other projects
+\appendix
+\include{appendix_fabrication} % details about fabrication 
+\include{appendix_cryostat_details} % details about measurement
+
+%% REFERENCES
+
+% if you use BIBTEX
+\bibliographystyle{IEEEtran}
+\bibliography{thesis}
+
+\begin{vita}
+
+Nikolaus George Hartman was born June 8, 1985 in Harrisburg, Pennsylvania. In 2003, he graduated from Central Dauphin High School. Nik received a Bachelors of Science degree in Physics from the University of Pittsburgh in 2007. After briefly working in healthcare technology at the ECRI Institute in Philadelphia, Nik started his PhD at Johns Hopkins University in 2008, joining the Markovic lab in 2009. Nik received his PhD in August 2015. He will continue his work in quantum transport as a post-doctoral fellow at the University of British Columbia in October 2015.
+
+\end{vita}
+
+\end{document}

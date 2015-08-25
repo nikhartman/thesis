@@ -1,12 +1,14 @@
 \chapter{Spin Transport in Tunable Ferromagnet/Superconductor Junction}
 \label{sec:SCFM}
-\chaptermark{FM-CNT-SC}
+\chaptermark{F-CNT-S}
 
 %%%%%%%%  Chapter starts below %%%%%%%%%%%
 
 In 1971, Tedrow and Meservey made their famous measurement of the spin polarization in a ferromagnetic nickel thin film \cite{Tedrow1971}. This was done by creating a tunnel junction between the thin nickel film and a thin aluminum film. The density of states of the aluminum film was used as a probe into the spin polarization of the nickel film by measuring the conductance through the junction. Tedrow and Meservey later used this same technique to characterize a number of ferromagnetic materials \cite{Tedrow1973}
 
-The motivation for the work in this chapter was to make the same type of measurement using a carbon nanotube quantum dot as a spin tunable tunnel barrier between a ferromagnetic and superconducting lead. In doing so, the spin resolved density of states of each material could be inferred from the differential conductance through the quantum dot as a function of magnetic field.
+%The motivation for the work in this chapter was to make the same type of measurement using a carbon nanotube quantum dot as a spin tunable tunnel barrier between a ferromagnetic and superconducting lead. In doing so, the spin resolved density of states of each material could be inferred from the differential conductance through the quantum dot as a function of magnetic field.
+
+The goal in this work was to replace the insulating barrier in the Meservey measurement with a carbon nanotube quantum dot. In doing so, it becomes possible to use the levels on the dot to further tune spin transport through the junction. Differential conductance measurements through such a F-CNT-S can be made to measure the ferromagnet polarization, exchange coupling in the carbon nanotube, and the spin-resolved density of states of the superconductor. The work presented in this chapter represents the first attempt to measure transport in this type of carbon nanotube quantum dot device.
 
 \section{Background}
 
@@ -77,13 +79,13 @@ Now, it is important to consider what might be observed when replacing the tunne
     \label{fig:MT_proposed}
 \end{figure}
 
-The levels on the dot should be non-degenerate due to exchange coupling with the ferromagnetic lead. The exact effect of this exchange coupling is not known in carbon nanotubes and could be determined using the proposed devices. The magnitude of the conductance peaks sketched in Figure \ref{fig:MT_explanation}(d) will be modulated by the gate voltage by bringing quantum dot levels with different spin textures in and out of resonance with the Fermi level on the magnetic and superconducting leads. Looking at how these conductance peaks evolve in the magnetic field at different gave voltages will give information about the exchange coupling between the nanotube and ferromagnet. A similar measurement has been performed in \ce{InAs} quantum dots \cite{Hofstetter2010}. Those results confirm the ferromagnetic exchange coupling in a similar system.
+The levels on the dot should be non-degenerate due to exchange coupling with the ferromagnetic lead. The exchange coupling magnitude is not known in carbon nanotubes and could be determined using the proposed devices. Such a measurement would be useful in discussing spin transport through ferromagnetically contacted nanotubes such as in Section \ref{sec:spin_selection_field}. The magnitude of the conductance peaks sketched in Figure \ref{fig:MT_explanation}(d) will be modulated by bringing quantum dot levels with different spin polarizations in and out of resonance with the Fermi level on the magnetic and superconducting leads. Looking at how these conductance peaks evolve in the magnetic field at different gate voltages will give information about the exchange coupling between the nanotube and ferromagnet. A similar measurement has been made to confirm the ferromagnetic exchange coupling in \ce{InAs} quantum dots \cite{Hofstetter2010}
 
 Measurements of the differential conductance as a function of $V_{bias}$ and applied field should show the conductance peaks sketched in Figure \ref{fig:MT_explanation}(d) move as a function of the applied field in the same was as observed by Tedrow and Meservey. If the spin texture of the resonant quantum dot level is known, this measurement will probe the density of states of the ferromagnet and superconductor materials.
 
 \section{Characteristics of Samples}
 
-Two F-CNT-S devices were measured at 4K for this thesis, MT7 and SCFMH8. Basic properties of each device will be summarized here.
+Of the devices fabricated, two F-CNT-S devices yielded clean measurements at 4K, MT7 and SCFMH8. Basic properties of each device will be summarized here. These properties will be useful later in discussing the spin transport through each device.
 
 \subsection*{MT7}
 
@@ -96,7 +98,7 @@ Sample MT7 was one of the earliest samples made for this project and motivated a
     \label{fig:mt7}
 \end{figure}
 
-The device is show in Figure \ref{fig:mt7}. Figure \ref{fig:mt7_gate} shows the conductance as a function of $V_{gate}$ measured at 4K. The inset of that figure shows some two-fold symmetry in the peaks. The spin degeneracy should be broken by the presence of the cobalt leads. The two-fold symmetry likely comes from orbital symmetry, which has energy level splittings smaller than what can be resolved at 4K.
+The device is show in Figure \ref{fig:mt7}. Figure \ref{fig:mt7_gate} shows the conductance as a function of $V_{gate}$ measured at 4K. The inset of that figure shows some two-fold symmetry in the peaks. The spin degeneracy should be broken by the presence of the cobalt leads. The two-fold symmetry likely comes from orbital symmetry, which is assumed to not be broken by the magnetic contacts. 
 
 \begin{figure}
     \centering
@@ -118,7 +120,7 @@ In the top plot of Figure \ref{fig:mt7_coulomb} the niobium lead is in the super
 
 \begin{equation}
     \label{eq:bcs_gap}
-    \Delta (T \rightarrow T_C) \approx 3.07 k_B T_C \sqrt(1 - T/T_C)
+    \Delta (T \rightarrow T_C) \approx 3.07 k_B T_C \sqrt{1 - T/T_C}
 \end{equation}
 
 Using this equation and the measured value of $T_C = 7$K, gives an expected gap of 1.2meV, which is in reasonably good agreement with the measured value, given the resolution of these measurements.
@@ -134,7 +136,7 @@ Sample SCFMH8 was one of the last samples made for this work. Nanotubes were gro
     \label{fig:scfmh8}
 \end{figure}
 
-As fabricated the thermally evaporated permalloy leads had contact resistances in the 100M$\Omega$ range. After fabrication, the samples were annealed at 325$^\circ$C for 3 hours in an Ar/\ce{H2} atmosphere. After annealing, both Py-CNT-Py and Nb-CNT-Nb junctions were around 100k$\Omega$. Tuning the back gate on this device was found to have no effect on the transport properties. It is possible that the high temperature growth or anneal damaged the gate oxide.
+As fabricated, the thermally evaporated permalloy leads had contact resistances in the 100M$\Omega$ range. After fabrication, the samples were annealed at 325$^\circ$C for 3 hours in an Ar/\ce{H2} atmosphere. After annealing, both Py-CNT-Py and Nb-CNT-Nb junctions were around 100k$\Omega$. Tuning the back gate on this device was found to have no effect on the transport properties. It is possible that the high temperature growth or anneal damaged the gate oxide.
 
 Figure \ref{fig:scfmh8_vi} shows the current and conductance as a function of the bias voltage. The sample is clearly in the Coulomb Blockade regime, but the level spacings are difficult to determine. A two probe resistance measurement was made across a niobium wire fabricated on the same chip as SCFMH8. The critical field in this wire was found to be 2T.
 
@@ -178,11 +180,11 @@ To more easily discuss the differential conductance as a function of field, vert
 
 Figure \ref{fig:bisweep_cuts_all} shows how the tunneling differential conductance evolves as a function of the magnetic field in each sample. Sample SCFMH8 shows very little movement of the peaks with the magnetic field. There are a number of reasons this might be the case. Most importantly, the splitting could be obscured by thermal noise in the system, which is on the order of 500$\mu$eV. Zeeman splitting of opposite spin levels on a nanotube quantum dot has been observed in the past to be of the same order of magnitude \cite{Tans1997}. This seem to be the most reasonable explanation. It is difficult to speculate any more on what splittings are expected from the Coulomb blockade features alone without the device being gate tunable. Looking closely at Figure \ref{fig:scfmh8_bisweep_edit} it is possible that there is some evidence of the superconducting gap closing in the outermost conductance peaks near $B=2T$.
 
-In Figures \ref{fig:bisweep_cuts_all} and \ref{fig:mt7_bisweep_edit} it is clear that there is some field dependent movement of the conductance peaks in sample MT7. Again, it is important to remember a change in conductance at low bias is not solely due to the superconducting gap, but rather a combination of the gap and Coulomb blockade. From $B=0$T to 0.5T conductance peak 1 (labelled in Figure \ref{fig:mt7_bisweep_edit}) shifts from $V_{bias}=-4.2meV$ to $V_{bias}=3meV$. This agrees well with the closing of the calculated superconducting gap of 1.2meV. Similar features are observed in the other three conductance peaks. At fields above 0.5T, peaks 1-3 have a slight field dependance. Peaks 1 and 2 show positive slopes of 1.5 and 0.3 meV/T, respectively. Peak 3 has a slope of -0.1meV/T. Qualitatively this makes senes in terms of the Coulomb blockade. The magnitudes of the slopes are consistent with Zeeman splitting energies, $g \mu_B B$, in carbon nanotubes with a g-factor of 2. The opposite sign of the splitting on each side of the Coulomb diamond makes sense for a quantum dot with no spin degeneracy. Each successive diamond should have opposite spin polarization, therefore excited states on opposite sides of a single diamond will have opposite spin. 
+In Figures \ref{fig:bisweep_cuts_all} and \ref{fig:mt7_bisweep_edit} it is clear that there is some field dependent movement of the conductance peaks in sample MT7. Again, it is important to remember a change in conductance at low bias is not solely due to the superconducting gap, but rather a combination of the gap and Coulomb blockade. From $B=0$T to 0.5T conductance peak 1 (labelled in Figure \ref{fig:mt7_bisweep_edit}) shifts from $V_{bias}=-4.2meV$ to $V_{bias}=3meV$. This agrees well with the closing of the calculated superconducting gap of 1.2meV. Similar features are observed in the other three conductance peaks. At fields above 0.5T, peaks 1-3 have a slight field dependance. Peaks 1 and 2 show positive slopes of 1.5 and 0.3 meV/T, respectively. Peak 3 has a slope of -0.1meV/T. Qualitatively this makes sense in terms of the Coulomb blockade. The magnitudes of the slopes are consistent with Zeeman splitting energies, $g \mu_B B$, in carbon nanotubes with a g-factor of 2. This also suggests that the levels are spin split due to exchange coupling with the ferromagnet, giving a hint at the magnitude of the coupling.
 
 Further measurements to resolve these features at lower temperatures will be necessary for a more quantitative analysis.
 
-\section{Hysteretic Switching of Quantum Dot Conductance at Low Field}
+\section{Hysteretic Switching of Quantum Dot Conductance in an External Field}
 \label{sec:scfm_switching}
 
 After not observing any clear field dependence in the differential conductance of sample SCFMH8, additional measurements were performed. For these measurements the fast and slow scan axes were switched. Sweeping the magnetic field, at a fixed bias, while measuring current through the quantum dot revealed some interesting behavior. The full data set is seen in Figure \ref{fig:scfmh8_positive_field_switching}.
@@ -259,3 +261,5 @@ To investigate the bias dependence of the switching behavior, the field values a
 One final possibility is that the hysteresis is not due to any transport phenomena, but rather a thermodynamic effect due to the arrangement of leads on the substrate. Looking at the superconducting quantum dot that was used as a control, it is separated from the large ferromagnetic leads by nearly 1$\mu$m. Conversely, the superconducting lead used in the F-CNT-S junctions is surrounded on both sides by larger ferromagnetic leads. 
 
 In light of this discussion, there is no clear physical picture for either the switching at 0.5T or the hysteresis observed at 0.5T and 2.0T. Future measurements looking at the behavior of this feature as a function of $V_{gate}$ at lower temperatures should determine if the switching is a result Zeeman splitting of levels on the dot. If it is, the physical origin of the hysteresis may be very interesting. Additionally, different device geometries (ordering the ferromagnetic and superconducting leads differently) could eliminate the possibility of a thermodynamic switching in the superconducting lead, rather than a transport phenomena.
+
+This chapter represents the first attempt at measuring spin-dependent transport properties through a F-CNT-S junction. The Zeeman splitting of conductance peaks and closing of the superconducting gap demonstrates that both superconductivity and spin non-degenerate quantum dot levels exist in the device. The measurement of hysteretic conductance splitting suggests the existence of new transport phenomena in this device that provides the basis for future work.
